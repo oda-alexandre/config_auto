@@ -388,7 +388,7 @@ while programmeLancer:
 
             os.system("sudo apt install --no-install-recommends -y git")
 
-            os.system("git clone https://github.com/oda-alexandre/conky.github.io.git")
+            os.system("git clone https://github.com/oda-alexandre/conky.git")
 
             os.system("sudo mv conky.github.io/conky/pizzadude_bullets /usr/share/fonts")
 
@@ -797,7 +797,7 @@ while programmeLancer:
 
             os.system("mkdir $HOME/snort")
 
-            os.system("docker run -d --name snort -v ${HOME}/snort:/etc/snort -v ${HOME}/snort:/usr/local/lib/snort_dynamicrules -v ${HOME}/snort:/var/log/snort -v ${HOME}/snort:/etc/init.d/ --network host --restart=always maitreoda/snort")
+            os.system("docker run -d --name snort -v ${HOME}/snort:/etc/snort -v ${HOME}/snort:/usr/local/lib/snort_dynamicrules -v ${HOME}/snort:/var/log/snort -v ${HOME}/snort:/etc/init.d/ --network host --restart=always alexandreoda/snort")
 
             continue
 
@@ -839,7 +839,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de Gophish...\n \033[0m")
 
-            os.system("docker run -d --name gophish -p 127.0.0.1:3333:3333 -p 80:80 maitreoda/gophish")
+            os.system("docker run -d --name gophish -p 127.0.0.1:3333:3333 -p 80:80 alexandreoda/gophish")
 
             print("\033[36;1m \nlien vers Gophish https://127.0.0.1:3333/login (ID = admin / PASSWORD = gophish)\n \033[0m")
 
@@ -859,7 +859,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de onionscan...\n \033[0m")
 
-            os.system("docker run -ti --name onionscan maitreoda/onionscan /bin/bash")
+            os.system("docker run -ti --name onionscan alexandreoda/onionscan /bin/bash")
 
             os.system("echo \"alias onionscan=\'docker start onionscan && docker exec -ti onionscan /bin/bash\'\" >> $HOME/.bashrc")
 
@@ -872,7 +872,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de ufonet...\n \033[0m")
 
-            os.system("docker run -d --name ufonet -p 9999:9999 -e DISPLAY maitreoda/ufonet")
+            os.system("docker run -d --name ufonet -p 9999:9999 -e DISPLAY alexandreoda/ufonet")
 
             print("\033[36;1m \nlien vers Ufonet http://0.0.0.0:9999\n \033[0m")
 
@@ -892,7 +892,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de pelican...\n \033[0m")
 
-            os.system("docker run --name pelican -p 127.0.0.1:8000:8000  maitreoda/pelican")
+            os.system("docker run --name pelican -p 127.0.0.1:8000:8000  alexandreoda/pelican")
 
             continue
 
@@ -905,7 +905,7 @@ while programmeLancer:
 
             os.system("mkdir ${HOME}/firefox")
 
-            os.system("docker run -d --name firefox -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/firefox:/home/firefox/Downloads -e DISPLAY --network host maitreoda/firefox")
+            os.system("docker run -d --name firefox -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/firefox:/home/firefox/Downloads -e DISPLAY --network host alexandreoda/firefox")
 
             continue
 
@@ -919,7 +919,7 @@ while programmeLancer:
 
             os.system("mkdir ${HOME}/opera")
 
-            os.system("docker run -d --name opera -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/opera:/home/opera/Downloads -e DISPLAY --network host maitreoda/opera")
+            os.system("docker run -d --name opera -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/opera:/home/opera/Downloads -e DISPLAY --network host alexandreoda/opera")
 
             continue
 
@@ -932,7 +932,7 @@ while programmeLancer:
 
             os.system("mkdir $HOME/tor-browser")
 
-            os.system("docker run -d --name tor-browser -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/tor-browser:/home/torbrowser -e DISPLAY --network host maitreoda/tor-browser")
+            os.system("docker run -d --name tor-browser -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/tor-browser:/home/torbrowser -e DISPLAY --network host alexandreoda/tor-browser")
 
             continue
 
@@ -958,7 +958,7 @@ while programmeLancer:
 
             os.system("mkdir ${HOME}/pidgin")
 
-            os.system("docker run -d --name pidgin -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}/pidgin:/home/pidgin/.purple -e DISPLAY maitreoda/pidgin")
+            os.system("docker run -d --name pidgin -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}/pidgin:/home/pidgin/.purple -e DISPLAY alexandreoda/pidgin")
 
             print("\033[36;1m"
             "\nCONFIGURER COMME CECI :\n"
@@ -1004,7 +1004,7 @@ while programmeLancer:
 
             os.system("mkdir ${HOME}/discord")
 
-            os.system("docker run -d --name discord -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/discord:/home/discord/discord -e DISPLAY maitreoda/discord")
+            os.system("docker run -d --name discord -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/discord:/home/discord/discord -e DISPLAY alexandreoda/discord")
 
             continue
 
@@ -1017,7 +1017,7 @@ while programmeLancer:
 
             os.system("mkdir $HOME/dropbox")
 
-            os.system("docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart=always maitreoda/dropbox")
+            os.system("docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart=always alexandreoda/dropbox")
 
             os.system("echo \"alias dropbox=\'docker exec -ti dropbox /bin/bash\'\" >> $HOME/.bashrc")
 
@@ -1043,7 +1043,7 @@ while programmeLancer:
 
             os.system("mkdir $HOME/keepassx")
 
-            os.system("docker run -it --name keepassx --env=QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/keepassx -e DISPLAY -v ${XAUTHORITY}:/xauthority:ro -e XAUTHORITY='/xauthority' --network none maitreoda/keepassx")
+            os.system("docker run -it --name keepassx --env=QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/keepassx -e DISPLAY -v ${XAUTHORITY}:/xauthority:ro -e XAUTHORITY='/xauthority' --network none alexandreoda/keepassx")
 
             continue
 
@@ -1054,7 +1054,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de PeaZip...\n \033[0m")
 
-            os.system("docker run -d --name peazip -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/peazip -e DISPLAY --network none maitreoda/peazip")
+            os.system("docker run -d --name peazip -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/peazip -e DISPLAY --network none alexandreoda/peazip")
 
             continue
 
@@ -1067,7 +1067,7 @@ while programmeLancer:
 
             os.system("mkdir $HOME/atom")
 
-            os.system("docker run -d --name atom -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}/atom:/home/atom/.atom -e DISPLAY maitreoda/atom")
+            os.system("docker run -d --name atom -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}/atom:/home/atom/.atom -e DISPLAY alexandreoda/atom")
 
             continue
 
@@ -1078,7 +1078,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de libreoffice...\n \033[0m")
 
-            os.system("docker run -d --name libreoffice -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/libreoffice -e DISPLAY --network none maitreoda/libreoffice")
+            os.system("docker run -d --name libreoffice -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/libreoffice -e DISPLAY --network none alexandreoda/libreoffice")
 
             continue
 
