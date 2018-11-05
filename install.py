@@ -819,7 +819,7 @@ while programmeLancer:
 ###
 # ARMITAGE
 ###
-        elif choixMenu == "22":
+        elif choixMenu == "23":
 
             print("\033[36;1m \nEn cours de dev\n \033[0m")
 
@@ -835,7 +835,7 @@ while programmeLancer:
 ###
 # GOPHISH
 ###
-        elif choixMenu == "23":
+        elif choixMenu == "24":
 
             print("\033[36;1m \nInstallation de Gophish...\n \033[0m")
 
@@ -855,7 +855,7 @@ while programmeLancer:
 ###
 # ONIONSCAN
 ###
-        elif choixMenu == "24":
+        elif choixMenu == "25":
 
             print("\033[36;1m \nInstallation de onionscan...\n \033[0m")
 
@@ -868,7 +868,7 @@ while programmeLancer:
 ###
 # UFONET
 ###
-        elif choixMenu == "25":
+        elif choixMenu == "26":
 
             print("\033[36;1m \nInstallation de ufonet...\n \033[0m")
 
@@ -888,7 +888,7 @@ while programmeLancer:
 ###
 # PELICAN
 ###
-        elif choixMenu == "26":
+        elif choixMenu == "27":
 
             print("\033[36;1m \nInstallation de pelican...\n \033[0m")
 
@@ -899,7 +899,7 @@ while programmeLancer:
 ###
 # FIREFOX
 ###
-        elif choixMenu == "27":
+        elif choixMenu == "28":
 
             print("\033[36;1m \nInstallation de firefox...\n \033[0m")
 
@@ -913,7 +913,7 @@ while programmeLancer:
 ###
 # OPERA
 ###
-        elif choixMenu == "28":
+        elif choixMenu == "29":
 
             print("\033[36;1m \nInstallation de opera...\n \033[0m")
 
@@ -926,7 +926,7 @@ while programmeLancer:
 ###
 # TOR BROWSER
 ###
-        elif choixMenu == "29":
+        elif choixMenu == "30":
 
             print("\033[36;1m \nInstallation de tor browser...\n \033[0m")
 
@@ -939,7 +939,7 @@ while programmeLancer:
 ###
 # OWASP-MANTRA
 ###
-        elif choixMenu == "30":
+        elif choixMenu == "31":
 
             print("\033[36;1m \nInstallation de owasp-mantra...\n \033[0m")
 
