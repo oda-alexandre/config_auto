@@ -453,11 +453,15 @@ while programmeLancer:
 
             print("\033[36;1m \nMise en place du script hostname_random...\n \033[0m")
 
+            os.system("sudo mkdir /usr/share/wordlist")
+
             os.system("sudo apt-get update")
 
             os.system("sudo apt install --no-install-recommends -y git")
 
             os.system("git clone https://github.com/oda-alexandre/hostname_random.git")
+
+            os.system("sudo mv -f hostname_random/name.txt /usr/share/wordlist/")
 
             os.system("sudo mv -f hostname_random/hostname-random /etc/init.d/")
 
