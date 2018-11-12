@@ -951,8 +951,7 @@ while programmeLancer:
 
             os.system("sudo apt-get update")
 
-            os.system(
-                "sudo apt install --no-install-recommends -y owasp-mantra-ff")
+            os.system("sudo apt install --no-install-recommends -y owasp-mantra-ff")
 
             continue
 
