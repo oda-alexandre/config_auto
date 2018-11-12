@@ -35,139 +35,140 @@ programmeLancer = True
 while programmeLancer:
 
     print("\033[36;1m"
-      "\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "CONFIGURATION\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "CONFIGURATION\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 1 Sources.list           => Modification des sources.list & update/upgrade/dist-upgrade\n"
-      " 2 Gnome mini             => Configuration minimaliste de gnome\n"
-      " 3 Theme sombre           => Utiliser le theme sombre integrale\n"
-      " 4 Bluetooth              => Activation du bluetooth\n"
-      " 5 Son                    => Activation du son\n"
-      " 6 Grub                   => Acceleration du temps de demarrage du grub et affichage des logs de boot\n"
-      " 7 Grub fond d'ecran      => Modification du fond d'ecran du grub\n"
-      " 8 Vimrc                  => Vim avec copier/coller & couleur syntax & souris\n"
-      " 9 Terminal Custom        => Terminal personnaliser\n"
-      " 10 Conky                 => Moniteur Systeme personnailer\n"
-      " 11 Htop                  => Moniteur Systeme terminal\n"
-      " 12 Auto clean            => Nettoyage a chaque demarrage\n"
-      "\n"
+          " 1 Sources.list           => Modification des sources.list & update/upgrade/dist-upgrade\n"
+          " 2 Gnome mini             => Configuration minimaliste de gnome\n"
+          " 3 Theme sombre           => Utiliser le theme sombre integrale\n"
+          " 4 Bluetooth              => Activation du bluetooth\n"
+          " 5 Son                    => Activation du son\n"
+          " 6 Grub                   => Acceleration du temps de demarrage du grub et affichage des logs de boot\n"
+          " 7 Grub fond d'ecran      => Modification du fond d'ecran du grub\n"
+          " 8 Vimrc                  => Vim avec copier/coller & couleur syntax & souris\n"
+          " 9 Terminal Custom        => Terminal personnaliser\n"
+          " 10 Conky                 => Moniteur Systeme personnailer\n"
+          " 11 Htop                  => Moniteur Systeme terminal\n"
+          " 12 Auto clean            => Nettoyage a chaque demarrage\n"
+          "\n"
 
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "ANONYMAT\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "ANONYMAT\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 13 Hostname Random       => Change le nom de l'ordinateur a chaque demarrage\n"
-      " 14 Mac Random            => (Indisponnible sur VirtualBox) Change les adresses mac a chaque demarrage\n"
-      " 15 Noip                  => Synchronisation de l'ip public avec Noip toutes les minutes\n"
-      " 16 Ip Jetable            => Installation vpn pptp & configuration de ip jetable\n"
-      " 17 Tor Privoxy           => Passe tout le trafic reseau a travers Tor Privoxy par connection mandataire\n"
-      " 18 Auto Destruction      => (Pour OS installer en lvm chiffree) Mot de passe auto destruction\n"
-      "\n"
+          " 13 Hostname Random       => Change le nom de l'ordinateur a chaque demarrage\n"
+          " 14 Mac Random            => (Indisponnible sur VirtualBox) Change les adresses mac a chaque demarrage\n"
+          " 15 Noip                  => Synchronisation de l'ip public avec Noip toutes les minutes\n"
+          " 16 Ip Jetable            => Installation vpn pptp & configuration de ip jetable\n"
+          " 17 Tor Privoxy           => Passe tout le trafic reseau a travers Tor Privoxy par connection mandataire\n"
+          " 18 Auto Destruction      => (Pour OS installer en lvm chiffree) Mot de passe auto destruction\n"
+          "\n"
 
-      "------------------------------------------------------------------------------------------------------------------\n"
-      "VIRTUALISATION\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "------------------------------------------------------------------------------------------------------------------\n"
+          "VIRTUALISATION\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 19 Virtualbox            => Programme de virtualisation\n"
-      " 20 Docker                => Installation de docker avec interface graphique portainer\n"
-      "\n"
+          " 19 Virtualbox            => Programme de virtualisation\n"
+          " 20 Docker                => Installation de docker avec interface graphique portainer\n"
+          "\n"
 
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "FIREWALL / IDS / DNS\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "FIREWALL / IDS / DNS\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 21 Snort                 => (docker) Detecteur d'intrusion\n"
-      " 22 DnsCrypt              => en cours de dev (docker) Chiffrement dns\n"
-      "\n"
+          " 21 Snort                 => (docker) Detecteur d'intrusion\n"
+          " 22 DnsCrypt              => en cours de dev (docker) Chiffrement dns\n"
+          "\n"
 
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "PROGRAMME WEB\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "PROGRAMME WEB\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 23 Armitage              => en cours de dev (docker) Integration de Beef-xss, Msf,Nmap,Geoip dans Armitage\n"
-      " 24 Gophish               => (docker) Programme de phishing\n"
-      " 25 OnionScan             => (docker) Scanner de site .onion\n"
-      " 26 Ufonet                => (docker) Programme de Ddos\n"
-      " 27 Pelican               => (docker) Generateur de site static\n"
-      "\n"
+          " 23 Armitage              => en cours de dev (docker) Integration de Beef-xss, Msf,Nmap,Geoip dans Armitage\n"
+          " 24 Gophish               => (docker) Programme de phishing\n"
+          " 25 OnionScan             => (docker) Scanner de site .onion\n"
+          " 26 Ufonet                => (docker) Programme de Ddos\n"
+          " 27 Pelican               => (docker) Generateur de site static\n"
+          "\n"
 
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "NAVIGATEUR\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "NAVIGATEUR\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 28 Firefox               => (docker) Navigateur simple\n"
-      " 29 Opera                 => (docker) Navigateur avec vpn\n"
-      " 30 Tor Browser           => (docker) Navigateur du reseau tor\n"
-      " 31 Owasp Mantra          => en cours de dev (docker) Navigateur de pentest\n"
-      "\n"
+          " 28 Firefox               => (docker) Navigateur simple\n"
+          " 29 Opera                 => (docker) Navigateur avec vpn\n"
+          " 30 Tor Browser           => (docker) Navigateur du reseau tor\n"
+          " 31 Owasp Mantra          => en cours de dev (docker) Navigateur de pentest\n"
+          "\n"
 
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "MESSAGERIE\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "MESSAGERIE\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 32 Pidgin                => (docker) Messagerie instantanee .onion\n"
-      " 33 Discord               => (docker) Plateforme Voip\n"
-      "\n"
+          " 32 Pidgin                => (docker) Messagerie instantanee .onion\n"
+          " 33 Discord               => (docker) Plateforme Voip\n"
+          "\n"
 
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "CLOUD\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "CLOUD\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 34 Dropbox               => (docker) Service Cloud\n"
-      "\n"
+          " 34 Dropbox               => (docker) Service Cloud\n"
+          "\n"
 
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "ACCES A DISTANCE\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "ACCES A DISTANCE\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 35 Teamviewer            => (docker) Prise de controle a distance\n"
-      "\n"
+          " 35 Teamviewer            => (docker) Prise de controle a distance\n"
+          "\n"
 
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "CHIFFREMENTS\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "CHIFFREMENTS\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 36 Keepassx              => (docker) Gestionnaire de mot de passe\n"
-      " 37 PeaZip                => (docker) Gestionnaire d'archive (zip,rar...)\n"
-      "\n"
+          " 36 Keepassx              => (docker) Gestionnaire de mot de passe\n"
+          " 37 PeaZip                => (docker) Gestionnaire d'archive (zip,rar...)\n"
+          "\n"
 
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "OUTILS\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "OUTILS\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 38 Atom                  => (docker) Editeur de code\n"
-      " 39 Libreoffice           => (docker) Suite bureautique\n"
-      " 40 Vokoscreen            => Capture video\n"
-      " 41 OpenShot              => Editeur video\n"
-      "\n"
+          " 38 Atom                  => (docker) Editeur de code\n"
+          " 39 Libreoffice           => (docker) Suite bureautique\n"
+          " 40 Vokoscreen            => Capture video\n"
+          " 41 OpenShot              => Editeur video\n"
+          "\n"
 
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "OPTIONS\n"
-      "-----------------------------------------------------------------------------------------------------------------\n"
-      "\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "OPTIONS\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
 
-      " 0 Quitter                => Quitter le programme d'installation\n"
-      "\n"
-      "\033[36;1m")
+          " 0 Quitter                => Quitter le programme d'installation\n"
+          "\n"
+          "\033[36;1m")
 
 ###
 # CHOIX MENU
 ###
     try:
-        choixMenu = raw_input("\033[36;1m" "VEUILLEZ SAISIR VOTRE CHOIX : " "\033[36;1m")
+        choixMenu = raw_input(
+            "\033[36;1m" "VEUILLEZ SAISIR VOTRE CHOIX : " "\033[36;1m")
         choixMenu = str(choixMenu)
 
 ###
@@ -522,25 +523,27 @@ while programmeLancer:
             os.system("sudo tar xf noip-duc-linux.tar.gz -C /usr/local/src/")
 
             print("\033[36;1m"
-            "\n"
-            "DANS LA FENETRE QUI VAS SUIVRE RENSEIGNER COMME CECI :\n"
+                  "\n"
+                  "DANS LA FENETRE QUI VAS SUIVRE RENSEIGNER COMME CECI :\n"
 
-    		"(POUR CREER UN COMPTE NOIP SUIVRE CE LIEN\n" "https://www.noip.com/sign-up)\n"
-    		"(POUR CREER VOTRE COMPTE VIA UNE EMAIL JETABLE SUIVRE CE LIEN\n" "https://www.crazymailing.com/fr/)\n"
+                  "(POUR CREER UN COMPTE NOIP SUIVRE CE LIEN\n" "https://www.noip.com/sign-up)\n"
+                  "(POUR CREER VOTRE COMPTE VIA UNE EMAIL JETABLE SUIVRE CE LIEN\n" "https://www.crazymailing.com/fr/)\n"
 
-    		"1-Entrez votre email noip\n"
-    		"2-Entrez votre mot de passe noip\n"
-    		"3-Entrez y et renseignez le temps entre chaque syncronisation (default 30min)\n"
-    		"4-Entrez y Appuyez sur entrer\n"
-            "\n"
-            "\033[0m")
+                  "1-Entrez votre email noip\n"
+                  "2-Entrez votre mot de passe noip\n"
+                  "3-Entrez y et renseignez le temps entre chaque syncronisation (default 30min)\n"
+                  "4-Entrez y Appuyez sur entrer\n"
+                  "\n"
+                  "\033[0m")
 
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
+            entree = raw_input(
+                "\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
             if entree == "":
                 pass
             else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
+                print(
+                    "\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
                 continue
 
             os.system("sudo make install -C /usr/local/src/noip-*/")
@@ -576,12 +579,12 @@ while programmeLancer:
             os.system("noip2 -U 1")
 
             print("\033[36;1m"
-            "\n"
-            "POUR VERIFIER LE STATUS TAPER DANS UN TERMINAL :\n\n"
+                  "\n"
+                  "POUR VERIFIER LE STATUS TAPER DANS UN TERMINAL :\n\n"
 
-            "noip2 -S"
-            "\n"
-            "\033[0m")
+                  "noip2 -S"
+                  "\n"
+                  "\033[0m")
 
             entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
@@ -604,26 +607,26 @@ while programmeLancer:
             os.system("sudo apt install --no-install-recommends -y network-manager-pptp-gnome")
 
             print("\033[36;1m"
-            "\n"
-            "POUR CREER UN COMPTE IP JETABLE SUIVRE CE LIEN\n" "https://ipjetable.net/\n\n"
+                  "\n"
+                  "POUR CREER UN COMPTE IP JETABLE SUIVRE CE LIEN\n" "https://ipjetable.net/\n\n"
 
-            "BENEFICIER D'UN MOIS GRATUIT AVEC LE CODE FCZKCXSNKDHEQVLA\n\n"
+                  "BENEFICIER D'UN MOIS GRATUIT AVEC LE CODE FCZKCXSNKDHEQVLA\n\n"
 
-            "POUR CREER VOTRE COMPTE VIA UNE EMAIL JETABLE SUIVRE CE LIEN\n" "https://www.crazymailing.com/fr/\n\n"
+                  "POUR CREER VOTRE COMPTE VIA UNE EMAIL JETABLE SUIVRE CE LIEN\n" "https://www.crazymailing.com/fr/\n\n"
 
-            "ALLER DANS PARAMETRE / RESEAU / VPN / AJOUTER PPTP ET RENTRER COMME CECI :\n\n"
+                  "ALLER DANS PARAMETRE / RESEAU / VPN / AJOUTER PPTP ET RENTRER COMME CECI :\n\n"
 
-    		"Nom               = au choix\n"
-    		"Passerelle        = pptp.ipjetable.net\n"
-    		"Nom d'utilisateur = fournis dans le mail ipjetable\n"
-    		"Mot de passe      = fournis dans le mail ipjetable\n"
-    		"Domaine           = laisser vide\n\n"
+                  "Nom               = au choix\n"
+                  "Passerelle        = pptp.ipjetable.net\n"
+                  "Nom d'utilisateur = fournis dans le mail ipjetable\n"
+                  "Mot de passe      = fournis dans le mail ipjetable\n"
+                  "Domaine           = laisser vide\n\n"
 
-    		"ALLER DANS AVANCE ET COCHER :\n\n"
+                  "ALLER DANS AVANCE ET COCHER :\n\n"
 
-    		"Utiliser le chiffrement point-to-point (MPPE)\n"
-            "\n"
-             "\033[0m")
+                  "Utiliser le chiffrement point-to-point (MPPE)\n"
+                  "\n"
+                  "\033[0m")
 
             entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
@@ -653,13 +656,13 @@ while programmeLancer:
             os.system("echo \"forward-socks4a / localhost:9050 .\" | sudo tee -a /etc/privoxy/config")
 
             print("\033[36;1m"
-            "AJOUTER CES LIGNES DANS PARAMETRE / RESEAU / SERVEUR MANDATAIRE / METHODE MANUELLE :\n\n"
+                  "AJOUTER CES LIGNES DANS PARAMETRE / RESEAU / SERVEUR MANDATAIRE / METHODE MANUELLE :\n\n"
 
-    		"HTTP localhost - 8118\n"
-    		"HTTPS localhost - 8118\n"
-    		"Socks localhost - 9050\n"
-            "\n"
-            "\033[0m")
+                  "HTTP localhost - 8118\n"
+                  "HTTPS localhost - 8118\n"
+                  "Socks localhost - 9050\n"
+                  "\n"
+                  "\033[0m")
 
             entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
@@ -707,14 +710,14 @@ while programmeLancer:
         elif choixMenu == "18":
 
             print("\033[36;1m"
-            "\n"
-            "DANS LA FENETRE QUI VAS SUIVRE RENSEIGNER COMME CECI :\n\n"
+                  "\n"
+                  "DANS LA FENETRE QUI VAS SUIVRE RENSEIGNER COMME CECI :\n\n"
 
-    		"1-Entrez votre mot de passe de decryptage (celui utiliser au demarrage du PC)\n"
-    		"2-Entrez votre mot de passe pour l'auto destruction\n"
-    		"3-Comfirmer le mot de passe pour l'auto destruction\n"
-            "\n"
-            "\033[0m")
+                  "1-Entrez votre mot de passe de decryptage (celui utiliser au demarrage du PC)\n"
+                  "2-Entrez votre mot de passe pour l'auto destruction\n"
+                  "3-Comfirmer le mot de passe pour l'auto destruction\n"
+                  "\n"
+                  "\033[0m")
 
             entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
@@ -797,13 +800,16 @@ while programmeLancer:
 ###
         elif choixMenu == "21":
 
-            print("\033[36;1m \nInstallation de snort...\n \033[0m")
+            print("\033[36;1m \nEn cours de dev\n \033[0m")
 
-            os.system("mkdir $HOME/snort")
+            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
-            os.system("docker run -d --name snort -v ${HOME}/snort:/etc/snort -v ${HOME}/snort:/usr/local/lib/snort_dynamicrules -v ${HOME}/snort:/var/log/snort -v ${HOME}/snort:/etc/init.d/ --network host --restart=always alexandreoda/snort")
+            if entree == "":
+                continue
+            else:
+                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
 
-            continue
+                continue
 
 ###
 # DNSCRYPT
@@ -818,6 +824,7 @@ while programmeLancer:
                 continue
             else:
                 print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
+
                 continue
 
 ###
@@ -833,6 +840,7 @@ while programmeLancer:
                 continue
             else:
                 print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
+
                 continue
 
 
@@ -907,9 +915,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de firefox...\n \033[0m")
 
-            os.system("mkdir ${HOME}/firefox")
-
-            os.system("docker run -d --name firefox -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/firefox:/home/firefox/Downloads -e DISPLAY --network host alexandreoda/firefox")
+            os.system("docker run -d --name firefox -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}:/home/firefox -e DISPLAY --network host alexandreoda/firefox")
 
             continue
 
@@ -921,9 +927,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de opera...\n \033[0m")
 
-            os.system("mkdir ${HOME}/opera")
-
-            os.system("docker run -d --name opera -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/opera:/home/opera/Downloads -e DISPLAY --network host alexandreoda/opera")
+            os.system("docker run -d --name opera -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}:/home/opera -e DISPLAY --network host alexandreoda/opera")
 
             continue
 
@@ -933,8 +937,6 @@ while programmeLancer:
         elif choixMenu == "30":
 
             print("\033[36;1m \nInstallation de tor browser...\n \033[0m")
-
-            os.system("mkdir $HOME/tor-browser")
 
             os.system("docker run -d --name tor-browser -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/tor-browser:/home/torbrowser -e DISPLAY --network host alexandreoda/tor-browser")
 
@@ -949,7 +951,8 @@ while programmeLancer:
 
             os.system("sudo apt-get update")
 
-            os.system("sudo apt install --no-install-recommends -y owasp-mantra-ff")
+            os.system(
+                "sudo apt install --no-install-recommends -y owasp-mantra-ff")
 
             continue
 
@@ -960,42 +963,42 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallations de pidgin...\n \033[0m")
 
-            os.system("mkdir ${HOME}/pidgin")
-
-            os.system("docker run -d --name pidgin -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}/pidgin:/home/pidgin/.purple -e DISPLAY alexandreoda/pidgin")
+            os.system("docker run -d --name pidgin -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/pidgin -e DISPLAY alexandreoda/pidgin")
 
             print("\033[36;1m"
-            "\nCONFIGURER COMME CECI :\n"
-    		"(Pour creer un compte XMPP en .onion via tor-browser suivre ce lien libertygb2nyeyay.onion:5280/register_web)\n"
+                  "\nCONFIGURER COMME CECI :\n"
+                  "(Pour creer un compte XMPP en .onion via tor-browser suivre ce lien libertygb2nyeyay.onion:5280/register_web)\n"
 
-    		"\n1- DANS PIDGIN / OUTILS / PREFERENCES / PROXY :\n"
+                  "\n1- DANS PIDGIN / OUTILS / PREFERENCES / PROXY :\n"
 
-    		"\n(cocher) utiliser une DNS avec SOCKS4\n"
+                  "\n(cocher) utiliser une DNS avec SOCKS4\n"
 
-    		"\nType de proxy	: Tor/Privacy (SOCKS5)\n"
-    		"\nHote		: 127.0.0.1         Port            : 9050\n"
-    		"Utilisateur	: laisser vide	Mot de passe	: laisser vide\n"
+                  "\nType de proxy	: Tor/Privacy (SOCKS5)\n"
+                  "\nHote		: 127.0.0.1         Port            : 9050\n"
+                  "Utilisateur	: laisser vide	Mot de passe	: laisser vide\n"
 
-    		"\nACCEPTER LE CERTIFICAT\n"
+                  "\nACCEPTER LE CERTIFICAT\n"
 
-    		"\n2- DANS PIDGIN / OUTILS / PLUGINS :\n"
+                  "\n2- DANS PIDGIN / OUTILS / PLUGINS :\n"
 
-    		"\n(cocher) Messagerie Confidentielle Off te Record\n"
+                  "\n(cocher) Messagerie Confidentielle Off te Record\n"
 
-    		"\n3- CHOISIR CONFIGURER LE PLUGIN (a coter de fermer)\n"
+                  "\n3- CHOISIR CONFIGURER LE PLUGIN (a coter de fermer)\n"
 
-    		"\n(cliquer) sur produire\n"
-    		"(cocher) Exiger messagerie privee\n"
+                  "\n(cliquer) sur produire\n"
+                  "(cocher) Exiger messagerie privee\n"
 
-    		"\nDANS VOS CONVERSATIONS CLIQUER SUR NON-PRIVE / NON-VERIFIER / AUTHENTIFIER LE CONTACT (votre interlocuteur devras faire pareil de son cote)\n"
-            "\033[0m")
+                  "\nDANS VOS CONVERSATIONS CLIQUER SUR NON-PRIVE / NON-VERIFIER / AUTHENTIFIER LE CONTACT (votre interlocuteur devras faire pareil de son cote)\n"
+                  "\033[0m")
 
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
+            entree = raw_input(
+                "\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
             if entree == "":
                 continue
             else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
+                print(
+                    "\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
 
                 continue
 
@@ -1006,9 +1009,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de discord...\n \033[0m")
 
-            os.system("mkdir ${HOME}/discord")
-
-            os.system("docker run -d --name discord -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/discord:/home/discord/discord -e DISPLAY alexandreoda/discord")
+            os.system("docker run -d --name discord -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}:/home/discord -e DISPLAY alexandreoda/discord")
 
             continue
 
@@ -1019,9 +1020,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de dropbox...\n \033[0m")
 
-            os.system("mkdir $HOME/dropbox")
-
-            os.system("docker run -d --name dropbox -v ${HOME}/dropbox:/home/dropbox/Dropbox --restart=always alexandreoda/dropbox")
+            os.system("docker run -d --name dropbox -v ${HOME}:/home/dropbox --restart=always alexandreoda/dropbox")
 
             os.system("echo \"alias dropbox=\'docker exec -ti dropbox /bin/bash\'\" >> $HOME/.bashrc")
 
@@ -1045,8 +1044,6 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de keepassx...\n \033[0m")
 
-            os.system("mkdir $HOME/keepassx")
-
             os.system("docker run -it --name keepassx --env=QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/keepassx -e DISPLAY -v ${XAUTHORITY}:/xauthority:ro -e XAUTHORITY='/xauthority' --network none alexandreoda/keepassx")
 
             continue
@@ -1069,9 +1066,7 @@ while programmeLancer:
 
             print("\033[36;1m \nInstallation de atom...\n \033[0m")
 
-            os.system("mkdir $HOME/atom")
-
-            os.system("docker run -d --name atom -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}/atom:/home/atom/.atom -e DISPLAY alexandreoda/atom")
+            os.system("docker run -d --name atom -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/atom -e DISPLAY alexandreoda/atom")
 
             continue
 
@@ -1116,7 +1111,7 @@ while programmeLancer:
 # GESTION ERREUR
 ###
         else:
-            print("\033[36;1m" "\nCe choix n'est pas dans la liste\n" "\033[36;1m");
+            print("\033[36;1m" "\nCe choix n'est pas dans la liste\n" "\033[36;1m")
             continue
 
     except KeyboardInterrupt:
