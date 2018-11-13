@@ -767,7 +767,7 @@ while programmeLancer:
 
             os.system("echo \'DOCKER_OPTS=\"-icc=false\"\' | sudo tee -a /etc/default/docker")
 
-            os.system("sudo apt install --no-install-recommends -y docker docker-compose docker.io")
+            os.system("sudo apt install --no-install-recommends -y docker-compose docker-ce docker docker.io")
 
             os.system("sudo systemctl start docker.service")
 
