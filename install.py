@@ -391,11 +391,11 @@ while programmeLancer:
 
             os.system("git clone https://github.com/oda-alexandre/conky.git")
 
-            os.system("sudo mv conky.github.io/conky/pizzadude_bullets /usr/share/fonts")
+            os.system("sudo mv conky/conky/pizzadude_bullets /usr/share/fonts")
 
-            os.system("cp -r conky.github.io/conky $HOME/.conky")
+            os.system("cp -r conky/conky $HOME/.conky")
 
-            os.system("rm -rf conky.github.io")
+            os.system("rm -rf conky")
 
             print("\033[36;1m \nDANS LA FENETRE QUI VAS S'OUVRIR SELECTIONNER VOTRE CONKY\n \033[0m")
 
