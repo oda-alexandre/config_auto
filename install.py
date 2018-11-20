@@ -425,7 +425,7 @@ while programmeLancer:
 ###
 # MAC RANDOM
 ###
-        elif choixMenu == "13":
+        elif choixMenu == "14":
 
             print("\033[36;1m \nMise en place du script mac_random...\n \033[0m")
 
@@ -450,11 +450,11 @@ while programmeLancer:
 ###
 # HOSTNAME RANDOM
 ###
-        elif choixMenu == "12":
+        elif choixMenu == "13":
 
             print("\033[36;1m \nMise en place du script hostname_random...\n \033[0m")
 
-            os.system("sudo mkdir /usr/share/wordlist")
+            os.system("sudo mkdir /usr/share/wordlists")
 
             os.system("sudo apt-get update")
 
@@ -462,7 +462,7 @@ while programmeLancer:
 
             os.system("git clone https://github.com/oda-alexandre/hostname_random.git")
 
-            os.system("sudo mv -f hostname_random/name.txt /usr/share/wordlist/")
+            os.system("sudo mv -f hostname_random/names.txt /usr/share/wordlist/")
 
             os.system("sudo mv -f hostname_random/hostname-random /etc/init.d/")
 
@@ -481,7 +481,7 @@ while programmeLancer:
 ###
 # AUTO CLEAN
 ###
-        elif choixMenu == "14":
+        elif choixMenu == "12":
 
             print("\033[36;1m \nMise en place du script auto_clean...\n \033[0m")
 
