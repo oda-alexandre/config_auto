@@ -765,8 +765,6 @@ while programmeLancer:
 
             os.system("sudo apt-get update")
 
-            os.system("echo \'DOCKER_OPTS=\"-icc=false\"\' | sudo tee -a /etc/default/docker")
-
             os.system("sudo apt install --no-install-recommends -y docker-compose docker-ce docker docker.io")
 
             os.system("sudo systemctl start docker.service")
@@ -780,6 +778,8 @@ while programmeLancer:
             os.system("sudo usermod -a -G docker $USER")
 
             os.system("newgrp docker")
+
+            os.system("echo \'DOCKER_OPTS=\"-icc=false\"\' | sudo tee -a /etc/default/docker")
 
             os.system("sudo systemctl restart docker.service")
 
