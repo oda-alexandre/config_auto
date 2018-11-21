@@ -213,7 +213,7 @@ while programmeLancer:
 
             print("\033[36;1m \nConfiguration gnome mini...\n \033[0m")
 
-            os.system("sudo apt install --no-install-recommends -y gdm3 gnome-theme-kali gnome-session gnome-control-center gnome-tweaks gnome-terminal network-manager-gnome nautilus nautilus-extension-gnome-terminal gnome-icon-theme gnome-disk-utility gnome-shell-extensions xserver-xorg xfonts-base kali-defaults kali-desktop-live desktop-base kali-root-login sudo bash-completion net-tools")
+            os.system("sudo apt install --no-install-recommends -y gdm3 gnome-theme-kali gnome-session gnome-control-center gnome-tweaks gnome-terminal network-manager-gnome nautilus nautilus-extension-gnome-terminal gnome-icon-theme gnome-disk-utility gnome-shell-extensions xserver-xorg xfonts-base kali-defaults kali-desktop-live desktop-base kali-root-login sudo bash-completion net-tools gvfs-backends")
 
             os.system("sudo apt-get --purge autoremove -y chromium* chrome* firefox-esr leafpad xpdf cherrytree evince gnome-online-miners gnome-online-accounts gnome-orca gnome-characters gnome-contacts gnome-shell-extension-easyscreencast gnome-system-monitor gnome-user-docs gnome-font-viewer gnome-software-common python3-software-properties baobab florence gedit file-roller gnome-logs zim yelp reportbug eog vim-gui-common vim-common vim-tiny")
 
