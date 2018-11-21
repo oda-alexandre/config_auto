@@ -225,7 +225,7 @@ while programmeLancer:
 
             print("\033[36;1m \nSuppression des paquets inutiles...\n \033[0m")
 
-            os.system("sudo apt-get --purge autoremove -y chromium* chrome* firefox-esr leafpad xpdf cherrytree evince tracker gnome-online-miners gnome-online-accounts gnome-orca gnome-characters gnome-contacts gnome-shell-extension-easyscreencast gnome-system-monitor gnome-user-docs gnome-font-viewer gnome-software-common python3-software-properties baobab florence gedit file-roller gnome-logs zim yelp reportbug eog vim-gui-common vim-common vim-tiny")
+            os.system("sudo apt-get --purge autoremove -y chromium* chrome* firefox-esr leafpad xpdf cherrytree evince gnome-online-miners gnome-online-accounts gnome-orca gnome-characters gnome-contacts gnome-shell-extension-easyscreencast gnome-system-monitor gnome-user-docs gnome-font-viewer gnome-software-common python3-software-properties baobab florence gedit file-roller gnome-logs zim yelp reportbug eog vim-gui-common vim-common vim-tiny")
 
             print("\033[36;1m \nDesactivation des services inutiles...\n \033[0m")
 
@@ -423,27 +423,29 @@ while programmeLancer:
             continue
 
 ###
-# MAC RANDOM
+# AUTO CLEAN
 ###
-        elif choixMenu == "14":
+        elif choixMenu == "12":
 
-            print("\033[36;1m \nMise en place du script mac_random...\n \033[0m")
+            print("\033[36;1m \nMise en place du script auto_clean...\n \033[0m")
+
+            os.system("sudo apt-get update")
 
             os.system("sudo apt install --no-install-recommends -y git")
 
-            os.system("git clone https://github.com/oda-alexandre/mac_random.git")
+            os.system("git clone https://github.com/oda-alexandre/auto_clean.git")
 
-            os.system("sudo mv -f mac_random/mac-random /etc/init.d/")
+            os.system("sudo mv -f auto_clean/auto-clean /etc/init.d/")
 
-            os.system("sudo chmod +x /etc/init.d/mac-random")
+            os.system("sudo chmod +x /etc/init.d/auto-clean")
 
             print("\033[36;1m \nMise en place demarrage auto...\n \033[0m")
 
-            os.system("sudo update-rc.d -f mac-random defaults")
+            os.system("sudo update-rc.d -f auto-clean defaults")
 
             print("\033[36;1m \nSuppression des residus de configuration...\n \033[0m")
 
-            os.system("rm -rf mac_random")
+            os.system("rm -rf auto_clean")
 
             continue
 
@@ -479,29 +481,27 @@ while programmeLancer:
             continue
 
 ###
-# AUTO CLEAN
+# MAC RANDOM
 ###
-        elif choixMenu == "12":
+        elif choixMenu == "14":
 
-            print("\033[36;1m \nMise en place du script auto_clean...\n \033[0m")
-
-            os.system("sudo apt-get update")
+            print("\033[36;1m \nMise en place du script mac_random...\n \033[0m")
 
             os.system("sudo apt install --no-install-recommends -y git")
 
-            os.system("git clone https://github.com/oda-alexandre/auto_clean.git")
+            os.system("git clone https://github.com/oda-alexandre/mac_random.git")
 
-            os.system("sudo mv -f auto_clean/auto-clean /etc/init.d/")
+            os.system("sudo mv -f mac_random/mac-random /etc/init.d/")
 
-            os.system("sudo chmod +x /etc/init.d/auto-clean")
+            os.system("sudo chmod +x /etc/init.d/mac-random")
 
             print("\033[36;1m \nMise en place demarrage auto...\n \033[0m")
 
-            os.system("sudo update-rc.d -f auto-clean defaults")
+            os.system("sudo update-rc.d -f mac-random defaults")
 
             print("\033[36;1m \nSuppression des residus de configuration...\n \033[0m")
 
-            os.system("rm -rf auto_clean")
+            os.system("rm -rf mac_random")
 
             continue
 
