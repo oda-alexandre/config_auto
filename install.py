@@ -24,8 +24,7 @@ if os.geteuid() == 0:
 # VERIF OS
 ###
 if not platform.platform('kali'):
-    sys.exit(
-        "\033[36;1m" "\nCe script ne fonctionne que sur une distribution Kali Linux" "\033[36;1m")
+    sys.exit("\033[36;1m" "\nCe script ne fonctionne que sur une distribution Kali Linux" "\033[36;1m")
 
 ###
 # MENU
