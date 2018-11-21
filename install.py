@@ -192,23 +192,15 @@ while programmeLancer:
 
             os.system("echo \"deb-src https://http.kali.org/kali kali-rolling main contrib non-free\" | sudo tee -a /etc/apt/sources.list")
 
-            print("\033[36;1m \nupdate...\n \033[0m")
-
             os.system("sudo apt update")
-
-            print("\033[36;1m \nupgrade...\n \033[0m")
 
             os.system("sudo apt upgrade -y")
 
-            print("\033[36;1m \ndist-upgrade...\n \033[0m")
-
             os.system("sudo apt dist-upgrade -y")
-
-            print("\033[36;1m \n--purge autoremove & autoclean...\n \033[0m")
 
             os.system("sudo apt-get --purge autoremove -y && sudo apt-get autoclean -y")
 
-            print("\033[36;1m \nAjout alias maj dans le .bashrc\n \033[0m")
+            print("\033[36;1m \nAjout alias .bashrc\n \033[0m")
 
             os.system("echo \"alias maj=\'sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt-get --purge autoremove -y && sudo apt-get autoclean -y\'\" >> $HOME/.bashrc")
 
@@ -219,21 +211,15 @@ while programmeLancer:
 ###
         elif choixMenu == "2":
 
-            print("\033[36;1m \nInstallation des prérequis...\n \033[0m")
+            print("\033[36;1m \nConfiguration gnome mini...\n \033[0m")
 
             os.system("sudo apt install --no-install-recommends -y gdm3 gnome-theme-kali gnome-session gnome-control-center gnome-tweaks gnome-terminal network-manager-gnome nautilus nautilus-extension-gnome-terminal gnome-icon-theme gnome-disk-utility gnome-shell-extensions xserver-xorg xfonts-base kali-defaults kali-desktop-live desktop-base kali-root-login sudo bash-completion net-tools")
 
-            print("\033[36;1m \nSuppression des paquets inutiles...\n \033[0m")
-
             os.system("sudo apt-get --purge autoremove -y chromium* chrome* firefox-esr leafpad xpdf cherrytree evince gnome-online-miners gnome-online-accounts gnome-orca gnome-characters gnome-contacts gnome-shell-extension-easyscreencast gnome-system-monitor gnome-user-docs gnome-font-viewer gnome-software-common python3-software-properties baobab florence gedit file-roller gnome-logs zim yelp reportbug eog vim-gui-common vim-common vim-tiny")
-
-            print("\033[36;1m \nDesactivation des services inutiles...\n \033[0m")
 
             os.system("sudo mv /usr/lib/evolution/ /usr/lib/evolution-DISABLE/")
 
             os.system("sudo mv /usr/lib/evolution-data-server/ /usr/lib/evolution-data-server-DISABLE/")
-
-            print("\033[36;1m \nSuppression des dossiers inutiles...\n \033[0m")
 
             os.system("rm -rf $HOME/Modèles $HOME/Musique $HOME/Public $HOME/Téléchargements $HOME/Vidéos $HOME/Documents $HOME/Images")
 
@@ -295,8 +281,6 @@ while programmeLancer:
 
             os.system("sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"/#GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"/g' /etc/default/grub")
 
-            print("\033[36;1m \nupdate grub...\n \033[0m")
-
             os.system("sudo update-grub")
 
             continue
@@ -341,8 +325,6 @@ while programmeLancer:
 
             os.system("sudo cp vimrc/vimrc /etc/vim/")
 
-            print("\033[36;1m \nSuppression des residus de configuration...\n \033[0m")
-
             os.system("rm -rf vimrc")
 
             continue
@@ -358,15 +340,11 @@ while programmeLancer:
 
             os.system("sudo apt install --no-install-recommends -y terminator")
 
-            print("\033[36;1m \nMise en place du script .bashrc...\n \033[0m")
-
             os.system("git clone https://github.com/oda-alexandre/terminal-custom.git")
 
             os.system("cp terminal_custom/bashrc $HOME/.bashrc")
 
             os.system("sudo cp terminal_custom/bashrc /root/.bashrc")
-
-            print("\033[36;1m \nSuppression des residus de configuration...\n \033[0m")
 
             os.system("rm -rf terminal_custom")
 
@@ -384,8 +362,6 @@ while programmeLancer:
             os.system("sudo apt install --no-install-recommands -y psmisc conky-manager")
 
             os.system("mkdir $HOME/.conky")
-
-            print("\033[36;1m \nMise en place du conky...\n \033[0m")
 
             os.system("sudo apt install --no-install-recommends -y git")
 
@@ -439,11 +415,7 @@ while programmeLancer:
 
             os.system("sudo chmod +x /etc/init.d/auto-clean")
 
-            print("\033[36;1m \nMise en place demarrage auto...\n \033[0m")
-
             os.system("sudo update-rc.d -f auto-clean defaults")
-
-            print("\033[36;1m \nSuppression des residus de configuration...\n \033[0m")
 
             os.system("rm -rf auto_clean")
 
@@ -470,11 +442,7 @@ while programmeLancer:
 
             os.system("sudo chmod +x /etc/init.d/hostname-random")
 
-            print("\033[36;1m \nMise en place demarrage auto...\n \033[0m")
-
             os.system("sudo update-rc.d -f hostname-random defaults")
-
-            print("\033[36;1m \nSuppression des residus de configuration...\n \033[0m")
 
             os.system("rm -rf hostname_random")
 
@@ -495,11 +463,7 @@ while programmeLancer:
 
             os.system("sudo chmod +x /etc/init.d/mac-random")
 
-            print("\033[36;1m \nMise en place demarrage auto...\n \033[0m")
-
             os.system("sudo update-rc.d -f mac-random defaults")
-
-            print("\033[36;1m \nSuppression des residus de configuration...\n \033[0m")
 
             os.system("rm -rf mac_random")
 
@@ -542,8 +506,8 @@ while programmeLancer:
             if entree == "":
                 pass
             else:
-                print(
-                    "\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
+                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
+
                 continue
 
             os.system("sudo make install -C /usr/local/src/noip-*/")
@@ -560,19 +524,13 @@ while programmeLancer:
 
             os.system("sudo update-rc.d -f noip defaults")
 
-            print("\033[36;1m \nAjout alias maj dans le .bashrc\n \033[0m")
-
             os.system("echo \"alias noip-restart=\'sudo service noip restart\'\" >> $HOME/.bashrc")
-
-            print("\033[36;1m \nSuppression des residus de configuration...\n \033[0m")
 
             os.system("rm -rf noip")
 
             os.system("rm -rf noip-duc-linux.tar.gz")
 
             os.system("sudo rm -rf /usr/local/src/noip-duc-linux.tar.gz")
-
-            print("\033[36;1m \nReglage du temps de synchronisation noip sur 1 min...\n \033[0m")
 
             os.system("sudo service noip start")
 
@@ -647,8 +605,6 @@ while programmeLancer:
 
             os.system("sudo apt install --no-install-recommends -y tor privoxy")
 
-            print("\033[36;1m \nConfiguration socks...\n \033[0m")
-
             os.system("echo \"forward-socks5 / localhost:9050 .\" | sudo tee -a /etc/privoxy/config")
 
             os.system("echo \"forward-socks4 / localhost:9050 .\" | sudo tee -a /etc/privoxy/config")
@@ -671,8 +627,6 @@ while programmeLancer:
             else:
                 print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
                 continue
-
-            print("\033[36;1m \nMise en place demarrage auto...\n \033[0m")
 
             os.system("sudo ifconfig wlan0 down")
 
@@ -1052,7 +1006,7 @@ while programmeLancer:
 ###
         elif choixMenu == "37":
 
-            print("\033[36;1m \nInstallation de PeaZip...\n \033[0m")
+            print("\033[36;1m \nInstallation de peazip...\n \033[0m")
 
             os.system("docker run -d --name peazip -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/peazip -e DISPLAY --network none alexandreoda/peazip")
 
