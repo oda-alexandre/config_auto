@@ -132,7 +132,7 @@ while programmeLancer:
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "DÉPANNAGE\n"
+          "CONTROLE DISTANT\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
@@ -155,7 +155,7 @@ while programmeLancer:
 
           " 120 Atom                  => (docker) Editeur de code\n"
           " 121 Libreoffice           => (docker) Suite bureautique\n"
-          " 122 Vokoscreen            => Capture video\n"
+          " 122 Obs                   => Capture & streaming video\n"
           " 123 OpenShot              => Editeur video\n"
           "\n"
 
@@ -295,155 +295,50 @@ while programmeLancer:
             import navigateurs.torbrowser
 
 ###
-# PIDGIN
+# MODULES MESSAGERIES
 ###
-        elif choixMenu == "32":
+        elif choixMenu == "80":
+            import messageries.pidgin
 
-            print("\033[36;1m \nInstallations de pidgin...\n \033[0m")
-
-            os.system("docker run -d --name pidgin -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/pidgin -e DISPLAY alexandreoda/pidgin")
-
-            print("\033[36;1m"
-                  "\nCONFIGURER COMME CECI :\n"
-                  "(Pour creer un compte XMPP en .onion via tor-browser suivre ce lien libertygb2nyeyay.onion:5280/register_web)\n"
-
-                  "\n1- DANS PIDGIN / OUTILS / PREFERENCES / PROXY :\n"
-
-                  "\n(cocher) utiliser une DNS avec SOCKS4\n"
-
-                  "\nType de proxy	: Tor/Privacy (SOCKS5)\n"
-                  "\nHote		: 127.0.0.1         Port            : 9050\n"
-                  "Utilisateur	: laisser vide	Mot de passe	: laisser vide\n"
-
-                  "\nACCEPTER LE CERTIFICAT\n"
-
-                  "\n2- DANS PIDGIN / OUTILS / PLUGINS :\n"
-
-                  "\n(cocher) Messagerie Confidentielle Off te Record\n"
-
-                  "\n3- CHOISIR CONFIGURER LE PLUGIN (a coter de fermer)\n"
-
-                  "\n(cliquer) sur produire\n"
-                  "(cocher) Exiger messagerie privee\n"
-
-                  "\nDANS VOS CONVERSATIONS CLIQUER SUR NON-PRIVE / NON-VERIFIER / AUTHENTIFIER LE CONTACT (votre interlocuteur devras faire pareil de son cote)\n"
-                  "\033[0m")
-
-            entree = raw_input(
-                "\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                continue
-            else:
-                print(
-                    "\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-                continue
+        elif choixMenu == "81":
+            import messageries.discord
 
 ###
-# DISCORD
+# MODULES CLOUDS
 ###
-        elif choixMenu == "33":
-
-            print("\033[36;1m \nInstallation de discord...\n \033[0m")
-
-            os.system("docker run -d --name discord -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}:/home/discord -e DISPLAY alexandreoda/discord")
-
-            continue
+        elif choixMenu == "90":
+            import clouds.dropbox
 
 ###
-# DROPBOX
+# MODULES CONTROLE DISTANT
 ###
-        elif choixMenu == "34":
-
-            print("\033[36;1m \nInstallation de dropbox...\n \033[0m")
-
-            os.system("docker run -d --name dropbox -v ${HOME}:/home/dropbox --restart=always alexandreoda/dropbox")
-
-            os.system("echo \"alias dropbox=\'docker exec -ti dropbox /bin/bash\'\" >> $HOME/.bashrc")
-
-            continue
+        elif choixMenu == "100":
+            import controledistant.teamviewer
 
 ###
-# TEAMVIEWER
+# MODULES CHIFFREMENTS
 ###
-        elif choixMenu == "35":
+        elif choixMenu == "110":
+            import Chiffrements.keepassx
 
-            print("\033[36;1m \nInstallation de teamviewer...\n \033[0m")
+        elif choixMenu == "111":
+            import Chiffrements.peazip
 
-            os.system("docker run -d --name teamviewer -e DISPLAY -e XAUTHORITY=${XAUTHORITY} -v /tmp/.X11-unix:/tmp/.X11-unix hurricane/teamviewer")
-
-            continue
-
-###
-# KEEPASSX
-###
-        elif choixMenu == "36":
-
-            print("\033[36;1m \nInstallation de keepassx...\n \033[0m")
-
-            os.system("docker run -it --name keepassx --env=QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/keepassx -e DISPLAY -v ${XAUTHORITY}:/xauthority:ro -e XAUTHORITY='/xauthority' --network none alexandreoda/keepassx")
-
-            continue
 
 ###
-# PEAZIP
+# MODULES OUTILS
 ###
-        elif choixMenu == "37":
+        elif choixMenu == "120":
+            import outils.atom
 
-            print("\033[36;1m \nInstallation de peazip...\n \033[0m")
+        elif choixMenu == "121":
+            import outils.libreoffice
 
-            os.system("docker run -d --name peazip -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/peazip -e DISPLAY --network none alexandreoda/peazip")
+        elif choixMenu == "122":
+            import outils.obs
 
-            continue
-
-###
-# ATOM
-###
-        elif choixMenu == "38":
-
-            print("\033[36;1m \nInstallation de atom...\n \033[0m")
-
-            os.system("docker run -d --name atom -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/atom -e DISPLAY alexandreoda/atom")
-
-            continue
-
-###
-# LIBREOFFICE
-###
-        elif choixMenu == "39":
-
-            print("\033[36;1m \nInstallation de libreoffice...\n \033[0m")
-
-            os.system("docker run -d --name libreoffice -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/libreoffice -e DISPLAY --network none alexandreoda/libreoffice")
-
-            continue
-
-###
-# VOKOSCREEN
-###
-        elif choixMenu == "40":
-
-            print("\033[36;1m \nInstallation de vokoscreen...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y vokoscreen")
-
-            continue
-
-###
-# OPENSHOT
-###
-        elif choixMenu == "41":
-
-            print("\033[36;1m \nInstallation de openshot...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y openshot")
-
-            continue
+        elif choixMenu == "123":
+            import outils.openshot
 
 ###
 # GESTION ERREUR
