@@ -1,6 +1,6 @@
 # CONFIG AUTO
 
-![kali linux](https://raw.githubusercontent.com/oda-alexandre/config_auto/master/logo-kali.png) ![config-auto](https://raw.githubusercontent.com/oda-alexandre/config_auto/master/config-auto.png)
+![kali linux](https://raw.githubusercontent.com/oda-alexandre/config_auto/master/img/logo-kali.png) ![config-auto](https://raw.githubusercontent.com/oda-alexandre/config_auto/master/img/config-auto.png)
 
 ## INDEX
 

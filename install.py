@@ -52,6 +52,7 @@ while programmeLancer:
           " 10 Conky                 => Moniteur Systeme personnailer\n"
           " 11 Htop                  => Moniteur Systeme terminal\n"
           " 12 Auto clean            => Nettoyage a chaque demarrage\n"
+          " 13 Auto Destruction      => (Pour OS installer en lvm chiffree) Mot de passe auto destruction\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -59,12 +60,11 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 13 Hostname Random       => Change le nom de l'ordinateur a chaque demarrage\n"
-          " 14 Mac Random            => (Indisponnible sur VirtualBox) Change les adresses mac a chaque demarrage\n"
-          " 15 Noip                  => Synchronisation de l'ip public avec Noip toutes les minutes\n"
-          " 16 Ip Jetable            => Installation vpn pptp & configuration de ip jetable\n"
-          " 17 Tor Privoxy           => Passe tout le trafic reseau a travers Tor Privoxy par connection mandataire\n"
-          " 18 Auto Destruction      => (Pour OS installer en lvm chiffree) Mot de passe auto destruction\n"
+          " 20 Hostname Random       => Change le nom de l'ordinateur a chaque demarrage\n"
+          " 21 Mac Random            => Change les adresses mac a chaque demarrage\n"
+          " 22 Noip                  => Synchronisation de l'ip public avec Noip toutes les minutes\n"
+          " 23 Ip Random             => Change l'IP de l'ordinateur a chaque demarrage\n"
+          " 24 Tor Privoxy           => Passe tout le trafic reseau a travers Tor Privoxy par connection mandataire\n"
           "\n"
 
           "------------------------------------------------------------------------------------------------------------------\n"
@@ -72,8 +72,8 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 19 Virtualbox            => Programme de virtualisation\n"
-          " 20 Docker                => Installation de docker avec interface graphique portainer\n"
+          " 31 Virtualbox            => Programme de virtualisation\n"
+          " 32 Docker                => Installation de docker avec interface graphique portainer\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -81,56 +81,62 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 21 Snort                 => (docker) Detecteur d'intrusion\n"
-          " 22 DnsCrypt              => en cours de dev (docker) Chiffrement dns\n"
+          " 41 Snort                 => (docker) Detecteur d'intrusion\n"
+          " 42 DnsCrypt              => en cours de dev (docker) Chiffrement dns\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "PROGRAMME WEB\n"
+          "PENTEST\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 23 Armitage              => en cours de dev (docker) Integration de Beef-xss, Msf,Nmap,Geoip dans Armitage\n"
-          " 24 Gophish               => (docker) Programme de phishing\n"
-          " 25 OnionScan             => (docker) Scanner de site .onion\n"
-          " 26 Ufonet                => (docker) Programme de Ddos\n"
-          " 27 Pelican               => (docker) Generateur de site static\n"
+          " 51 Armitage              => en cours de dev (docker) Integration de Beef-xss, Msf,Nmap,Geoip dans Armitage\n"
+          " 52 Gophish               => (docker) Programme de phishing\n"
+          " 53 OnionScan             => (docker) Scanner de site .onion\n"
+          " 54 Ufonet                => (docker) Programme de Ddos\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "NAVIGATEUR\n"
+          "WEB\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 28 Firefox               => (docker) Navigateur simple\n"
-          " 29 Opera                 => (docker) Navigateur avec vpn\n"
-          " 30 Tor Browser           => (docker) Navigateur du reseau tor\n"
-          " 31 Owasp Mantra          => en cours de dev (docker) Navigateur de pentest\n"
+          " 60 Pelican               => (docker) Generateur de site static\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "MESSAGERIE\n"
+          "NAVIGATEURS\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 32 Pidgin                => (docker) Messagerie instantanee .onion\n"
-          " 33 Discord               => (docker) Plateforme Voip\n"
+          " 70 Firefox               => (docker) Navigateur simple\n"
+          " 71 Opera                 => (docker) Navigateur avec vpn\n"
+          " 72 Tor Browser           => (docker) Navigateur du reseau tor\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "CLOUD\n"
+          "MESSAGERIES\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 34 Dropbox               => (docker) Service Cloud\n"
+          " 80 Pidgin                => (docker) Messagerie instantanee .onion\n"
+          " 81 Discord               => (docker) Plateforme Voip\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "ACCES A DISTANCE\n"
+          "CLOUDS\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 35 Teamviewer            => (docker) Prise de controle a distance\n"
+          " 90 Dropbox               => (docker) Service Cloud\n"
+          "\n"
+
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "DÉPANNAGE\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
+          "\n"
+
+          " 100 Teamviewer            => (docker) Prise de controle a distance\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -138,8 +144,8 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 36 Keepassx              => (docker) Gestionnaire de mot de passe\n"
-          " 37 PeaZip                => (docker) Gestionnaire d'archive (zip,rar...)\n"
+          " 110 Keepassx              => (docker) Gestionnaire de mot de passe\n"
+          " 111 PeaZip                => (docker) Gestionnaire d'archive (zip,rar...)\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -147,10 +153,10 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 38 Atom                  => (docker) Editeur de code\n"
-          " 39 Libreoffice           => (docker) Suite bureautique\n"
-          " 40 Vokoscreen            => Capture video\n"
-          " 41 OpenShot              => Editeur video\n"
+          " 120 Atom                  => (docker) Editeur de code\n"
+          " 121 Libreoffice           => (docker) Suite bureautique\n"
+          " 122 Vokoscreen            => Capture video\n"
+          " 123 OpenShot              => Editeur video\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -177,736 +183,116 @@ while programmeLancer:
             print("\033[36;1m" "\nMerci aurevoir\n" "\033[36;1m")
             programmeLancer = False
 
-
 ###
-# SOURCES.LIST
+# MODULES CONFIGURATION
 ###
         elif choixMenu == "1":
+            import configuration.sourceslist
 
-            print("\033[36;1m \nModification du fichier sources.list...\n \033[0m")
-
-            os.system("sudo rm -f /etc/apt/sources.list")
-
-            os.system("echo \"deb https://http.kali.org/kali kali-rolling main contrib non-free\" | sudo tee -a /etc/apt/sources.list")
-
-            os.system("echo \"deb-src https://http.kali.org/kali kali-rolling main contrib non-free\" | sudo tee -a /etc/apt/sources.list")
-
-            os.system("sudo apt update")
-
-            os.system("sudo apt upgrade -y")
-
-            os.system("sudo apt dist-upgrade -y")
-
-            os.system("sudo apt-get --purge autoremove -y && sudo apt-get autoclean -y")
-
-            print("\033[36;1m \nAjout alias .bashrc\n \033[0m")
-
-            os.system("echo \"alias maj=\'sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt-get --purge autoremove -y && sudo apt-get autoclean -y\'\" >> $HOME/.bashrc")
-
-            continue
-
-###
-# GNOME-MINI
-###
         elif choixMenu == "2":
+            import configuration.gnomemini
 
-            print("\033[36;1m \nConfiguration gnome mini...\n \033[0m")
-
-            os.system("sudo apt install --no-install-recommends -y gdm3 gnome-theme-kali gnome-session gnome-control-center gnome-tweaks gnome-terminal network-manager-gnome nautilus nautilus-extension-gnome-terminal gnome-icon-theme gnome-disk-utility gnome-shell-extensions xserver-xorg xfonts-base kali-defaults kali-desktop-live desktop-base kali-root-login sudo bash-completion net-tools gvfs-backends")
-
-            os.system("sudo apt-get --purge autoremove -y chromium* chrome* firefox-esr leafpad xpdf cherrytree evince gnome-online-miners gnome-online-accounts gnome-orca gnome-characters gnome-contacts gnome-shell-extension-easyscreencast gnome-system-monitor gnome-user-docs gnome-font-viewer gnome-software-common python3-software-properties baobab florence gedit file-roller gnome-logs zim yelp reportbug eog vim-gui-common vim-common vim-tiny")
-
-            os.system("sudo mv /usr/lib/evolution/ /usr/lib/evolution-DISABLE/")
-
-            os.system("sudo mv /usr/lib/evolution-data-server/ /usr/lib/evolution-data-server-DISABLE/")
-
-            os.system("rm -rf $HOME/Modèles $HOME/Musique $HOME/Public $HOME/Téléchargements $HOME/Vidéos $HOME/Documents $HOME/Images")
-
-            os.system("sudo rm -rf /root/Modèles /root/Musique /root/Public /root/Téléchargements /root/Vidéos /root/Documents /root/Images")
-
-            continue
-
-###
-# THEME-SOMBRE
-###
         elif choixMenu == "3":
+            import configuration.themesombre
 
-            print("\033[36;1m \nConfiguration theme sombre...\n \033[0m")
-
-            os.system("echo '[Settings]' >> $HOME/.config/gtk-3.0/settings.ini")
-
-            os.system("echo 'gtk-application-prefer-dark-theme=1' >> $HOME/.config/gtk-3.0/settings.ini")
-
-            continue
-
-###
-# BLUETOOTH
-###
         elif choixMenu == "4":
+            import configuration.bluetooth
 
-            print("\033[36;1m \nActivation du bluetooth...\n \033[0m")
-
-            os.system("sudo apt update")
-
-            os.system("sudo apt install --no-install-recommends -y bluetooth")
-
-            os.system("sudo systemctl enable bluetooth.service")
-
-            os.system("sudo systemctl start bluetooth.service")
-
-            continue
-
-###
-# SON
-###
         elif choixMenu == "5":
+            import configuration.son
 
-            print("\033[36;1m \nActivation du son...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y pulseaudio")
-
-            continue
-
-###
-# GRUB
-###
         elif choixMenu == "6":
+            import configuration.grub
 
-            print("\033[36;1m \nModification timeout grub...\n \033[0m")
-
-            os.system("sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=1/g' /etc/default/grub")
-
-            os.system("sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"/#GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"/g' /etc/default/grub")
-
-            os.system("sudo update-grub")
-
-            continue
-
-###
-# GRUB FOND D'ECRAN
-###
         elif choixMenu == "7":
+            import configuration.grubimg
 
-            print("\033[36;1m \nModification arriere plan du grub...\n \033[0m")
-
-            print("\033[36;1m \nPlacez votre image background_cache.png dans votre dossier personnel\n \033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                pass
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-                continue
-
-            os.system("sudo rm -f /boot/grub/.background_cache.png")
-
-            os.system("sudo cp $HOME/background_cache.png /boot/grub/background_cache.png")
-
-            os.system("sudo update-grub")
-
-            continue
-
-###
-# VIMRC
-###
         elif choixMenu == "8":
+            import configuration.vimrc
 
-            print("\033[36;1m \nMise en place du fichier de configuration...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y vim git")
-
-            os.system("git clone https://github.com/oda-alexandre/vimrc.git")
-
-            os.system("sudo cp vimrc/vimrc /etc/vim/")
-
-            os.system("rm -rf vimrc")
-
-            continue
-
-###
-# TERMINAL-CUSTOM
-###
         elif choixMenu == "9":
+            import configuration.terminalcustom
 
-            print("\033[36;1m \nInstallation de terminator...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y terminator")
-
-            os.system("git clone https://github.com/oda-alexandre/terminal-custom.git")
-
-            os.system("cp terminal_custom/bashrc $HOME/.bashrc")
-
-            os.system("sudo cp terminal_custom/bashrc /root/.bashrc")
-
-            os.system("rm -rf terminal_custom")
-
-            continue
-
-###
-# CONKY
-###
         elif choixMenu == "10":
+            import configuration.conky
 
-            print("\033[36;1m \nInstallation de conky...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommands -y psmisc conky-manager")
-
-            os.system("mkdir $HOME/.conky")
-
-            os.system("sudo apt install --no-install-recommends -y git")
-
-            os.system("git clone https://github.com/oda-alexandre/conky.git")
-
-            os.system("sudo mv conky/conky/pizzadude_bullets /usr/share/fonts")
-
-            os.system("cp -r conky/conky $HOME/.conky")
-
-            os.system("rm -rf conky")
-
-            print("\033[36;1m \nDANS LA FENETRE QUI VAS S'OUVRIR SELECTIONNER VOTRE CONKY\n \033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                pass
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-                continue
-
-            os.system("conky-manager")
-
-            continue
-
-###
-# HTOP
-###
         elif choixMenu == "11":
+            import configuration.htop
 
-            print("\033[36;1m \nInstallation de Htop...\n \033[0m")
-
-            os.system("sudo apt install --no-install-recommends -y htop xterm")
-
-            continue
-
-###
-# AUTO CLEAN
-###
         elif choixMenu == "12":
+            import configuration.autoclean
 
-            print("\033[36;1m \nMise en place du script auto_clean...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y git")
-
-            os.system("git clone https://github.com/oda-alexandre/auto_clean.git")
-
-            os.system("sudo mv -f auto_clean/auto-clean /etc/init.d/")
-
-            os.system("sudo chmod +x /etc/init.d/auto-clean")
-
-            os.system("sudo update-rc.d -f auto-clean defaults")
-
-            os.system("rm -rf auto_clean")
-
-            continue
-
-###
-# HOSTNAME RANDOM
-###
         elif choixMenu == "13":
-
-            print("\033[36;1m \nMise en place du script hostname_random...\n \033[0m")
-
-            os.system("sudo mkdir /usr/share/wordlists")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y git")
-
-            os.system("git clone https://github.com/oda-alexandre/hostname_random.git")
-
-            os.system("sudo mv -f hostname_random/names.txt /usr/share/wordlist/")
-
-            os.system("sudo mv -f hostname_random/hostname-random /etc/init.d/")
-
-            os.system("sudo chmod +x /etc/init.d/hostname-random")
-
-            os.system("sudo update-rc.d -f hostname-random defaults")
-
-            os.system("rm -rf hostname_random")
-
-            continue
+            import configuration.autodestruction
 
 ###
-# MAC RANDOM
-###
-        elif choixMenu == "14":
-
-            print("\033[36;1m \nMise en place du script mac_random...\n \033[0m")
-
-            os.system("sudo apt install --no-install-recommends -y git")
-
-            os.system("git clone https://github.com/oda-alexandre/mac_random.git")
-
-            os.system("sudo mv -f mac_random/mac-random /etc/init.d/")
-
-            os.system("sudo chmod +x /etc/init.d/mac-random")
-
-            os.system("sudo update-rc.d -f mac-random defaults")
-
-            os.system("rm -rf mac_random")
-
-            continue
-
-###
-# NOIP
-###
-        elif choixMenu == "15":
-
-            print("\033[36;1m \nInstallation de noip...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y wget")
-
-            os.system("wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz -O")
-
-            os.system("noip-duc-linux.tar.gz")
-
-            os.system("sudo tar xf noip-duc-linux.tar.gz -C /usr/local/src/")
-
-            print("\033[36;1m"
-                  "\n"
-                  "DANS LA FENETRE QUI VAS SUIVRE RENSEIGNER COMME CECI :\n"
-
-                  "(POUR CREER UN COMPTE NOIP SUIVRE CE LIEN\n" "https://www.noip.com/sign-up)\n"
-                  "(POUR CREER VOTRE COMPTE VIA UNE EMAIL JETABLE SUIVRE CE LIEN\n" "https://www.crazymailing.com/fr/)\n"
-
-                  "1-Entrez votre email noip\n"
-                  "2-Entrez votre mot de passe noip\n"
-                  "3-Entrez y et renseignez le temps entre chaque syncronisation (default 30min)\n"
-                  "4-Entrez y Appuyez sur entrer\n"
-                  "\n"
-                  "\033[0m")
-
-            entree = raw_input(
-                "\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                pass
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-                continue
-
-            os.system("sudo make install -C /usr/local/src/noip-*/")
-
-            print("\033[36;1m \nMise en place du script noip...\n \033[0m")
-
-            os.system("sudo apt install --no-install-recommends -y git")
-
-            os.system("git clone https://github.com/oda-alexandre/noip.git noip")
-
-            os.system("sudo mv -f noip/noip /etc/init.d/")
-
-            os.system("sudo chmod +x /etc/init.d/noip")
-
-            os.system("sudo update-rc.d -f noip defaults")
-
-            os.system("echo \"alias noip-restart=\'sudo service noip restart\'\" >> $HOME/.bashrc")
-
-            os.system("rm -rf noip")
-
-            os.system("rm -rf noip-duc-linux.tar.gz")
-
-            os.system("sudo rm -rf /usr/local/src/noip-duc-linux.tar.gz")
-
-            os.system("sudo service noip start")
-
-            os.system("noip2 -U 1")
-
-            print("\033[36;1m"
-                  "\n"
-                  "POUR VERIFIER LE STATUS TAPER DANS UN TERMINAL :\n\n"
-
-                  "noip2 -S"
-                  "\n"
-                  "\033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                continue
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-                continue
-
-###
-# IP JETABLE
-###
-        elif choixMenu == "16":
-
-            print("\033[36;1m \nInstallation de pptp...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y network-manager-pptp-gnome")
-
-            print("\033[36;1m"
-                  "\n"
-                  "POUR CREER UN COMPTE IP JETABLE SUIVRE CE LIEN\n" "https://ipjetable.net/\n\n"
-
-                  "BENEFICIER D'UN MOIS GRATUIT AVEC LE CODE FCZKCXSNKDHEQVLA\n\n"
-
-                  "POUR CREER VOTRE COMPTE VIA UNE EMAIL JETABLE SUIVRE CE LIEN\n" "https://www.crazymailing.com/fr/\n\n"
-
-                  "ALLER DANS PARAMETRE / RESEAU / VPN / AJOUTER PPTP ET RENTRER COMME CECI :\n\n"
-
-                  "Nom               = au choix\n"
-                  "Passerelle        = pptp.ipjetable.net\n"
-                  "Nom d'utilisateur = fournis dans le mail ipjetable\n"
-                  "Mot de passe      = fournis dans le mail ipjetable\n"
-                  "Domaine           = laisser vide\n\n"
-
-                  "ALLER DANS AVANCE ET COCHER :\n\n"
-
-                  "Utiliser le chiffrement point-to-point (MPPE)\n"
-                  "\n"
-                  "\033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                continue
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-                continue
-
-###
-# TOR PRIVOXY
-###
-        elif choixMenu == "17":
-
-            print("\033[36;1m \nInstallation de tor et privoxy...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y tor privoxy")
-
-            os.system("echo \"forward-socks5 / localhost:9050 .\" | sudo tee -a /etc/privoxy/config")
-
-            os.system("echo \"forward-socks4 / localhost:9050 .\" | sudo tee -a /etc/privoxy/config")
-
-            os.system("echo \"forward-socks4a / localhost:9050 .\" | sudo tee -a /etc/privoxy/config")
-
-            print("\033[36;1m"
-                  "AJOUTER CES LIGNES DANS PARAMETRE / RESEAU / SERVEUR MANDATAIRE / METHODE MANUELLE :\n\n"
-
-                  "HTTP localhost - 8118\n"
-                  "HTTPS localhost - 8118\n"
-                  "Socks localhost - 9050\n"
-                  "\n"
-                  "\033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                pass
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-                continue
-
-            os.system("sudo ifconfig wlan0 down")
-
-            os.system("sudo ifconfig eth0 down")
-
-            os.system("sudo service network-manager stop")
-
-            os.system("sudo update-rc.d -f tor remove")
-
-            os.system("sudo update-rc.d -f privoxy remove")
-
-            os.system("sudo update-rc.d -f tor defaults")
-
-            os.system("sudo update-rc.d -f privoxy defaults")
-
-            os.system("sudo update-rc.d -f tor enable")
-
-            os.system("sudo update-rc.d -f privoxy enable")
-
-            os.system("sudo ifconfig wlan0 up")
-
-            os.system("sudo ifconfig eth0 up")
-
-            os.system("sudo service network-manager start")
-
-            os.system("sudo service privoxy start")
-
-            os.system("sudo service tor start")
-
-            continue
-
-###
-# MOT DE PASSE AUTO DESTRUCTION POUR LVM CHIFFREE
-###
-        elif choixMenu == "18":
-
-            print("\033[36;1m"
-                  "\n"
-                  "DANS LA FENETRE QUI VAS SUIVRE RENSEIGNER COMME CECI :\n\n"
-
-                  "1-Entrez votre mot de passe de decryptage (celui utiliser au demarrage du PC)\n"
-                  "2-Entrez votre mot de passe pour l'auto destruction\n"
-                  "3-Comfirmer le mot de passe pour l'auto destruction\n"
-                  "\n"
-                  "\033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                pass
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-                continue
-
-            os.system("sudo cryptsetup luksAddNuke /dev/sda3")
-
-            continue
-
-###
-# VIRTUALBOX
-###
-        elif choixMenu == "19":
-
-            print("\033[36;1m \nInstallation de virtualbox...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install -y virtualbox")
-
-            os.system("sudo usermod -a -G vboxusers $USER")
-
-            continue
-
-###
-# DOCKER
+# MODULES ANONYMAT
 ###
         elif choixMenu == "20":
+            import anonymat.hostnamerandom
 
-            print("\033[36;1m \nInstallation de Docker...\n \033[0m")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt-get --purge autoremove -y docker*")
-
-            os.system("sudo apt install --no-install-recommends -y gnupg2 apt-transport-https ca-certificates curl software-properties-common dirmngr")
-
-            os.system("curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -")
-
-            os.system("echo \'deb https://download.docker.com/linux/debian stretch stable\' | sudo tee -a /etc/apt/sources.list.d/docker.list")
-
-            os.system("sudo apt-get update")
-
-            os.system("sudo apt install --no-install-recommends -y docker-compose docker-ce docker docker.io")
-
-            os.system("sudo systemctl start docker.service")
-
-            os.system("sudo systemctl enable docker.service")
-
-            os.system("sudo groupadd -f docker")
-
-            os.system("sudo chown root:docker /var/run/docker.sock")
-
-            os.system("sudo usermod -a -G docker $USER")
-
-            os.system("newgrp docker")
-
-            os.system("echo \'DOCKER_OPTS=\"-icc=false\"\' | sudo tee -a /etc/default/docker")
-
-            os.system("sudo systemctl restart docker.service")
-
-            print("\033[36;1m \ninstallation de portainer...\n \033[0m")
-
-            os.system("docker run -d --name portainer -p 127.0.0.1:9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer")
-
-            print("\033[36;1m \nLien vers portainer http://localhost:9000\n \033[0m")
-
-            entree = raw_input("\033[36;1m \nAppuyer sur <Entrée> pour confirmer \033[0m")
-
-            if entree == "":
-
-                continue
-
-###
-# SNORT
-###
         elif choixMenu == "21":
+            import anonymat.macrandom
 
-            print("\033[36;1m \nEn cours de dev\n \033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                continue
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-                continue
-
-###
-# DNSCRYPT
-###
         elif choixMenu == "22":
+            import anonymat.noip
 
-            print("\033[36;1m \nEn cours de dev\n \033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                continue
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-                continue
-
-###
-# ARMITAGE
-###
         elif choixMenu == "23":
+            import anonymat.iprandom
 
-            print("\033[36;1m \nEn cours de dev\n \033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                continue
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-                continue
-
-
-###
-# GOPHISH
-###
         elif choixMenu == "24":
-
-            print("\033[36;1m \nInstallation de Gophish...\n \033[0m")
-
-            os.system("docker run -d --name gophish -p 127.0.0.1:3333:3333 -p 80:80 alexandreoda/gophish")
-
-            print("\033[36;1m \nlien vers Gophish https://127.0.0.1:3333/login (ID = admin / PASSWORD = gophish)\n \033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                continue
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-                continue
+            import anonymat.torprivoxy
 
 ###
-# ONIONSCAN
-###
-        elif choixMenu == "25":
-
-            print("\033[36;1m \nInstallation de onionscan...\n \033[0m")
-
-            os.system("docker run -ti --name onionscan alexandreoda/onionscan /bin/bash")
-
-            os.system("echo \"alias onionscan=\'docker start onionscan && docker exec -ti onionscan /bin/bash\'\" >> $HOME/.bashrc")
-
-            continue
-
-###
-# UFONET
-###
-        elif choixMenu == "26":
-
-            print("\033[36;1m \nInstallation de ufonet...\n \033[0m")
-
-            os.system("docker run -d --name ufonet -p 9999:9999 -e DISPLAY alexandreoda/ufonet")
-
-            print("\033[36;1m \nlien vers Ufonet http://0.0.0.0:9999\n \033[0m")
-
-            entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-            if entree == "":
-                continue
-            else:
-                print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-                continue
-
-###
-# PELICAN
-###
-        elif choixMenu == "27":
-
-            print("\033[36;1m \nInstallation de pelican...\n \033[0m")
-
-            os.system("docker run --name pelican -p 127.0.0.1:8000:8000  alexandreoda/pelican")
-
-            continue
-
-###
-# FIREFOX
-###
-        elif choixMenu == "28":
-
-            print("\033[36;1m \nInstallation de firefox...\n \033[0m")
-
-            os.system("docker run -d --name firefox -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}:/home/firefox -e DISPLAY --network host alexandreoda/firefox")
-
-            continue
-
-
-###
-# OPERA
-###
-        elif choixMenu == "29":
-
-            print("\033[36;1m \nInstallation de opera...\n \033[0m")
-
-            os.system("docker run -d --name opera -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}:/home/opera -e DISPLAY --network host alexandreoda/opera")
-
-            continue
-
-###
-# TOR BROWSER
+# MODULES VIRTUALISATION
 ###
         elif choixMenu == "30":
+            import virtualisation.virtualbox
 
-            print("\033[36;1m \nInstallation de tor browser...\n \033[0m")
-
-            os.system("docker run -d --name tor-browser -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/snd:/dev/snd -v /dev/shm:/dev/shm -v /var/run/dbus:/var/run/dbus -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native --group-add $(getent group audio | cut -d: -f3) -v ${HOME}/tor-browser:/home/torbrowser -e DISPLAY --network host alexandreoda/tor-browser")
-
-            continue
-
-###
-# OWASP-MANTRA
-###
         elif choixMenu == "31":
+            import virtualisation.docker
 
-            print("\033[36;1m \nInstallation de owasp-mantra...\n \033[0m")
+###
+# MODULES FIREWALL
+###
+        elif choixMenu == "40":
+            import firewall.snort
 
-            os.system("sudo apt-get update")
+        elif choixMenu == "41":
+            import firewall.dnscrypt
 
-            os.system("sudo apt install --no-install-recommends -y owasp-mantra-ff")
+###
+# MODULES PENTEST
+###
+        elif choixMenu == "50":
+            import pentest.armitage
 
-            continue
+        elif choixMenu == "51":
+            import pentest.gophish
+
+        elif choixMenu == "52":
+            import pentest.onionscan
+
+        elif choixMenu == "53":
+            import pentest.ufonet
+
+###
+# MODULES WEB
+###
+        elif choixMenu == "60":
+            import web.pelican
+
+###
+# MODULES NAVIGATEURS
+###
+        elif choixMenu == "70":
+            import navigateurs.firefox
+
+        elif choixMenu == "71":
+            import navigateurs.opera
+
+        elif choixMenu == "72":
+            import navigateurs.torbrowser
 
 ###
 # PIDGIN
