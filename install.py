@@ -18,7 +18,11 @@ import platform
 # VERIF USER
 ###
 if os.geteuid() == 0:
-    sys.exit("\033[36;1m" "\nCe script ne fonctionne pas en root" "\033[36;1m")
+    print("\033[36;1m" "\nCe script ne fonctionne pas en root, un compte utilisateur va étre créé" "\033[36;1m")
+    os.system("read -p 'Entrez votre nom : ' nom && \
+    adduser $nom && \
+    adduser $nom sudo && \
+    su $nom")
 
 ###
 # VERIF OS
