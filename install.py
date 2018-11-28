@@ -40,19 +40,20 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 1 Sources.list           => Modification des sources.list & update/upgrade/dist-upgrade\n"
-          " 2 Gnome mini             => Configuration minimaliste de gnome\n"
-          " 3 Theme sombre           => Utiliser le theme sombre integrale\n"
-          " 4 Bluetooth              => Activation du bluetooth\n"
-          " 5 Son                    => Activation du son\n"
-          " 6 Grub                   => Acceleration du temps de demarrage du grub et affichage des logs de boot\n"
-          " 7 Grub fond d'ecran      => Modification du fond d'ecran du grub\n"
-          " 8 Vimrc                  => Vim avec copier/coller & couleur syntax & souris\n"
-          " 9 Terminal Custom        => Terminal personnaliser\n"
-          " 10 Conky                 => Moniteur Systeme personnailer\n"
-          " 11 Htop                  => Moniteur Systeme terminal\n"
-          " 12 Auto clean            => Nettoyage a chaque demarrage\n"
-          " 13 Auto Destruction      => (Pour OS installer en lvm chiffree) Mot de passe auto destruction\n"
+          " 1 Kali build             => Création d'une ISO minimaliste de kali avec configurateur automatisé\n"
+          " 2 Sources.list           => Modification des sources.list & update/upgrade/dist-upgrade\n"
+          " 3 Gnome mini             => Configuration minimaliste de gnome\n"
+          " 4 Theme sombre           => Utiliser le theme sombre integrale\n"
+          " 5 Bluetooth              => Activation du bluetooth\n"
+          " 6 Son                    => Activation du son\n"
+          " 7 Grub                   => Acceleration du temps de demarrage du grub et affichage des logs de boot\n"
+          " 8 Grub fond d'ecran      => Modification du fond d'ecran du grub\n"
+          " 9 Vimrc                  => Vim avec copier/coller & couleur syntax & souris\n"
+          " 10 Terminal Custom        => Terminal personnaliser\n"
+          " 11 Conky                 => Moniteur Systeme personnailer\n"
+          " 12 Htop                  => Moniteur Systeme terminal\n"
+          " 13 Auto clean            => Nettoyage a chaque demarrage\n"
+          " 14 Auto Destruction      => (Pour OS installer en lvm chiffree) Mot de passe auto destruction\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -187,42 +188,45 @@ while programmeLancer:
 # MODULES CONFIGURATION
 ###
         elif choixMenu == "1":
-            import configuration.sourceslist
+            import configuration.kalibuild
 
         elif choixMenu == "2":
-            import configuration.gnomemini
+            import configuration.sourceslist
 
         elif choixMenu == "3":
-            import configuration.themesombre
+            import configuration.gnomemini
 
         elif choixMenu == "4":
-            import configuration.bluetooth
+            import configuration.themesombre
 
         elif choixMenu == "5":
-            import configuration.son
+            import configuration.bluetooth
 
         elif choixMenu == "6":
-            import configuration.grub
+            import configuration.son
 
         elif choixMenu == "7":
-            import configuration.grubimg
+            import configuration.grub
 
         elif choixMenu == "8":
-            import configuration.vimrc
+            import configuration.grubimg
 
         elif choixMenu == "9":
-            import configuration.terminalcustom
+            import configuration.vimrc
 
         elif choixMenu == "10":
-            import configuration.conky
+            import configuration.terminalcustom
 
         elif choixMenu == "11":
-            import configuration.htop
+            import configuration.conky
 
         elif choixMenu == "12":
-            import configuration.autoclean
+            import configuration.htop
 
         elif choixMenu == "13":
+            import configuration.autoclean
+
+        elif choixMenu == "14":
             import configuration.autodestruction
 
 ###

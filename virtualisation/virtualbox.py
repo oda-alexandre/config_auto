@@ -8,7 +8,9 @@ print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
 os.system("sudo apt-get update && \
 sudo apt install -y \
-virtualbox")
+virtualbox \
+virtualbox-ext-pack \
+virtualbox-guest-additions-iso")
 
 print("\033[36;1m \nAjout de l'utilisateur au groupe vboxusers\n \033[0m")
 
