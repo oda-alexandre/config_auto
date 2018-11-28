@@ -22,7 +22,9 @@ if os.geteuid() == 0:
     os.system("read -p 'Entrez votre nom : ' nom && \
     adduser $nom && \
     adduser $nom sudo && \
-    su $nom")
+    su $nom && \
+    sudo mv /root/config_auto $HOME/ && \
+    python config_auto/install.py")
 
 ###
 # VERIF OS
