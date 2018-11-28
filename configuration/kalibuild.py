@@ -21,5 +21,4 @@ mv kali_build/common . && \
 mv kali_build/variant-gnome . && \
 rm -rf kali_build/")
 
-
 continue
