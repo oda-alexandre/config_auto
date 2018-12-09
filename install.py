@@ -79,8 +79,8 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 31 Virtualbox            => Programme de virtualisation\n"
-          " 32 Docker                => Installation de docker avec interface graphique portainer\n"
+          " 30 Virtualbox            => Programme de virtualisation\n"
+          " 31 Docker                => Installation de docker avec interface graphique portainer\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -88,8 +88,8 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 41 Snort                 => (docker) Detecteur d'intrusion\n"
-          " 42 DnsCrypt              => en cours de dev (docker) Chiffrement dns\n"
+          " 40 Snort                 => (docker) Detecteur d'intrusion\n"
+          " 41 DnsCrypt              => en cours de dev (docker) Chiffrement dns\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -97,10 +97,11 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 51 Armitage              => en cours de dev (docker) Integration de Beef-xss, Msf,Nmap,Geoip dans Armitage\n"
-          " 52 Gophish               => (docker) Programme de phishing\n"
-          " 53 OnionScan             => (docker) Scanner de site .onion\n"
-          " 54 Ufonet                => (docker) Programme de Ddos\n"
+          " 50 Armitage              => en cours de dev (docker) Integration de Beef-xss, Msf,Nmap,Geoip dans Armitage\n"
+          " 51 Gophish               => (docker) Programme de phishing\n"
+          " 52 OnionScan             => (docker) Scanner de site .onion\n"
+          " 53 Ufonet                => (docker) Programme de Ddos\n"
+          " 54 Cupp                  => (docker) Gestion & creation de wordlist\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -285,6 +286,9 @@ while programmeLancer:
 
         elif choixMenu == "53":
             import pentest.ufonet
+
+        elif choixMenu == "54":
+            import pentest.cupp
 
 ###
 # MODULES WEB
