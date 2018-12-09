@@ -4,13 +4,9 @@
 module pour l'installation du demon snort via docker
 '''
 
-print("\033[36;1m \nEn cours de dev\n \033[0m")
+print("\033[36;1m \nInstallation de snort\n \033[0m")
 
-entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
+os.system("mkdir $HOME/snort && \
+docker run -it --name snort -v ${HOME}/snort:/snort -v ${HOME}/snort:/etc/snort -v ${HOME}/snort:/usr/local/lib -v ${HOME}/snort:/var/log/snort --network host --cap-add=NET_ADMIN --restart=always alexandreoda/snort")
 
-if entree == "":
-    continue
-else:
-    print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-    continue
+continue
