@@ -103,6 +103,7 @@ while programmeLancer:
           " 53 Ufonet                => (docker) Programme de Ddos\n"
           " 54 Cupp                  => (docker) Gestion & creation de wordlist\n"
           " 55 WebShell              => Bibliotheque webshell\n"
+          " 56 Sqlmap                => (docker) Programme d'injection sql avec interface graphique\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -291,8 +292,11 @@ while programmeLancer:
         elif choixMenu == "54":
             import pentest.cupp
 
-        elif choixMenu == "54":
+        elif choixMenu == "55":
             import pentest.webshell
+
+        elif choixMenu == "56":
+            import pentest.sqlmap
 
 ###
 # MODULES WEB
