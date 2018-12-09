@@ -102,6 +102,7 @@ while programmeLancer:
           " 52 OnionScan             => (docker) Scanner de site .onion\n"
           " 53 Ufonet                => (docker) Programme de Ddos\n"
           " 54 Cupp                  => (docker) Gestion & creation de wordlist\n"
+          " 55 WebShell              => Bibliotheque webshell\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -289,6 +290,9 @@ while programmeLancer:
 
         elif choixMenu == "54":
             import pentest.cupp
+
+        elif choixMenu == "54":
+            import pentest.webshell
 
 ###
 # MODULES WEB
