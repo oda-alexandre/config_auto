@@ -97,13 +97,14 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 50 Armitage              => en cours de dev (docker) Integration de Beef-xss, Msf,Nmap,Geoip dans Armitage\n"
+          " 50 Armitage              => en cours de dev (docker) Beef-xss, Msf,Nmap,Geoip via Armitage\n"
           " 51 Gophish               => (docker) Programme de phishing\n"
           " 52 OnionScan             => (docker) Scanner de site .onion\n"
           " 53 Ufonet                => (docker) Programme de Ddos\n"
-          " 54 Cupp                  => (docker) Gestion & creation de wordlist\n"
+          " 54 Cupp                  => (docker) Gestion & creation de wordlists\n"
           " 55 WebShell              => Bibliotheque webshell\n"
           " 56 Sqlmap                => (docker) Programme d'injection sql avec interface graphique\n"
+          " 57 Maltego               => (docker) Programme de footprinting\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -297,6 +298,9 @@ while programmeLancer:
 
         elif choixMenu == "56":
             import pentest.sqlmap
+
+        elif choixMenu == "57":
+            import pentest.maltego
 
 ###
 # MODULES WEB
