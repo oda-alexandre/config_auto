@@ -7,18 +7,15 @@ Prerequis:   Python
 Tutoriel:    https://www.youtube.com/channel/UCELtTOkvfaLoZzUWZ6zywJQ
 """
 
-###
-# IMPORT
-###
+# IMPORTATION DES MODULES PYTHON
 import os
 import sys
 import platform
 
-###
-# VERIF USER
-###
+# VERIFICATION DE L'UTILISATEUR EN COURS
 if os.geteuid() == 0:
     print("\033[36;1m" "\nCe script ne fonctionne pas en root, un compte utilisateur va étre créé" "\033[36;1m")
+
     os.system("read -p 'Entrez votre nom : ' nom && \
     adduser $nom && \
     adduser $nom sudo && \
@@ -26,15 +23,11 @@ if os.geteuid() == 0:
     sudo mv /root/config_auto $HOME/ && \
     python config_auto/install.py")
 
-###
-# VERIF OS
-###
+# VERIFICATION DE L'OS EN COURS
 if not platform.platform('kali'):
     sys.exit("\033[36;1m" "\nCe script ne fonctionne que sur une distribution Kali Linux" "\033[36;1m")
 
-###
 # MENU
-###
 programmeLancer = True
 
 while programmeLancer:
@@ -179,24 +172,18 @@ while programmeLancer:
           "\n"
           "\033[36;1m")
 
-###
-# CHOIX MENU
-###
+# CHOIX DU MENU
     try:
         choixMenu = raw_input(
             "\033[36;1m" "VEUILLEZ SAISIR VOTRE CHOIX : " "\033[36;1m")
         choixMenu = str(choixMenu)
 
-###
-# QUITTER
-###
+# QUITTER LE MENU
         if choixMenu == "0":
             print("\033[36;1m" "\nMerci aurevoir\n" "\033[36;1m")
             programmeLancer = False
 
-###
 # MODULES CONFIGURATION
-###
         elif choixMenu == "1":
             import configuration.kalibuild
 
@@ -239,9 +226,7 @@ while programmeLancer:
         elif choixMenu == "14":
             import configuration.autodestruction
 
-###
 # MODULES ANONYMAT
-###
         elif choixMenu == "20":
             import anonymat.hostnamerandom
 
@@ -257,27 +242,21 @@ while programmeLancer:
         elif choixMenu == "24":
             import anonymat.torprivoxy
 
-###
 # MODULES VIRTUALISATION
-###
         elif choixMenu == "30":
             import virtualisation.virtualbox
 
         elif choixMenu == "31":
             import virtualisation.docker
 
-###
 # MODULES FIREWALL
-###
         elif choixMenu == "40":
             import firewall.snort
 
         elif choixMenu == "41":
             import firewall.dnscrypt
 
-###
 # MODULES PENTEST
-###
         elif choixMenu == "50":
             import pentest.armitage
 
@@ -302,15 +281,12 @@ while programmeLancer:
         elif choixMenu == "57":
             import pentest.maltego
 
-###
+
 # MODULES WEB
-###
         elif choixMenu == "60":
             import web.pelican
 
-###
 # MODULES NAVIGATEURS
-###
         elif choixMenu == "70":
             import navigateurs.firefox
 
@@ -320,40 +296,29 @@ while programmeLancer:
         elif choixMenu == "72":
             import navigateurs.torbrowser
 
-###
 # MODULES MESSAGERIES
-###
         elif choixMenu == "80":
             import messageries.pidgin
 
         elif choixMenu == "81":
             import messageries.discord
 
-###
 # MODULES CLOUDS
-###
         elif choixMenu == "90":
             import clouds.dropbox
 
-###
 # MODULES CONTROLE DISTANT
-###
         elif choixMenu == "100":
             import controledistant.teamviewer
 
-###
 # MODULES CHIFFREMENTS
-###
         elif choixMenu == "110":
             import Chiffrements.keepassx
 
         elif choixMenu == "111":
             import Chiffrements.peazip
 
-
-###
 # MODULES OUTILS
-###
         elif choixMenu == "120":
             import outils.atom
 
@@ -366,9 +331,7 @@ while programmeLancer:
         elif choixMenu == "123":
             import outils.openshot
 
-###
 # GESTION ERREUR
-###
         else:
             print("\033[36;1m" "\nCe choix n'est pas dans la liste\n" "\033[36;1m")
             continue
