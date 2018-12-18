@@ -15,7 +15,7 @@ import platform
 # VERIFICATION DE L'UTILISATEUR EN COURS
 if os.geteuid() == 0:
 
-    # CREATION D'UN UTILISATEUR EN CAS D'UTILISATION DU COMPTE ROOT
+# CREATION D'UN UTILISATEUR EN CAS D'UTILISATION DU COMPTE ROOT
     print("\033[36;1m" "\nCe script ne fonctionne pas en root, un compte utilisateur va étre créé" "\033[36;1m")
 
     os.system("read -p 'Entrez votre nom : ' nom && \
@@ -179,8 +179,7 @@ while programmeLancer:
 
 # CHOIX DU MENU
     try:
-        choixMenu = raw_input(
-            "\033[36;1m" "VEUILLEZ SAISIR VOTRE CHOIX : " "\033[36;1m")
+        choixMenu = raw_input("\033[36;1m" "VEUILLEZ SAISIR VOTRE CHOIX : " "\033[36;1m")
         choixMenu = str(choixMenu)
 
 # QUITTER LE MENU
@@ -337,8 +336,7 @@ while programmeLancer:
 
 # GESTION ERREUR
         else:
-            print(
-                "\033[36;1m" "\nCe choix n'est pas dans la liste\n" "\033[36;1m")
+            print("\033[36;1m" "\nCe choix n'est pas dans la liste\n" "\033[36;1m")
             continue
 
     except KeyboardInterrupt:
