@@ -4,6 +4,7 @@
 module pour l'installation du demon snort via docker
 '''
 
+# INSTALLATION DEPUIS LE DOCKER HUB
 print("\033[36;1m \nInstallation de snort\n \033[0m")
 
 os.system("mkdir $HOME/snort && \

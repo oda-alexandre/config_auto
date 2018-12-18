@@ -4,6 +4,7 @@
 module pour l'activation du son
 '''
 
+# INSTALLATION DE PULSEAUDIO
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
 os.system("sudo apt update && \

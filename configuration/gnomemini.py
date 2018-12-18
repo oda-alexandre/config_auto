@@ -4,6 +4,7 @@
 module pour l'installation de gnome minimaliste avec shell kali linux
 '''
 
+# INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prérequis\n \033[0m")
 
 os.system("sudo apt update && \
@@ -32,6 +33,7 @@ bash-completion \
 net-tools \
 gvfs-backends")
 
+# NETTOYAGE DES PAQUETS INUTILES
 print("\033[36;1m \nSuppression des paquets inutiles\n \033[0m")
 
 os.system("sudo apt-get --purge autoremove -y \
@@ -66,11 +68,13 @@ vim-gui-common \
 vim-common \
 vim-tiny")
 
+# DESACTIVATION DES SERVICES EVOLUTION
 print("\033[36;1m \nDésactivation des services evolution\n \033[0m")
 
 os.system("sudo mv /usr/lib/evolution/ /usr/lib/evolution-DISABLE/ && \
 sudo mv /usr/lib/evolution-data-server/ /usr/lib/evolution-data-server-DISABLE/")
 
+# NETTOYAGE DU DOSSIER PERSONNEL ROOT ET UTILISATEUR
 print("\033[36;1m \nSuppressions des dossiers pré-configurés\n \033[0m")
 
 os.system("rm -rf $HOME/Modèles $HOME/Musique $HOME/Public $HOME/Téléchargements $HOME/Vidéos $HOME/Documents $HOME/Images && \

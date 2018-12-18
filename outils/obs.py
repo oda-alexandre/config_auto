@@ -4,6 +4,7 @@
 module pour l'installation de obs studio
 '''
 
+# INSTALLATION DE OBS
 print("\033[36;1m \nInstallation de obs\n \033[0m")
 
 os.system("sudo apt-get update && \

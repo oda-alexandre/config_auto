@@ -4,10 +4,12 @@
 module pour l'installation de pidgin via docker
 '''
 
+# INSTALLATION DEPUIS LE DOCKER HUB
 print("\033[36;1m \nInstallations de pidgin\n \033[0m")
 
 os.system("docker run -d --name pidgin -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/pidgin -e DISPLAY alexandreoda/pidgin")
 
+# CONSIGNES DE CONFIGURATION
 print("\033[36;1m"
       "\nCONFIGURER COMME CECI :\n"
       "(Pour creer un compte XMPP en .onion via tor-browser suivre ce lien libertygb2nyeyay.onion:5280/register_web)\n"

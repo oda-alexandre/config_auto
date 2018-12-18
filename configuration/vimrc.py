@@ -4,16 +4,15 @@
 module pour l'installation de vim avec fichier de configuration personnaliser
 '''
 
-print("\033[36;1m \nUpdate\n \033[0m")
-
-os.system("sudo apt-get update")
-
+# INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
-os.system("sudo apt install --no-install-recommends -y \
+os.system("sudo apt-get update && \
+sudo apt install --no-install-recommends -y \
 vim \
 git")
 
+# INSTALLATION DU FICHIER /etc/vim/vimrc
 print("\033[36;1m \nInstallation du fichier de configuration\n \033[0m")
 
 os.system("git clone https://github.com/oda-alexandre/vimrc.git && \

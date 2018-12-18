@@ -4,6 +4,7 @@
 module pour la création d'une ISO kali minimaliste
 '''
 
+# INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
 os.system("sudo apt-get update && \
@@ -11,6 +12,7 @@ sudo apt install --no-install-recommends -y \
 live-build \
 cdebootstrap")
 
+# INSTALLATION ET CONFIGURATION DE LIVE BUILD CONFIG AVEC INCLUDES PERSONNALISER
 print("\033[36;1m \nInstallation et configuration de live-build-config\n \033[0m")
 
 os.system("git clone git://git.kali.org/live-build-config.git && \
@@ -22,7 +24,8 @@ mv kali_build/variant-gnome . && \
 rm -rf kali_build/ && \
 cd ../")
 
-print("\033[36;1m \nDémarrage du build\n \033[0m")
+# DEMARRAGE DE LA CONSTRUCTION DE L'ISO
+print("\033[36;1m \nConstruction de l'iso\n \033[0m")
 
 os.system("sudo ./build.sh --verbose")
 

@@ -14,13 +14,17 @@ import platform
 
 # VERIFICATION DE L'UTILISATEUR EN COURS
 if os.geteuid() == 0:
+
+# CREATION D'UN UTILISATEUR EN CAS D'UTILISATION DU COMPTE ROOT
     print("\033[36;1m" "\nCe script ne fonctionne pas en root, un compte utilisateur va étre créé" "\033[36;1m")
 
     os.system("read -p 'Entrez votre nom : ' nom && \
     adduser $nom && \
     adduser $nom sudo && \
-    su $nom && \
-    sudo mv /root/config_auto $HOME/ && \
+    su $nom")
+
+# DEPLACEMENT DU PROGRAMME EN COURS VERS LE DOSSIER PERSONNEL DU NOUVEL UTILISATEUR
+    os.system("sudo mv /root/config_auto $HOME/ && \
     python config_auto/install.py")
 
 # VERIFICATION DE L'OS EN COURS
@@ -48,7 +52,7 @@ while programmeLancer:
           " 7 Grub                   => Acceleration du temps de demarrage du grub et affichage des logs de boot\n"
           " 8 Grub fond d'ecran      => Modification du fond d'ecran du grub\n"
           " 9 Vimrc                  => Vim avec copier/coller & couleur syntax & souris\n"
-          " 10 Terminal Custom        => Terminal personnaliser\n"
+          " 10 Terminal Custom       => Terminal personnaliser\n"
           " 11 Conky                 => Moniteur Systeme personnailer\n"
           " 12 Htop                  => Moniteur Systeme terminal\n"
           " 13 Auto clean            => Nettoyage a chaque demarrage\n"
@@ -280,7 +284,6 @@ while programmeLancer:
 
         elif choixMenu == "57":
             import pentest.maltego
-
 
 # MODULES WEB
         elif choixMenu == "60":

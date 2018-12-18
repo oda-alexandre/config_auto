@@ -4,6 +4,7 @@
 module pour l'installation de torbrowser via docker
 '''
 
+# INSTALLATION DEPUIS LE DOCKER HUB
 print("\033[36;1m \nInstallation de tor browser\n \033[0m")
 
 os.system("mkdir $HOME/tor-browser && \
