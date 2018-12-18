@@ -15,7 +15,7 @@ import platform
 # VERIFICATION DE L'UTILISATEUR EN COURS
 if os.geteuid() == 0:
 
-# CREATION D'UN UTILISATEUR EN CAS D'UTILISATION DU COMPTE ROOT
+    # CREATION D'UN UTILISATEUR EN CAS D'UTILISATION DU COMPTE ROOT
     print("\033[36;1m" "\nCe script ne fonctionne pas en root, un compte utilisateur va étre créé" "\033[36;1m")
 
     os.system("read -p 'Entrez votre nom : ' nom && \
@@ -29,7 +29,8 @@ if os.geteuid() == 0:
 
 # VERIFICATION DE L'OS EN COURS
 if not platform.platform('kali'):
-    sys.exit("\033[36;1m" "\nCe script ne fonctionne que sur une distribution Kali Linux" "\033[36;1m")
+    sys.exit(
+        "\033[36;1m" "\nCe script ne fonctionne que sur une distribution Kali Linux" "\033[36;1m")
 
 # MENU
 programmeLancer = True
@@ -144,7 +145,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 100 Teamviewer            => (docker) Prise de controle a distance\n"
+          " 100 Teamviewer           => (docker) Prise de controle a distance\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -152,8 +153,8 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 110 Keepassx              => (docker) Gestionnaire de mot de passe\n"
-          " 111 PeaZip                => (docker) Gestionnaire d'archive (zip,rar...)\n"
+          " 110 Keepassx             => (docker) Gestionnaire de mot de passe\n"
+          " 111 PeaZip               => (docker) Gestionnaire d'archive (zip,rar...)\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -161,10 +162,10 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 120 Atom                  => (docker) Editeur de code\n"
-          " 121 Libreoffice           => (docker) Suite bureautique\n"
-          " 122 Obs                   => Capture & streaming video\n"
-          " 123 OpenShot              => Editeur video\n"
+          " 120 Atom                 => (docker) Editeur de code\n"
+          " 121 Libreoffice          => (docker) Suite bureautique\n"
+          " 122 Obs                  => Capture & streaming video\n"
+          " 123 OpenShot             => Editeur video\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -336,12 +337,17 @@ while programmeLancer:
 
 # GESTION ERREUR
         else:
-            print("\033[36;1m" "\nCe choix n'est pas dans la liste\n" "\033[36;1m")
+            print(
+                "\033[36;1m" "\nCe choix n'est pas dans la liste\n" "\033[36;1m")
             continue
 
     except KeyboardInterrupt:
         print("\033[36;1m" "\n\nMerci aurevoir\n" "\033[36;1m")
         programmeLancer = False
+
+    except ImportError:
+        print("\033[36;1m" "\nImpossible de trouver le module\n" "\033[36;1m")
+        continue
 
     except:
         print("\033[36;1m" "\nVous devez saisir un nombre\n" "\033[36;1m")
