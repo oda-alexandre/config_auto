@@ -4,6 +4,8 @@
 module pour l'installation de gnome minimaliste avec shell kali linux
 '''
 
+import os
+
 # INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prérequis\n \033[0m")
 
@@ -79,5 +81,3 @@ print("\033[36;1m \nSuppressions des dossiers pré-configurés\n \033[0m")
 
 os.system("rm -rf $HOME/Modèles $HOME/Musique $HOME/Public $HOME/Téléchargements $HOME/Vidéos $HOME/Documents $HOME/Images && \
 sudo rm -rf /root/Modèles /root/Musique /root/Public /root/Téléchargements /root/Vidéos /root/Documents /root/Images")
-
-continue

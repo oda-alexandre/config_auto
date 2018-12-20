@@ -4,6 +4,8 @@
 module pour l'installation de pidgin via docker
 '''
 
+import os
+
 # INSTALLATION DEPUIS LE DOCKER HUB
 print("\033[36;1m \nInstallations de pidgin\n \033[0m")
 
@@ -40,9 +42,6 @@ entree = raw_input(
     "\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
 if entree == "":
-    continue
+    pass
 else:
-    print(
-        "\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-    continue
+    print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")

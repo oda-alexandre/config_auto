@@ -4,6 +4,8 @@
 module pour la création d'une ISO kali minimaliste
 '''
 
+import os
+
 # INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
@@ -28,5 +30,3 @@ cd ../")
 print("\033[36;1m \nConstruction de l'iso\n \033[0m")
 
 os.system("sudo ./build.sh --verbose")
-
-continue

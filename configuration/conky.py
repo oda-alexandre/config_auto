@@ -4,11 +4,13 @@
 module pour l'installation de conky avec conky personnaliser
 '''
 
+import os
+
 # INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
 os.system("sudo apt-get update && \
-sudo apt install --no-install-recommands -y \
+sudo apt install --no-install-recommends -y \
 psmisc \
 conky-manager \
 git")
@@ -18,8 +20,8 @@ print("\033[36;1m \nInstallation du conky personnaliser\n \033[0m")
 
 os.system("mkdir $HOME/.conky && \
 git clone https://github.com/oda-alexandre/conky.git && \
-sudo mv conky/conky/pizzadude_bullets /usr/share/fonts && \
-cp -r conky/conky $HOME/.conky")
+sudo mv conky/pizzadude_bullets /usr/share/fonts && \
+mv conky/conky $HOME/.conky")
 
 # NETTOYAGE DES RESIDUS D'INSTALLATION
 os.system("rm -rf conky")
@@ -33,8 +35,5 @@ if entree == "":
     pass
 else:
     print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-    continue
 
 os.system("conky-manager")
-
-continue

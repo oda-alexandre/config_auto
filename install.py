@@ -29,8 +29,7 @@ if os.geteuid() == 0:
 
 # VERIFICATION DE L'OS EN COURS
 if not platform.platform('kali'):
-    sys.exit(
-        "\033[36;1m" "\nCe script ne fonctionne que sur une distribution Kali Linux" "\033[36;1m")
+    sys.exit("\033[36;1m" "\nCe script ne fonctionne que sur une distribution Kali Linux" "\033[36;1m")
 
 # MENU
 programmeLancer = True
@@ -190,149 +189,194 @@ while programmeLancer:
 # MODULES CONFIGURATION
         elif choixMenu == "1":
             import configuration.kalibuild
+            continue
 
         elif choixMenu == "2":
             import configuration.sourceslist
+            continue
 
         elif choixMenu == "3":
             import configuration.gnomemini
+            continue
 
         elif choixMenu == "4":
             import configuration.themesombre
+            continue
 
         elif choixMenu == "5":
             import configuration.bluetooth
+            continue
 
         elif choixMenu == "6":
             import configuration.son
+            continue
 
         elif choixMenu == "7":
             import configuration.grub
+            continue
 
         elif choixMenu == "8":
             import configuration.grubimg
+            continue
 
         elif choixMenu == "9":
             import configuration.vimrc
+            continue
 
         elif choixMenu == "10":
             import configuration.terminalcustom
+            continue
 
         elif choixMenu == "11":
             import configuration.conky
+            continue
 
         elif choixMenu == "12":
             import configuration.htop
+            continue
 
         elif choixMenu == "13":
             import configuration.autoclean
+            continue
 
         elif choixMenu == "14":
             import configuration.autodestruction
+            continue
 
 # MODULES ANONYMAT
         elif choixMenu == "20":
             import anonymat.hostnamerandom
+            continue
 
         elif choixMenu == "21":
             import anonymat.macrandom
+            continue
 
         elif choixMenu == "22":
             import anonymat.noip
+            continue
 
         elif choixMenu == "23":
             import anonymat.iprandom
+            continue
 
         elif choixMenu == "24":
             import anonymat.torprivoxy
+            continue
 
 # MODULES VIRTUALISATION
         elif choixMenu == "30":
             import virtualisation.virtualbox
+            continue
 
         elif choixMenu == "31":
             import virtualisation.docker
+            continue
 
 # MODULES FIREWALL
         elif choixMenu == "40":
             import firewall.snort
+            continue
 
         elif choixMenu == "41":
             import firewall.dnscrypt
+            continue
 
 # MODULES PENTEST
         elif choixMenu == "50":
             import pentest.armitage
+            continue
 
         elif choixMenu == "51":
             import pentest.gophish
+            continue
 
         elif choixMenu == "52":
             import pentest.onionscan
+            continue
 
         elif choixMenu == "53":
             import pentest.ufonet
+            continue
 
         elif choixMenu == "54":
             import pentest.cupp
+            continue
 
         elif choixMenu == "55":
             import pentest.webshell
+            continue
 
         elif choixMenu == "56":
             import pentest.sqlmap
+            continue
 
         elif choixMenu == "57":
             import pentest.maltego
+            continue
 
 # MODULES WEB
         elif choixMenu == "60":
             import web.pelican
+            continue
 
 # MODULES NAVIGATEURS
         elif choixMenu == "70":
             import navigateurs.firefox
+            continue
 
         elif choixMenu == "71":
             import navigateurs.opera
+            continue
 
         elif choixMenu == "72":
             import navigateurs.torbrowser
+            continue
 
 # MODULES MESSAGERIES
         elif choixMenu == "80":
             import messageries.pidgin
+            continue
 
         elif choixMenu == "81":
             import messageries.discord
+            continue
 
 # MODULES CLOUDS
         elif choixMenu == "90":
             import clouds.dropbox
+            continue
 
 # MODULES CONTROLE DISTANT
         elif choixMenu == "100":
             import controledistant.teamviewer
+            continue
 
 # MODULES CHIFFREMENTS
         elif choixMenu == "110":
-            import Chiffrements.keepassx
+            import chiffrements.keepassx
+            continue
 
         elif choixMenu == "111":
-            import Chiffrements.peazip
+            import chiffrements.peazip
+            continue
 
 # MODULES OUTILS
         elif choixMenu == "120":
             import outils.atom
+            continue
 
         elif choixMenu == "121":
             import outils.libreoffice
+            continue
 
         elif choixMenu == "122":
             import outils.obs
+            continue
 
         elif choixMenu == "123":
             import outils.openshot
+            continue
 
 # GESTION ERREUR
         else:

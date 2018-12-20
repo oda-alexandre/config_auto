@@ -42,8 +42,6 @@ if entree == "":
 else:
     print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
 
-    continue
-
 # CONFIGURATION DE NOIP
 os.system("sudo make install -C /usr/local/src/noip-*/")
 
@@ -76,8 +74,6 @@ print("\033[36;1m"
 entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
 if entree == "":
-    continue
+    pass
 else:
     print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-
-    continue

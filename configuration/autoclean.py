@@ -4,6 +4,8 @@
 module pour l'installation d'un script de nettoyage automatique
 '''
 
+import os
+
 # INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
@@ -23,5 +25,3 @@ os.system("sudo update-rc.d -f auto-clean defaults")
 
 # NETTOYAGE DES RESIDUS D'INSTALLATION
 os.system("rm -rf auto_clean")
-
-continue

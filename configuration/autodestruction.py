@@ -4,6 +4,8 @@
 module pour l'activation du mot de passe autodestruction uniquement disponible pour une installation en LVM chiffrée
 '''
 
+import os
+
 # MESSAGE
 print("\033[36;1m"
       "\n"
@@ -21,9 +23,6 @@ if entree == "":
     pass
 else:
     print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-    continue
 
 # CONFIGURATION DU MOT DE PASSE AUTO DESTRUCTION AVEC CRYPTSETUP
 os.system("sudo cryptsetup luksAddNuke /dev/sda3")
-
-continue

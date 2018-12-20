@@ -4,6 +4,8 @@
 module pour l'installation de docker
 '''
 
+import os
+
 # INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
@@ -27,10 +29,7 @@ print("\033[36;1m \nInstallation de docker\n \033[0m")
 
 os.system("sudo apt-get update && \
 sudo apt install --no-install-recommends -y \
-docker-compose \
-docker-ce \
-docker \
-docker.io")
+docker.ce")
 
 # ACTIVATION DU SERVICE
 print("\033[36;1m \nActivation du service\n \033[0m")
@@ -75,5 +74,4 @@ print("\033[36;1m \nLien vers portainer http://localhost:9000\n \033[0m")
 entree = raw_input("\033[36;1m \nAppuyer sur <Entrée> pour confirmer \033[0m")
 
 if entree == "":
-
-    continue
+    pass

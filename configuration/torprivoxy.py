@@ -4,6 +4,8 @@
 module pour l'installation de tor et de privoxy
 '''
 
+import os
+
 # INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
@@ -35,7 +37,6 @@ if entree == "":
     pass
 else:
     print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-    continue
 
 # DESACTIVATION DES INTERFACES RESEAUX
 print("\033[36;1m \nDésactivation des interfaces réseaux\n \033[0m")
@@ -63,5 +64,3 @@ sudo ifconfig eth0 up && \
 sudo service network-manager start && \
 sudo service privoxy start && \
 sudo service tor start")
-
-continue

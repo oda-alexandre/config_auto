@@ -4,6 +4,8 @@
 module pour l'installation d'un script d'ip aléatoire automatique
 '''
 
+import os
+
 # INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
@@ -26,7 +28,6 @@ if entree == "":
     pass
 else:
     print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
-    continue
 
 # INSTALLATION DU SCRIPT /etc/init.d/ip-random
 os.system("git clone https://github.com/oda-alexandre/ip_random.git && \
@@ -40,5 +41,3 @@ sudo update-rc.d -f ip-random defaults")
 
 # NETTOYAGE DES RESIDUS D'INSTALLATION
 os.system("rm -rf ip_random")
-
-continue
