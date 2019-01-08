@@ -70,6 +70,12 @@ vim-gui-common \
 vim-common \
 vim-tiny")
 
+# ACTIVATION DE L'INTERFACE eth DANS NETWORK MANAGER
+print("\033[36;1m \nActivation de l'interface eth\n \033[0m")
+
+os.system("echo \"[keyfile]\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf && \
+echo \"unmanaged-devices=*,except:type:ethernet,except:type:wifi,except:type:wwan\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf")
+
 # DESACTIVATION DES SERVICES EVOLUTION
 print("\033[36;1m \nDésactivation des services evolution\n \033[0m")
 

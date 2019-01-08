@@ -10,7 +10,8 @@ import os
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 
 os.system("sudo apt install --no-install-recommends -y \
-git")
+git \
+macchanger")
 
 # INSTALLATION DU SCRIPT /etc/init.d/mac-random
 print("\033[36;1m \nMise en place du script\n \033[0m")

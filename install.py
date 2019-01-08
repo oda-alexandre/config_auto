@@ -100,8 +100,10 @@ while programmeLancer:
           " 53 Ufonet                => (docker) Programme de Ddos\n"
           " 54 Cupp                  => (docker) Gestion & creation de wordlists\n"
           " 55 WebShell              => Bibliotheque webshell\n"
-          " 56 Sqlmap                => (docker) Programme d'injection sql avec interface graphique\n"
+          " 56 Sqlmap                => (docker) Programme d'injection sql\n"
           " 57 Maltego               => (docker) Programme de footprinting\n"
+          " 58 Wifite                => (docker) Programme de crack wifi\n"
+          " 59 Nikto                 => (docker) Scanner de serveur web\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -165,6 +167,7 @@ while programmeLancer:
           " 121 Libreoffice          => (docker) Suite bureautique\n"
           " 122 Obs                  => Capture & streaming video\n"
           " 123 OpenShot             => Editeur video\n"
+          " 124 Spotify              => (docker) Lecteur de musique\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -315,6 +318,14 @@ while programmeLancer:
             import pentest.maltego
             continue
 
+        elif choixMenu == "58":
+            import pentest.wifite
+            continue
+
+        elif choixMenu == "59":
+            import pentest.nikto
+            continue
+
 # MODULES WEB
         elif choixMenu == "60":
             import web.pelican
@@ -376,6 +387,10 @@ while programmeLancer:
 
         elif choixMenu == "123":
             import outils.openshot
+            continue
+
+        elif choixMenu == "124":
+            import outils.spotify
             continue
 
 # GESTION ERREUR
