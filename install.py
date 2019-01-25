@@ -66,9 +66,8 @@ while programmeLancer:
 
           " 20 Hostname Random       => Change le nom de l'ordinateur a chaque demarrage\n"
           " 21 Mac Random            => Change les adresses mac a chaque demarrage\n"
-          " 22 Noip                  => Synchronisation de l'ip public avec Noip toutes les minutes\n"
-          " 23 Ip Random             => Change l'IP de l'ordinateur a chaque demarrage\n"
-          " 24 Tor Privoxy           => Passe tout le trafic reseau a travers Tor Privoxy par connection mandataire\n"
+          " 22 Ip Random             => Change l'IP de l'ordinateur a chaque demarrage\n"
+          " 23 Tor Privoxy           => Passe tout le trafic reseau a travers Tor Privoxy par connection mandataire\n"
           "\n"
 
           "------------------------------------------------------------------------------------------------------------------\n"
@@ -87,6 +86,8 @@ while programmeLancer:
 
           " 40 Snort                 => (docker) Detecteur d'intrusion\n"
           " 41 DnsCrypt              => en cours de dev (docker) Chiffrement dns\n"
+          " 42 Noip                  => Synchronisation de l'ip public avec Noip toutes les minutes\n"
+
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -104,14 +105,15 @@ while programmeLancer:
           " 57 Maltego               => (docker) Programme de footprinting\n"
           " 58 Wifite                => (docker) Programme de crack wifi\n"
           " 59 Nikto                 => (docker) Scanner de serveur web\n"
+          " 60 Whatweb               => (docker) Scanner de site web\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "WEB\n"
+          "CMS\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 60 Pelican               => (docker) Generateur de site static\n"
+          " 70 Pelican               => (docker) Generateur de site static\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -119,9 +121,9 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 70 Firefox               => (docker) Navigateur simple\n"
-          " 71 Opera                 => (docker) Navigateur avec vpn\n"
-          " 72 Tor Browser           => (docker) Navigateur du reseau tor\n"
+          " 80 Firefox               => (docker) Navigateur simple\n"
+          " 81 Opera                 => (docker) Navigateur avec vpn\n"
+          " 82 Tor Browser           => (docker) Navigateur du reseau tor\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -129,8 +131,8 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 80 Pidgin                => (docker) Messagerie instantanee .onion\n"
-          " 81 Discord               => (docker) Plateforme Voip\n"
+          " 90 Pidgin                => (docker) Messagerie instantanee .onion\n"
+          " 91 Discord               => (docker) Plateforme Voip\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -138,7 +140,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 90 Dropbox               => (docker) Service Cloud\n"
+          " 100 Dropbox               => (docker) Service Cloud\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -146,7 +148,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 100 Teamviewer           => (docker) Prise de controle a distance\n"
+          " 110 Teamviewer           => (docker) Prise de controle a distance\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -154,8 +156,8 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 110 Keepassx             => (docker) Gestionnaire de mot de passe\n"
-          " 111 PeaZip               => (docker) Gestionnaire d'archive (zip,rar...)\n"
+          " 120 Keepassx             => (docker) Gestionnaire de mot de passe\n"
+          " 121 PeaZip               => (docker) Gestionnaire d'archive (zip,rar...)\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -163,11 +165,11 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 120 Atom                 => (docker) Editeur de code\n"
-          " 121 Libreoffice          => (docker) Suite bureautique\n"
-          " 122 Obs                  => Capture & streaming video\n"
-          " 123 OpenShot             => Editeur video\n"
-          " 124 Spotify              => (docker) Lecteur de musique\n"
+          " 130 Atom                 => (docker) Editeur de code\n"
+          " 131 Libreoffice          => (docker) Suite bureautique\n"
+          " 132 Obs                  => Capture & streaming video\n"
+          " 133 OpenShot             => Editeur video\n"
+          " 134 Spotify              => (docker) Lecteur de musique\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -255,10 +257,6 @@ while programmeLancer:
             import anonymat.macrandom
             continue
 
-        elif choixMenu == "22":
-            import anonymat.noip
-            continue
-
         elif choixMenu == "23":
             import anonymat.iprandom
             continue
@@ -283,6 +281,10 @@ while programmeLancer:
 
         elif choixMenu == "41":
             import firewall.dnscrypt
+            continue
+
+        elif choixMenu == "42":
+            import firewall.noip
             continue
 
 # MODULES PENTEST
@@ -326,70 +328,74 @@ while programmeLancer:
             import pentest.nikto
             continue
 
-# MODULES WEB
         elif choixMenu == "60":
-            import web.pelican
+            import pentest.whatweb
+            continue
+
+# MODULES CMS
+        elif choixMenu == "70":
+            import cms.pelican
             continue
 
 # MODULES NAVIGATEURS
-        elif choixMenu == "70":
+        elif choixMenu == "80":
             import navigateurs.firefox
             continue
 
-        elif choixMenu == "71":
+        elif choixMenu == "81":
             import navigateurs.opera
             continue
 
-        elif choixMenu == "72":
+        elif choixMenu == "82":
             import navigateurs.torbrowser
             continue
 
 # MODULES MESSAGERIES
-        elif choixMenu == "80":
+        elif choixMenu == "90":
             import messageries.pidgin
             continue
 
-        elif choixMenu == "81":
+        elif choixMenu == "91":
             import messageries.discord
             continue
 
 # MODULES CLOUDS
-        elif choixMenu == "90":
+        elif choixMenu == "100":
             import clouds.dropbox
             continue
 
 # MODULES CONTROLE DISTANT
-        elif choixMenu == "100":
+        elif choixMenu == "110":
             import controledistant.teamviewer
             continue
 
 # MODULES CHIFFREMENTS
-        elif choixMenu == "110":
+        elif choixMenu == "120":
             import chiffrements.keepassx
             continue
 
-        elif choixMenu == "111":
+        elif choixMenu == "121":
             import chiffrements.peazip
             continue
 
 # MODULES OUTILS
-        elif choixMenu == "120":
+        elif choixMenu == "130":
             import outils.atom
             continue
 
-        elif choixMenu == "121":
+        elif choixMenu == "131":
             import outils.libreoffice
             continue
 
-        elif choixMenu == "122":
+        elif choixMenu == "132":
             import outils.obs
             continue
 
-        elif choixMenu == "123":
+        elif choixMenu == "133":
             import outils.openshot
             continue
 
-        elif choixMenu == "124":
+        elif choixMenu == "134":
             import outils.spotify
             continue
 
@@ -399,7 +405,7 @@ while programmeLancer:
             continue
 
     except KeyboardInterrupt:
-        print("\033[36;1m" "\n\nMerci aurevoir\n" "\033[36;1m")
+        print("\033[36;1m" "\nMerci aurevoir\n" "\033[36;1m")
         programmeLancer = False
 
     except ImportError:

@@ -1,7 +1,7 @@
 # coding:utf-8
 
 '''
-module pour l'installation de terminator et la mise en place du fichier .bashrc personnailer
+module pour l'installation de terminator et la mise en place du fichier .bashrc personnaliser
 '''
 
 import os
