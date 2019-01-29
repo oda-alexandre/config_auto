@@ -106,6 +106,7 @@ while programmeLancer:
           " 58 Wifite                => (docker) Programme de crack wifi\n"
           " 59 Nikto                 => (docker) Scanner de serveur web\n"
           " 60 Whatweb               => (docker) Scanner de site web\n"
+          " 61 Owasp-Zap             => (docker) Scanner d'application web\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -170,6 +171,8 @@ while programmeLancer:
           " 132 Obs                  => Capture & streaming video\n"
           " 133 OpenShot             => Editeur video\n"
           " 134 Spotify              => (docker) Lecteur de musique\n"
+          " 135 Vlc                  => (docker) Lecteur de media\n"
+          " 136 Transmission         => (docker) Telechargement Torrent\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -332,6 +335,10 @@ while programmeLancer:
             import pentest.whatweb
             continue
 
+        elif choixMenu == "61":
+            import pentest.owaspzap
+            continue
+
 # MODULES CMS
         elif choixMenu == "70":
             import cms.pelican
@@ -397,6 +404,14 @@ while programmeLancer:
 
         elif choixMenu == "134":
             import outils.spotify
+            continue
+
+        elif choixMenu == "135":
+            import outils.vlc
+            continue
+
+        elif choixMenu == "136":
+            import outils.transmission
             continue
 
 # GESTION ERREUR
