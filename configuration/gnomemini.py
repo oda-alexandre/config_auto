@@ -35,7 +35,8 @@ bash-completion \
 net-tools \
 gvfs-backends \
 locate \
-usbutils")
+usbutils \
+dosfstools")
 
 # NETTOYAGE DES PAQUETS INUTILES
 print("\033[36;1m \nSuppression des paquets inutiles\n \033[0m")
