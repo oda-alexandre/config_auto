@@ -33,7 +33,9 @@ kali-root-login \
 sudo \
 bash-completion \
 net-tools \
-gvfs-backends")
+gvfs-backends \
+locate \
+usbutils")
 
 # NETTOYAGE DES PAQUETS INUTILES
 print("\033[36;1m \nSuppression des paquets inutiles\n \033[0m")
