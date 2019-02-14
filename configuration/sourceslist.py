@@ -10,10 +10,8 @@ import os
 print("\033[36;1m \nModification du fichier sources.list\n \033[0m")
 
 os.system("sudo rm -f /etc/apt/sources.list && \
-sudo tee -a /etc/apt/sources.list <<EOF
-deb https://http.kali.org/kali kali-rolling main contrib non-free
-deb-src https://http.kali.org/kali kali-rolling main contrib non-free
-EOF")
+echo \"deb https://http.kali.org/kali kali-rolling main contrib non-free\" | sudo tee -a /etc/apt/sources.list && \
+echo \"deb-src https://http.kali.org/kali kali-rolling main contrib non-free\" | sudo tee -a /etc/apt/sources.list")
 
 # MISE A NIVEAU
 print("\033[36;1m \nMise à niveau du systéme\n \033[0m")
