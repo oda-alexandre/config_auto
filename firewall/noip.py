@@ -34,7 +34,7 @@ print("\033[36;1m"
       "\n"
       "\033[0m")
 
-entree = raw_input(
+entree = input(
     "\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
 if entree == "":
@@ -71,7 +71,7 @@ print("\033[36;1m"
       "\n"
       "\033[0m")
 
-entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
+entree = input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
 if entree == "":
     pass

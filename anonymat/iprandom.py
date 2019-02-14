@@ -22,7 +22,7 @@ os.system("sudo mkdir /usr/share/openvpn/vpn")
 # MESSAGE
 print("\033[36;1m" "VOUS DEVEZ METTRE LES FICHIERS openvpn.conf DANS LE DOSSIER /usr/share/openvpn/vpn POUR QUE LE SCRIPT FONCTIONNE\n" "\033[0m")
 
-entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
+entree = input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
 if entree == "":
     pass

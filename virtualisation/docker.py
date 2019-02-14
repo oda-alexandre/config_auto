@@ -71,7 +71,7 @@ os.system("docker run -d --name portainer -p 127.0.0.1:9000:9000 --restart alway
 # MESSAGE
 print("\033[36;1m \nLien vers portainer http://localhost:9000\n \033[0m")
 
-entree = raw_input("\033[36;1m \nAppuyer sur <Entrée> pour confirmer \033[0m")
+entree = input("\033[36;1m \nAppuyer sur <Entrée> pour confirmer \033[0m")
 
 if entree == "":
     pass
