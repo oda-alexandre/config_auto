@@ -6,10 +6,7 @@ module pour l'installation de htop avec terminal xterm
 
 import os
 
-# INSTALLATION DES PREREQUIS
-print("\033[36;1m \nInstallation des prerequis\n \033[0m")
+# INSTALLATION DEPUIS LE DOCKER HUB
+print("\033[36;1m \nInstallation de htop\n \033[0m")
 
-os.system("sudo apt-get update && \
-sudo apt install --no-install-recommends -y \
-htop \
-xterm")
+os.system("docker run -d --name htop -v ${HOME}:/home/htop -v /tmp/.X11-unix/:/tmp/.X11-unix/ --pid host -e DISPLAY alexandreoda/htop")

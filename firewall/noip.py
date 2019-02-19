@@ -4,6 +4,8 @@
 module pour l'installation d'un script de syncronisation automatique de l'ip publique avec noip
 '''
 
+import os
+
 # INSTALLATION DES PREREQUIS
 print("\033[36;1m \nInstallation des prerequis\n \033[0m")
 

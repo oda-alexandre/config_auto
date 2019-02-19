@@ -54,7 +54,7 @@ while programmeLancer:
           " 9 Vimrc                  => Vim avec copier/coller & couleur syntax & souris\n"
           " 10 Terminal Custom       => Terminal personnaliser\n"
           " 11 Conky                 => Moniteur Systeme personnailer\n"
-          " 12 Htop                  => Moniteur Systeme terminal\n"
+          " 12 Htop                  => (docker) Moniteur Systeme terminal\n"
           " 13 Auto clean            => Nettoyage a chaque demarrage\n"
           " 14 Auto Destruction      => (Pour OS installer en lvm chiffree) Mot de passe auto destruction\n"
           "\n"
@@ -107,6 +107,8 @@ while programmeLancer:
           " 59 Nikto                 => (docker) Scanner de serveur web\n"
           " 60 Whatweb               => (docker) Scanner de site web\n"
           " 61 Owasp-Zap             => (docker) Scanner d'application web\n"
+          " 62 Wireshark             => (docker) Analiseur de trames web\n"
+          " 63 Zenmap                => (docker) Scanner de ports\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -125,6 +127,7 @@ while programmeLancer:
           " 80 Firefox               => (docker) Navigateur simple\n"
           " 81 Opera                 => (docker) Navigateur avec vpn\n"
           " 82 Tor Browser           => (docker) Navigateur du reseau tor\n"
+          " 83 Chromium              => (docker) Navigateur google\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -134,6 +137,9 @@ while programmeLancer:
 
           " 90 Pidgin                => (docker) Messagerie instantanee .onion\n"
           " 91 Discord               => (docker) Plateforme Voip\n"
+          " 92 Skype                 => (docker) Plateforme Voip\n"
+          " 93 Teamspeak client      => (docker) Client pour Serveur Voip\n"
+          " 94 Teamspeak serveur     => (docker) Serveur Voip\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -166,13 +172,15 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 130 Atom                 => (docker) Editeur de code\n"
+          " 130 Atom                 => (docker) IDE\n"
           " 131 Libreoffice          => (docker) Suite bureautique\n"
           " 132 Obs                  => Capture & streaming video\n"
           " 133 OpenShot             => Editeur video\n"
           " 134 Spotify              => (docker) Lecteur de musique\n"
           " 135 Vlc                  => (docker) Lecteur de media\n"
           " 136 Transmission         => (docker) Telechargement Torrent\n"
+          " 137 Android Studio       => (docker) IDEA\n"
+          " 138 Android Root         => (docker) Outils pour le root android \n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -339,6 +347,14 @@ while programmeLancer:
             import pentest.owaspzap
             continue
 
+        elif choixMenu == "62":
+            import pentest.wireshark
+            continue
+
+        elif choixMenu == "63":
+            import pentest.zenmap
+            continue
+
 # MODULES CMS
         elif choixMenu == "70":
             import cms.pelican
@@ -357,6 +373,10 @@ while programmeLancer:
             import navigateurs.torbrowser
             continue
 
+        elif choixMenu == "83":
+            import navigateurs.chromium
+            continue
+
 # MODULES MESSAGERIES
         elif choixMenu == "90":
             import messageries.pidgin
@@ -364,6 +384,10 @@ while programmeLancer:
 
         elif choixMenu == "91":
             import messageries.discord
+            continue
+
+        elif choixMenu == "91":
+            import messageries.skype
             continue
 
 # MODULES CLOUDS
@@ -412,6 +436,14 @@ while programmeLancer:
 
         elif choixMenu == "136":
             import outils.transmission
+            continue
+
+        elif choixMenu == "137":
+            import outils.androidstudio
+            continue
+
+        elif choixMenu == "138":
+            import outils.androidroot
             continue
 
 # GESTION ERREUR
