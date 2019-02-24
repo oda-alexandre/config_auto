@@ -66,7 +66,7 @@ os.system("sudo systemctl restart docker.service")
 # INSTALLATION DE L'INTERFACE GRAPHIQUE PORTAINER DEPUIS LE DOCKER HUB
 print("\033[36;1m \nInstallation du gestionnaire portainer\n \033[0m")
 
-os.system("docker run -d --name portainer -p 127.0.0.1:9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer")
+os.system("docker run -ti --name portainer -p 127.0.0.1:9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer")
 
 # MESSAGE
 print("\033[36;1m \nLien vers portainer http://localhost:9000\n \033[0m")
