@@ -18,19 +18,33 @@ Ce repository contient un programme de configuration automatiser pour [Kali Linu
 OUTILS                | DESCRIPTION
 ----------------------|----------------------------------------------------------------------------------
 - 1 Kali build        | Création d'une ISO minimaliste de kali avec configurateur automatisé
+----------------------|----------------------------------------------------------------------------------
 - 2 Sources.list      | Modification des sources.list & update/upgrade/dist-upgrade
+----------------------|----------------------------------------------------------------------------------
 - 3 Gnome mini        | Configuration minimaliste de gnome
+----------------------|----------------------------------------------------------------------------------
 - 4 Theme sombre      | Utiliser le theme sombre integrale
+----------------------|----------------------------------------------------------------------------------
 - 5 Bluetooth         | Activation du bluetooth
+----------------------|----------------------------------------------------------------------------------
 - 6 Son               | Activation du son
+----------------------|----------------------------------------------------------------------------------
 - 7 Grub              | Acceleration du temps de demarrage du grub et affichage des logs de boot
+----------------------|----------------------------------------------------------------------------------
 - 8 Grub fond d'ecran | Modification du fond d'ecran du grub
+----------------------|----------------------------------------------------------------------------------
 - 9 Vimrc             | Vim avec copier/coller & couleur syntax & souris
+----------------------|----------------------------------------------------------------------------------
 - 10 Terminal Custom  | Terminal personnaliser
+----------------------|----------------------------------------------------------------------------------
 - 11 Conky            | Moniteur Systeme personnailer
+----------------------|----------------------------------------------------------------------------------
 - 12 Htop             | (docker) Moniteur Systeme terminal
+----------------------|----------------------------------------------------------------------------------
 - 13 Auto clean       | Nettoyage a chaque demarrage
+----------------------|----------------------------------------------------------------------------------
 - 14 Auto Destruction | (Pour OS installer en lvm chiffree) Mot de passe auto destruction
+----------------------|----------------------------------------------------------------------------------
 
 ### ANONYMAT
 
@@ -58,8 +72,11 @@ OUTILS                | DESCRIPTION
 
 OUTILS                | DESCRIPTION
 ----------------------|----------------------------------------------------------------------------------
+
 ### PENTEST
 
+OUTILS                | DESCRIPTION
+----------------------|----------------------------------------------------------------------------------
 - 50 Armitage         | en cours de dev (docker) Beef-xss, Msf,Nmap,Geoip via Armitage
 - 51 Gophish          | (docker) Programme de phishing
 - 52 OnionScan        | (docker) Scanner de site .onion
