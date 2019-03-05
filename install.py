@@ -1,7 +1,7 @@
 # coding:utf-8
 
 """
-Maintainer:  https://oda-alexandre.github.io
+Maintainer:  https://oda-alexandre.com
 Description: Configurateur automatisé pour Kali Linux
 Prerequis:   Python
 Tutoriel:    https://www.youtube.com/channel/UCELtTOkvfaLoZzUWZ6zywJQ
@@ -85,7 +85,7 @@ while programmeLancer:
           "\n"
 
           " 40 Snort                 => (docker) Detecteur d'intrusion\n"
-          " 41 DnsCrypt              => en cours de dev (docker) Chiffrement dns\n"
+          " 41 DnsCrypt              => (docker) Chiffrement dns\n"
           " 42 Noip                  => Synchronisation de l'ip public avec Noip toutes les minutes\n"
 
           "\n"
@@ -109,6 +109,7 @@ while programmeLancer:
           " 61 Owasp-Zap             => (docker) Scanner d'application web\n"
           " 62 Wireshark             => (docker) Analiseur de trames web\n"
           " 63 Zenmap                => (docker) Scanner de ports\n"
+          " 64 Evilginx              => (docker) Programme de phishing\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -353,6 +354,10 @@ while programmeLancer:
 
         elif choixMenu == "63":
             import pentest.zenmap
+            continue
+
+        elif choixMenu == "64":
+            import pentest.evilginx
             continue
 
 # MODULES CMS

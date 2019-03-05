@@ -5,11 +5,6 @@ module pour l'installation de dnscrypt via docker
 '''
 
 # INSTALLATION DEPUIS LE DOCKER HUB
-print("\033[36;1m \nEn cours de dev\n \033[0m")
+print("\033[36;1m \nInstallation de dnscrypt\n \033[0m")
 
-entree = input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
-
-if entree == "":
-    pass
-else:
-    print("\033[36;1m" "\nVous devez appuyer sur <Entree>\n" "\033[36;1m")
+os.system("docker run -ti --name dnscrypt --network host --restart=always alexandreoda/dnscrypt")
