@@ -11,35 +11,38 @@
 
 ## INTRODUCTION
 
-Ce repository contient un programme de configuration automatiser pour [Kali Linux](https://www.kali.org/), il automatise l'installation et la configuration des programmes suivants :
+Ce repository contient un programme de configuration automatiser pour [Kali Linux](https://www.kali.org/), il automatise l'installation et la configuration des outils suivants :
+
+> (docker) signifie que l'outils est installer via docker
+> (lvm chiffré) signifie que l'outils est disponnible uniquement pour un systéme chiffré
 
 ### CONFIGURATION
 
 OUTILS              | DESCRIPTION
 --------------------|----------------------------------------------------------------------------------
-1 Kali build        | Création d'une ISO minimaliste de kali avec configurateur automatisé
-2 Sources.list      | Modification des sources.list & update/upgrade/dist-upgrade
+1 Kali build        | Création d'une ISO minimaliste de kali avec config_auto intégré
+2 Sources.list      | Modification des sources et mise à niveau du systéme
 3 Gnome mini        | Configuration minimaliste de gnome
-4 Theme sombre      | Utiliser le theme sombre integrale
+4 Theme sombre      | Thème sombre intégrale
 5 Bluetooth         | Activation du bluetooth
 6 Son               | Activation du son
-7 Grub              | Acceleration du temps de demarrage du grub et affichage des logs de boot
-8 Grub fond d'ecran | Modification du fond d'ecran du grub
-9 Vimrc             | Vim avec copier/coller & couleur syntax & souris
-10 Terminal Custom  | Terminal personnaliser
-11 Conky            | Moniteur Systeme personnailer
-12 Htop             | (docker) Moniteur Systeme terminal
-13 Auto clean       | Nettoyage a chaque demarrage
-14 Auto Destruction | (Pour OS installer en lvm chiffree) Mot de passe auto destruction
+7 Grub              | Accélération du temps de démarrage du grub et affichage des logs de boot
+8 Grub fond d'écran | Modification du fond d'écran du grub
+9 Vimrc             | Vim avec copier/coller & couleur syntax & souri
+10 Terminal Custom  | Terminal personnalisé
+11 Conky            | Moniteur systeme personnalisé
+12 Htop             | (docker) Moniteur systeme
+13 Auto clean       | Nettoyage à chaque démarrage
+14 Auto Destruction | (lvm chiffrée) Mot de passe auto destruction
 
 ### ANONYMAT
 
 OUTILS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-20 Hostname Random  | Change le nom de l'ordinateur a chaque demarrage
-21 Mac Random       | Change les adresses mac a chaque demarrage
-22 Ip Random        | Change l'IP de l'ordinateur a chaque demarrage
-23 Tor Privoxy      | Passe tout le trafic reseau a travers Tor Privoxy par connection mandataire
+20 Hostname Random  | Change le nom de l'ordinateur à chaque démarrage
+21 Mac Random       | Change les adresses mac à chaque démarrage
+22 Ip Random        | Change l'IP publique à chaque démarrage
+23 Tor Privoxy      | Passe tout le trafic réseau a travers Tor Privoxy via connection mandataire
 
 ### VIRTUALISATION
 
@@ -52,12 +55,9 @@ OUTILS              | DESCRIPTION
 
 OUTILS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-40 Snort            | (docker) Detecteur d'intrusion
+40 Snort            | (docker) Détecteur d'intrusion
 41 DnsCrypt         | (docker) Chiffrement dns
 42 Noip             | Synchronisation de l'ip public avec Noip toutes les minutes
-
-OUTILS              | DESCRIPTION
---------------------|----------------------------------------------------------
 
 ### PENTEST
 
@@ -75,7 +75,7 @@ OUTILS              | DESCRIPTION
 59 Nikto            | (docker) Scanner de serveur web
 60 Whatweb          | (docker) Scanner de site web
 61 Owasp-Zap        | (docker) Scanner d'application web
-62 Wireshark        | (docker) Analiseur de trames web
+62 Wireshark        | (docker) Analyseur de trames web
 63 Zenmap           | (docker) Scanner de ports
 64 Evilginx         | (docker) Programme de phishing
 
@@ -83,7 +83,7 @@ OUTILS              | DESCRIPTION
 
 OUTILS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-70 Pelican          | (docker) Generateur de site static
+70 Pelican          | (docker) Générateur de site static
 
 ### NAVIGATEURS
 
@@ -91,17 +91,17 @@ OUTILS              | DESCRIPTION
 --------------------|----------------------------------------------------------
 80 Firefox          | (docker) Navigateur simple
 81 Opera            | (docker) Navigateur avec vpn
-82 Tor Browser      | (docker) Navigateur du reseau tor
+82 Tor Browser      | (docker) Navigateur du réseau tor
 83 Chromium         | (docker) Navigateur google
 
 ### MESSAGERIES
 
 OUTILS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-90 Pidgin           | (docker) Messagerie instantanee .onion
+90 Pidgin           | (docker) Messagerie instantanée .onion
 91 Discord          | (docker) Plateforme Voip
 92 Skype            | (docker) Plateforme Voip
-93 Teamspeak client | (docker) Client pour Serveur Voip
+93 Teamspeak client | (docker) Client pour serveur Voip
 94 Teamspeak serveur| (docker) Serveur Voip
 
 ### CLOUDS
@@ -114,7 +114,7 @@ OUTILS              | DESCRIPTION
 
 OUTILS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-110 Teamviewer      | (docker) Prise de controle a distance
+110 Teamviewer      | (docker) Prise de contrôle à distance
 
 ### CHIFFREMENTS
 
@@ -133,7 +133,7 @@ OUTILS              | DESCRIPTION
 133 OpenShot        | Editeur video
 134 Spotify         | (docker) Lecteur de musique
 135 Vlc             | (docker) Lecteur de media
-136 Transmission    | (docker) Telechargement Torrent
+136 Transmission    | (docker) Téléchargement Torrent
 137 Android Studio  | (docker) IDEA
 138 Android Root    | (docker) Outils pour le root android
 

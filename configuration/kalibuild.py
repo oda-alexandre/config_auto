@@ -14,7 +14,7 @@ sudo apt install --no-install-recommends -y \
 live-build \
 cdebootstrap")
 
-# INSTALLATION ET CONFIGURATION DE LIVE BUILD CONFIG AVEC INCLUDES PERSONNALISER
+# INSTALLATION ET CONFIGURATION DE LIVE BUILD CONFIG AVEC INCLUDES PERSONNALISÉ
 print("\033[36;1m \nInstallation et configuration de live-build-config\n \033[0m")
 
 os.system("git clone git://git.kali.org/live-build-config.git && \

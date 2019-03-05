@@ -44,19 +44,19 @@ while programmeLancer:
           "\n"
 
           " 1 Kali build             => Création d'une ISO minimaliste de kali avec configurateur automatisé\n"
-          " 2 Sources.list           => Modification des sources.list & update/upgrade/dist-upgrade\n"
+          " 2 Sources.list           => Modification des sources et mise à niveau du systéme\n"
           " 3 Gnome mini             => Configuration minimaliste de gnome\n"
-          " 4 Theme sombre           => Utiliser le theme sombre integrale\n"
+          " 4 Theme sombre           => Utiliser le Thème sombre intégrale\n"
           " 5 Bluetooth              => Activation du bluetooth\n"
           " 6 Son                    => Activation du son\n"
-          " 7 Grub                   => Acceleration du temps de demarrage du grub et affichage des logs de boot\n"
-          " 8 Grub fond d'ecran      => Modification du fond d'ecran du grub\n"
-          " 9 Vimrc                  => Vim avec copier/coller & couleur syntax & souris\n"
-          " 10 Terminal Custom       => Terminal personnaliser\n"
-          " 11 Conky                 => Moniteur Systeme personnailer\n"
-          " 12 Htop                  => (docker) Moniteur Systeme terminal\n"
-          " 13 Auto clean            => Nettoyage a chaque demarrage\n"
-          " 14 Auto Destruction      => (Pour OS installer en lvm chiffree) Mot de passe auto destruction\n"
+          " 7 Grub                   => Accélération du temps de démarrage du grub et affichage des logs de boot\n"
+          " 8 Grub fond d'écran      => Modification du fond d'écran du grub\n"
+          " 9 Vimrc                  => Vim avec copier/coller & couleur syntax & souri\n"
+          " 10 Terminal Custom       => Terminal personnalisé\n"
+          " 11 Conky                 => Moniteur systeme personnailer\n"
+          " 12 Htop                  => (docker) Moniteur systeme\n"
+          " 13 Auto clean            => Nettoyage à chaque démarrage\n"
+          " 14 Auto Destruction      => (lvm chiffré) Mot de passe auto destruction\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -64,10 +64,10 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 20 Hostname Random       => Change le nom de l'ordinateur a chaque demarrage\n"
-          " 21 Mac Random            => Change les adresses mac a chaque demarrage\n"
-          " 22 Ip Random             => Change l'IP de l'ordinateur a chaque demarrage\n"
-          " 23 Tor Privoxy           => Passe tout le trafic reseau a travers Tor Privoxy par connection mandataire\n"
+          " 20 Hostname Random       => Change le nom de l'ordinateur à chaque démarrage\n"
+          " 21 Mac Random            => Change les adresses mac à chaque démarrage\n"
+          " 22 Ip Random             => Change l'IP publique à chaque démarrage\n"
+          " 23 Tor Privoxy           => Passe tout le trafic réseau a travers Tor Privoxy via connection mandataire\n"
           "\n"
 
           "------------------------------------------------------------------------------------------------------------------\n"
@@ -84,7 +84,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 40 Snort                 => (docker) Detecteur d'intrusion\n"
+          " 40 Snort                 => (docker) Détecteur d'intrusion\n"
           " 41 DnsCrypt              => (docker) Chiffrement dns\n"
           " 42 Noip                  => Synchronisation de l'ip public avec Noip toutes les minutes\n"
 
@@ -107,7 +107,7 @@ while programmeLancer:
           " 59 Nikto                 => (docker) Scanner de serveur web\n"
           " 60 Whatweb               => (docker) Scanner de site web\n"
           " 61 Owasp-Zap             => (docker) Scanner d'application web\n"
-          " 62 Wireshark             => (docker) Analiseur de trames web\n"
+          " 62 Wireshark             => (docker) Analyseur de trames web\n"
           " 63 Zenmap                => (docker) Scanner de ports\n"
           " 64 Evilginx              => (docker) Programme de phishing\n"
           "\n"
@@ -117,7 +117,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 70 Pelican               => (docker) Generateur de site static\n"
+          " 70 Pelican               => (docker) Générateur de site static\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -127,7 +127,7 @@ while programmeLancer:
 
           " 80 Firefox               => (docker) Navigateur simple\n"
           " 81 Opera                 => (docker) Navigateur avec vpn\n"
-          " 82 Tor Browser           => (docker) Navigateur du reseau tor\n"
+          " 82 Tor Browser           => (docker) Navigateur du réseau tor\n"
           " 83 Chromium              => (docker) Navigateur google\n"
           "\n"
 
@@ -136,10 +136,10 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 90 Pidgin                => (docker) Messagerie instantanee .onion\n"
+          " 90 Pidgin                => (docker) Messagerie instantanée .onion\n"
           " 91 Discord               => (docker) Plateforme Voip\n"
           " 92 Skype                 => (docker) Plateforme Voip\n"
-          " 93 Teamspeak client      => (docker) Client pour Serveur Voip\n"
+          " 93 Teamspeak client      => (docker) Client pour serveur Voip\n"
           " 94 Teamspeak serveur     => (docker) Serveur Voip\n"
           "\n"
 
@@ -156,7 +156,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 110 Teamviewer           => (docker) Prise de controle a distance\n"
+          " 110 Teamviewer           => (docker) Prise de contrôle à distance\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -179,7 +179,7 @@ while programmeLancer:
           " 133 OpenShot             => Editeur video\n"
           " 134 Spotify              => (docker) Lecteur de musique\n"
           " 135 Vlc                  => (docker) Lecteur de media\n"
-          " 136 Transmission         => (docker) Telechargement Torrent\n"
+          " 136 Transmission         => (docker) Téléchargement Torrent\n"
           " 137 Android Studio       => (docker) IDEA\n"
           " 138 Android Root         => (docker) Outils pour le root android \n"
           "\n"

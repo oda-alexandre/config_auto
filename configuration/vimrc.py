@@ -1,7 +1,7 @@
 # coding:utf-8
 
 '''
-module pour l'installation de vim avec fichier de configuration personnaliser
+module pour l'installation de vim avec fichier de configuration personnalisé
 '''
 
 import os

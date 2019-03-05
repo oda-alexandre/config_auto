@@ -6,7 +6,7 @@ module pour la personnalisation du fond d'écran du grub
 
 import os
 
-# MODIFICATION DE L'IMAGE DE FOND D'ECRAN DU GRUB /boot/grub/.background_cache.png
+# MODIFICATION DE L'IMAGE DE FOND D'ÉCRAN DU GRUB /boot/grub/.background_cache.png
 print("\033[36;1m \nPlacez votre image background_cache.png dans votre dossier personnel\n \033[0m")
 
 entree = input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")

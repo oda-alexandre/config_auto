@@ -1,7 +1,7 @@
 # coding:utf-8
 
 '''
-module pour l'installation de terminator et la mise en place du fichier .bashrc personnaliser
+module pour l'installation de terminator et la mise en place du fichier .bashrc personnalisé
 '''
 
 import os
@@ -13,7 +13,7 @@ os.system("sudo apt-get update && \
 sudo apt install --no-install-recommends -y \
 terminator")
 
-# INSTALLATION DU FICHIER .bashrc PERSONNALISER
+# INSTALLATION DU FICHIER .bashrc PERSONNALISÉ
 print("\033[36;1m \nInstallation du fichier .bashrc\n \033[0m")
 
 os.system("git clone https://github.com/oda-alexandre/terminal_custom.git && \

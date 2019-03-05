@@ -21,9 +21,9 @@ os.system("echo \"forward-socks5 / localhost:9050 .\" | sudo tee -a /etc/privoxy
 echo \"forward-socks4 / localhost:9050 .\" | sudo tee -a /etc/privoxy/config && \
 echo \"forward-socks4a / localhost:9050 .\" | sudo tee -a /etc/privoxy/config")
 
-# CONFIGURATION MANUELLE DU RESEAU
+# CONFIGURATION MANUELLE DU RÉSEAU
 print("\033[36;1m"
-      "AJOUTER CES LIGNES DANS PARAMETRE / RESEAU / SERVEUR MANDATAIRE / METHODE MANUELLE :\n\n"
+      "AJOUTER CES LIGNES DANS PARAMETRE / RÉSEAU / SERVEUR MANDATAIRE / METHODE MANUELLE :\n\n"
 
       "HTTP localhost - 8118\n"
       "HTTPS localhost - 8118\n"

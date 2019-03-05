@@ -1,7 +1,7 @@
 # coding:utf-8
 
 '''
-module pour l'installation de conky avec conky personnaliser
+module pour l'installation de conky avec conky personnalisé
 '''
 
 import os
@@ -15,8 +15,8 @@ psmisc \
 conky-manager \
 git")
 
-# INSTALLATION DU CONKY PERSONNALISER
-print("\033[36;1m \nInstallation du conky personnaliser\n \033[0m")
+# INSTALLATION DU CONKY PERSONNALISÉ
+print("\033[36;1m \nInstallation du conky personnalisé\n \033[0m")
 
 os.system("mkdir $HOME/.conky && \
 git clone https://github.com/oda-alexandre/conky.git && \
