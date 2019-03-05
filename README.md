@@ -14,6 +14,7 @@
 Ce repository contient un programme de configuration automatiser pour [Kali Linux](https://www.kali.org/), il automatise l'installation et la configuration des outils suivants :
 
 > (docker) signifie que l'outils est installer via docker
+
 > (lvm chiffré) signifie que l'outils est disponnible uniquement pour un systéme chiffré
 
 ### CONFIGURATION
