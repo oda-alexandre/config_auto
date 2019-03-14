@@ -195,7 +195,7 @@ while programmeLancer:
 
 # CHOIX DU MENU
     try:
-        choixMenu = input("\033[36;1m" "VEUILLEZ SAISIR VOTRE CHOIX : " "\033[36;1m")
+        choixMenu = raw_input("\033[36;1m" "VEUILLEZ SAISIR VOTRE CHOIX : " "\033[36;1m")
         choixMenu = str(choixMenu)
 
 # QUITTER LE MENU

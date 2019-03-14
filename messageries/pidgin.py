@@ -38,7 +38,7 @@ print("\033[36;1m"
       "\nDANS VOS CONVERSATIONS CLIQUER SUR NON-PRIVE / NON-VERIFIER / AUTHENTIFIER LE CONTACT (votre interlocuteur devras faire pareil de son cote)\n"
       "\033[0m")
 
-entree = input(
+entree = raw_input(
     "\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
 if entree == "":

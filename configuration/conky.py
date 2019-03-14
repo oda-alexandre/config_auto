@@ -29,7 +29,7 @@ os.system("rm -rf conky")
 # DEMARRAGE DE CONKY MANAGER
 print("\033[36;1m \nDANS LA FENETRE QUI VAS S'OUVRIR SELECTIONNER VOTRE CONKY\n \033[0m")
 
-entree = input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
+entree = raw_input("\033[36;1m" "\nAppuyer sur <Entrée> pour continuer\n" "\033[0m")
 
 if entree == "":
     pass
