@@ -132,7 +132,7 @@ while programmeLancer:
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "MESSAGERIES\n"
+          "MESSAGERIE\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
@@ -160,7 +160,7 @@ while programmeLancer:
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "CHIFFREMENTS\n"
+          "CHIFFREMENT\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
@@ -382,17 +382,25 @@ while programmeLancer:
             import navigateurs.chromium
             continue
 
-# MODULES MESSAGERIES
+# MODULES MESSAGERIE
         elif choixMenu == "90":
-            import messageries.pidgin
+            import messagerie.pidgin
             continue
 
         elif choixMenu == "91":
-            import messageries.discord
+            import messagerie.discord
             continue
 
-        elif choixMenu == "91":
-            import messageries.skype
+        elif choixMenu == "92":
+            import messagerie.skype
+            continue
+
+        elif choixMenu == "93":
+            import messagerie.teamspeakclient
+            continue
+
+        elif choixMenu == "94":
+            import messagerie.teamspeakserveur
             continue
 
 # MODULES CLOUDS
@@ -405,13 +413,13 @@ while programmeLancer:
             import controledistant.teamviewer
             continue
 
-# MODULES CHIFFREMENTS
+# MODULES CHIFFREMENT
         elif choixMenu == "120":
-            import chiffrements.keepassx
+            import chiffrement.keepassx
             continue
 
         elif choixMenu == "121":
-            import chiffrements.peazip
+            import chiffrement.peazip
             continue
 
 # MODULES OUTILS
