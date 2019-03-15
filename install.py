@@ -18,7 +18,8 @@ if os.geteuid() == 0:
 # CREATION D'UN UTILISATEUR EN CAS D'UTILISATION DU COMPTE ROOT
     print("\033[36;1m" "\nCe script ne fonctionne pas en root, un compte utilisateur va étre créé" "\033[36;1m")
 
-    os.system("read -p 'Entrez votre nom : ' nom && \
+    os.system("apt install sudo && \
+    read -p 'Entrez votre nom : ' nom && \
     adduser $nom && \
     adduser $nom sudo && \
     su $nom")
@@ -70,13 +71,14 @@ while programmeLancer:
           " 23 Tor Privoxy           => Passe tout le trafic réseau a travers Tor Privoxy via connection mandataire\n"
           "\n"
 
-          "------------------------------------------------------------------------------------------------------------------\n"
+          "-----------------------------------------------------------------------------------------------------------------\n"
           "VIRTUALISATION\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
           " 30 Virtualbox            => Programme de virtualisation\n"
           " 31 Docker                => Installation de docker avec interface graphique portainer\n"
+          " 32 Wine                  => Émulateur de logiciels Windows\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -284,6 +286,10 @@ while programmeLancer:
 
         elif choixMenu == "31":
             import virtualisation.docker
+            continue
+
+        elif choixMenu == "32":
+            import virtualisation.wine
             continue
 
 # MODULES FIREWALL
