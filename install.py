@@ -1,7 +1,7 @@
 # coding:utf-8
 
 """
-Maintainer:  https://oda-alexandre.com
+Maintainer:  http://www.oda-alexandre.com/
 Description: Configurateur automatisé pour Kali Linux
 Prerequis:   Python
 Tutoriel:    https://www.youtube.com/channel/UCELtTOkvfaLoZzUWZ6zywJQ
