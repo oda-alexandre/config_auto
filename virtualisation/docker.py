@@ -50,8 +50,7 @@ os.system("sudo chown root:docker /var/run/docker.sock")
 # AJOUT DE L'UTILISATEUR AU GROUPE DOCKER
 print("\033[36;1m \nAjout de l'utilisateur au groupe docker\n \033[0m")
 
-os.system("sudo usermod -a -G docker $USER && \
-newgrp docker")
+os.system("sudo usermod -a -G docker $USER")
 
 # SECURISATIONS DES COMMUNICATIONS INTER CONTENEURS
 print("\033[36;1m \nIsolation des communications inter-conteneurs\n \033[0m")
