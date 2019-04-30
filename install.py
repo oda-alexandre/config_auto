@@ -1,7 +1,7 @@
 # coding:utf-8
 
 """
-Maintainer:  http://www.oda-alexandre.com/
+Maintainer:  https://www.oda-alexandre.com/
 Description: Configurateur automatisé pour Kali Linux
 Prerequis:   Python
 Tutoriel:    https://www.youtube.com/channel/UCELtTOkvfaLoZzUWZ6zywJQ
@@ -168,6 +168,7 @@ while programmeLancer:
 
           " 120 Keepassx             => (docker) Gestionnaire de mot de passe\n"
           " 121 PeaZip               => (docker) Gestionnaire d'archive (zip,rar...)\n"
+          " 122 GtkHash              => (docker) Outils de vérification d'intégrité de fichier\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -426,6 +427,10 @@ while programmeLancer:
 
         elif choixMenu == "121":
             import chiffrement.peazip
+            continue
+
+        elif choixMenu == "122":
+            import chiffrement.gtkhash
             continue
 
 # MODULES OUTILS
