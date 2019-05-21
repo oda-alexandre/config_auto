@@ -1,6 +1,8 @@
 # CONFIG AUTO
 
 ![kali linux](https://raw.githubusercontent.com/oda-alexandre/config_auto/master/img/logo-kali.png)
+
+
 ## INDEX
 
 - [Introduction](#INTRODUCTION)
@@ -142,8 +144,6 @@ OUTILS              | DESCRIPTION
 ## PREREQUIS
 
 - Utiliser [Kali Linux](https://www.kali.org/)
-
-- Installer [Python](https://www.python.org/)
 
 
 ## INSTALLATION
