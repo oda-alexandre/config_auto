@@ -1,13 +1,13 @@
 # coding:utf-8
 
 '''
-module pour obtenir le théme sombre intégrale
+module for obtenir le théme dark integral
 '''
 
 import os
 
-# CONFIGURATION DU FICHIER .config/gtk-3.0/settings.ini AVEC dark-theme
-print("\033[36;1m \nConfiguration du fichier .config/gtk-3.0/settings.ini\n \033[0m")
+# CONFIG OF FILE .config/gtk-3.0/settings.ini WITH dark-theme
+print("\033[36;1m \nConfiguration of file .config/gtk-3.0/settings.ini\n \033[0m")
 
 os.system("mkdir -p $HOME/.config/gtk-3.0 && \
 touch $HOME/.config/gtk-3.0/settings.ini && \

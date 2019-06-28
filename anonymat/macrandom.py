@@ -1,27 +1,27 @@
 # coding:utf-8
 
 '''
-module pour l'installation d'un script de mac aléatoire automatique
+module for install a script of mac random auto
 '''
 
 import os
 
-# INSTALLATION DES PREREQUIS
-print("\033[36;1m \nInstallation des prerequis\n \033[0m")
+# INSTALL OF PACKAGES
+print("\033[36;1m install prerequisites\n \033[0m")
 
 os.system("sudo apt install --no-install-recommends -y \
 git \
 macchanger")
 
-# INSTALLATION DU SCRIPT /etc/init.d/mac-random
-print("\033[36;1m \nMise en place du script\n \033[0m")
+# INSTALL SCRIPT /etc/init.d/mac-random
+print("\033[36;1m \nSetting up the script\n \033[0m")
 
-os.system("git clone https://github.com/oda-alexandre/mac_random.git && \
+os.system("git clone https://gitlab.com/oda-alexandre/mac_random.git && \
 sudo mv -f mac_random/mac-random /etc/init.d/ && \
 sudo chmod +x /etc/init.d/mac-random")
 
-# LANCEMENT DU SERVICE AU DEMARRAGE
+# AUTO STARTING
 os.system("sudo update-rc.d -f mac-random defaults")
 
-# NETTOYAGE DES RESIDUS D'INSTALLATION
+# CLEANING OF INSTALL RESIDUES
 os.system("rm -rf mac_random")

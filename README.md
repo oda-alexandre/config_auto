@@ -1,155 +1,161 @@
 # CONFIG AUTO
 
-![kali linux](https://raw.githubusercontent.com/oda-alexandre/config_auto/master/img/logo-kali.png)
+<img src="https://raw.githubusercontent.com/oda-alexandre/config_auto/master/img/logo-kali.png" width="200" height="200"/>
 
 
 ## INDEX
 
+- [Badges](#BADGES)
 - [Introduction](#INTRODUCTION)
-- [Prerequis](#PREREQUIS)
-- [Installation](#INSTALLATION)
+- [PREREQUISITESites](#PREREQUISITESITES)
+- [Install](#INSTALL)
 - [License](#LICENSE)
+
+
+## BADGES
+
+[![pipeline status](https://gitlab.com/oda-alexandre/config_auto/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/config_auto/commits/master)
 
 
 ## INTRODUCTION
 
-Ce repository contient un programme de configuration automatiser pour [Kali Linux](https://www.kali.org/), il automatise l'installation et la configuration des outils suivants :
+This repository contains an automated config program for [Kali Linux](https://www.kali.org/), he automates install the config of the this tools :
 
-> (docker) signifie que l'outils est installer via docker
+> (docker) means that the tool is install by docker
 
-> (lvm chiffré) signifie que l'outils est disponnible uniquement pour un systéme chiffré
+> (lvm encrypted) means that the tool is only available for an encrypted system
 
-### CONFIGURATION
+### CONFIG
 
-OUTILS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------------------------------
-1 Kali build        | Création d'une ISO minimaliste de kali avec config_auto intégré
-2 Sources.list      | Modification des sources et mise à niveau du systéme
-3 Gnome mini        | Configuration minimaliste de gnome
-4 Theme sombre      | Thème sombre intégrale
-5 Bluetooth         | Activation du bluetooth
-6 Son               | Activation du son
-7 Grub              | Accélération du temps de démarrage du grub et affichage des logs de boot
-8 Grub fond d'écran | Modification du fond d'écran du grub
-9 Vimrc             | Vim avec copier/coller & couleur syntax & souri
-10 Terminal Custom  | Terminal personnalisé
-11 Conky            | Moniteur systeme personnalisé
+1 Kali build        | Create a minimal ISO of kali with config_auto integrated
+2 Sources.list      | Change of the sources and update of system
+3 Gnome mini        | Configuration minimal of gnome
+4 Theme dark        | theme dark integral
+5 Bluetooth         | Activation of bluetooth
+6 Son               | Activation of sound
+7 Grub              | Acceleration of temps of start-up of grub and display of the logs of boot
+8 Grub wallpaper    | Change wallpaper of grub
+9 Vimrc             | Vim with copy/paste & couleur syntax & souri
+10 Terminal Custom  | Terminal custom
+11 Conky            | Moniteur systeme custom
 12 Htop             | (docker) Moniteur systeme
-13 Auto clean       | Nettoyage à chaque démarrage
-14 Auto Destruction | (lvm chiffrée) Mot de passe auto destruction
+13 Auto clean       | Cleaning at boot
+14 Auto Destruction | (lvm encryptede) Mot of passe auto destruction
 
 ### ANONYMAT
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-20 Hostname Random  | Change le nom de l'ordinateur à chaque démarrage
-21 Mac Random       | Change les adresses mac à chaque démarrage
-22 Ip Random        | Change l'IP publique à chaque démarrage
+20 Hostname Random  | Change le nom of l'ordinateur at boot
+21 Mac Random       | Change les adresses mac at boot
+22 Ip Random        | Change IP publique at boot
 23 Tor Privoxy      | Passe tout le trafic réseau a travers Tor Privoxy via connection mandataire
 
 ### VIRTUALISATION
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-30 Virtualbox       | Programme de virtualisation
-31 Docker           | Installation de docker avec interface graphique portainer
+30 Virtualbox       | Programme of virtualisation
+31 Docker           | INSTALL of docker with interface graphique portainer
 
 ### FIREWALL / IDS / DNS
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
 40 Snort            | (docker) Détecteur d'intrusion
 41 DnsCrypt         | (docker) Chiffrement dns
-42 Noip             | Synchronisation de l'ip public avec Noip toutes les minutes
+42 Noip             | Synchronisation of l'ip public with Noip toutes les minutes
 
 ### PENTEST
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-50 Armitage         | en cours de dev (docker) Beef-xss, Msf,Nmap,Geoip via Armitage
-51 Gophish          | (docker) Programme de phishing
-52 OnionScan        | (docker) Scanner de site .onion
-53 Ufonet           | (docker) Programme de Ddos
-54 Cupp             | (docker) Gestion & creation de wordlists
+50 Armitage         | en cours of dev (docker) Beef-xss, Msf,Nmap,Geoip via Armitage
+51 Gophish          | (docker) Programme of phishing
+52 OnionScan        | (docker) Scanner of site .onion
+53 Ufonet           | (docker) Programme of Ddos
+54 Cupp             | (docker) Gestion & creation of wordlists
 55 WebShell         | Bibliotheque webshell
 56 Sqlmap           | (docker) Programme d'injection sql
-57 Maltego          | (docker) Programme de footprinting
-58 Wifite           | (docker) Programme de crack wifi
-59 Nikto            | (docker) Scanner de serveur web
-60 Whatweb          | (docker) Scanner de site web
+57 Maltego          | (docker) Programme of footprinting
+58 Wifite           | (docker) Programme of crack wifi
+59 Nikto            | (docker) Scanner of serveur web
+60 Whatweb          | (docker) Scanner of site web
 61 Owasp-Zap        | (docker) Scanner d'application web
-62 Wireshark        | (docker) Analyseur de trames web
-63 Zenmap           | (docker) Scanner de ports
-64 Evilginx         | (docker) Programme de phishing
+62 Wireshark        | (docker) Analyseur of trames web
+63 Zenmap           | (docker) Scanner of ports
+64 Evilginx         | (docker) Programme of phishing
 
 ### CMS
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-70 Pelican          | (docker) Générateur de site static
+70 Pelican          | (docker) Générateur of site static
 
 ### NAVIGATEURS
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
 80 Firefox          | (docker) Navigateur simple
-81 Opera            | (docker) Navigateur avec vpn
-82 Tor Browser      | (docker) Navigateur du réseau tor
+81 Opera            | (docker) Navigateur with vpn
+82 Tor Browser      | (docker) Navigateur of réseau tor
 83 Chromium         | (docker) Navigateur google
 
 ### MESSAGERIES
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
 90 Pidgin           | (docker) Messagerie instantanée .onion
 91 Discord          | (docker) Plateforme Voip
 92 Skype            | (docker) Plateforme Voip
-93 Teamspeak client | (docker) Client pour serveur Voip
+93 Teamspeak client | (docker) Client for serveur Voip
 94 Teamspeak serveur| (docker) Serveur Voip
 
 ### CLOUDS
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
 100 Dropbox         | (docker) Service Cloud
 
 ### CONTROLE DISTANT
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-110 Teamviewer      | (docker) Prise de contrôle à distance
+110 Teamviewer      | (docker) Prise of contrôle à distance
 
 ### CHIFFREMENTS
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
-120 Keepassx        | (docker) Gestionnaire de mot de passe
+120 Keepassx        | (docker) Gestionnaire of mot of passe
 121 PeaZip          | (docker) Gestionnaire d'archive (zip,rar...)
 
-### OUTILS
+### TOOLS
 
-OUTILS              | DESCRIPTION
+TOOLS              | DESCRIPTION
 --------------------|----------------------------------------------------------
 130 Atom            | (docker) IDE
 131 Libreoffice     | (docker) Suite bureautique
 132 Obs             | Capture & streaming video
 133 OpenShot        | Editeur video
-134 Spotify         | (docker) Lecteur de musique
-135 Vlc             | (docker) Lecteur de media
+134 Spotify         | (docker) Lecteur of musique
+135 Vlc             | (docker) Lecteur of media
 136 Transmission    | (docker) Téléchargement Torrent
 137 Android Studio  | (docker) IDEA
-138 Android Root    | (docker) Outils pour le root android
+138 Android Root    | (docker) Outils for le root android
 
 
-## PREREQUIS
+## PREREQUISITES
 
 - Utiliser [Kali Linux](https://www.kali.org/)
 
 
-## INSTALLATION
+## INSTALL
 
 ```
-git clone https://github.com/oda-alexandre/config_auto.git
+git clone https://gitlab.com/oda-alexandre/config_auto.git
 ```
 ```
 python config_auto/install.py
@@ -158,4 +164,4 @@ python config_auto/install.py
 
 ## LICENSE
 
-[![GPLv3+](http://gplv3.fsf.org/gplv3-127x51.png)](https://github.com/oda-alexandre/config_auto/blob/master/LICENSE)
+[![GPLv3+](http://gplv3.fsf.org/gplv3-127x51.png)](https://gitlab.com/oda-alexandre/config_auto/blob/master/LICENSE)

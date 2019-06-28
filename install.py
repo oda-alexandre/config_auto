@@ -2,33 +2,33 @@
 
 """
 Maintainer:  https://www.oda-alexandre.com/
-Description: Configurateur automatisé pour Kali Linux
-Prerequis:   Python
+Description: Configurateur automatisé for Kali Linux
+PREREQUISITES:   Python
 Tutoriel:    https://www.youtube.com/channel/UCELtTOkvfaLoZzUWZ6zywJQ
 """
 
-# IMPORTATION DES MODULES PYTHON
+# IMPORT OF THE MODULES PYTHON
 import os
 import sys
 import platform
 
-# VERIFICATION DE L'UTILISATEUR EN COURS
+# VERIFICATION OF L'USER EN COURS
 if os.geteuid() == 0:
 
-# CREATION D'UN UTILISATEUR EN CAS D'UTILISATION DU COMPTE ROOT
-    print("\033[36;1m" "\nCe script ne fonctionne pas en root, un compte utilisateur va étre créé" "\033[36;1m")
+# CREATION D'UN USER EN CAS D'UTILISATION OF COMPTE ROOT
+    print("\033[36;1m" "\nCe script ne fonctionne pas en root, un compte user va étre créé" "\033[36;1m")
 
     os.system("apt install sudo && \
-    read -p 'Entrez votre nom : ' nom && \
+    read -p 'Entrez your nom : ' nom && \
     adduser $nom && \
     adduser $nom sudo && \
     su $nom")
 
-# DEPLACEMENT DU PROGRAMME EN COURS VERS LE DOSSIER PERSONNEL DU NOUVEL UTILISATEUR
+# DEPLACEMENT OF PROGRAMME EN COURS VERS THE personal folder OF NOUVEL USER
     os.system("sudo mv /root/config_auto $HOME/ && \
     python config_auto/install.py")
 
-# VERIFICATION DE L'OS EN COURS
+# VERIFICATION OF L'OS EN COURS
 if not platform.platform('kali'):
     sys.exit("\033[36;1m" "\nCe script ne fonctionne que sur une distribution Kali Linux" "\033[36;1m")
 
@@ -40,24 +40,24 @@ while programmeLancer:
     print("\033[36;1m"
           "\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "CONFIGURATION\n"
+          "CONFIG\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 1 Kali build             => Création d'une ISO minimaliste de kali avec configurateur automatisé\n"
-          " 2 Sources.list           => Modification des sources et mise à niveau du systéme\n"
-          " 3 Gnome mini             => Configuration minimaliste de gnome\n"
-          " 4 Theme sombre           => Utiliser le Thème sombre intégrale\n"
-          " 5 Bluetooth              => Activation du bluetooth\n"
-          " 6 Son                    => Activation du son\n"
-          " 7 Grub                   => Accélération du temps de démarrage du grub et affichage des logs de boot\n"
-          " 8 Grub fond d'écran      => Modification du fond d'écran du grub\n"
-          " 9 Vimrc                  => Vim avec copier/coller & couleur syntax & souri\n"
-          " 10 Terminal Custom       => Terminal personnalisé\n"
+          " 1 Kali build             => Création d'une ISO minimal of kali with configurateur automatisé\n"
+          " 2 Sources.list           => Change of the sources and update of system\n"
+          " 3 Gnome mini             => Configuration minimal of gnome\n"
+          " 4 Theme dark           => Utiliser le theme dark integral\n"
+          " 5 Bluetooth              => Activation of bluetooth\n"
+          " 6 Son                    => Activation of son\n"
+          " 7 Grub                   => Acceleration of temps of start-up of grub and display of the logs of boot\n"
+          " 8 Grub wallpaper      => Change wallpaper of grub\n"
+          " 9 Vimrc                  => Vim with copy/paste & couleur syntax & souri\n"
+          " 10 Terminal Custom       => Terminal custom\n"
           " 11 Conky                 => Moniteur systeme personnailer\n"
           " 12 Htop                  => (docker) Moniteur systeme\n"
-          " 13 Auto clean            => Nettoyage à chaque démarrage\n"
-          " 14 Auto Destruction      => (lvm chiffré) Mot de passe auto destruction\n"
+          " 13 Auto clean            => Cleaning at boot\n"
+          " 14 Auto Destruction      => (lvm encrypted) Mot of passe auto destruction\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -65,9 +65,9 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 20 Hostname Random       => Change le nom de l'ordinateur à chaque démarrage\n"
-          " 21 Mac Random            => Change les adresses mac à chaque démarrage\n"
-          " 22 Ip Random             => Change l'IP publique à chaque démarrage\n"
+          " 20 Hostname Random       => Change le nom of l'ordinateur at boot\n"
+          " 21 Mac Random            => Change les adresses mac at boot\n"
+          " 22 Ip Random             => Change IP publique at boot\n"
           " 23 Tor Privoxy           => Passe tout le trafic réseau a travers Tor Privoxy via connection mandataire\n"
           "\n"
 
@@ -76,9 +76,9 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 30 Virtualbox            => Programme de virtualisation\n"
-          " 31 Docker                => Installation de docker avec interface graphique portainer\n"
-          " 32 Wine                  => Émulateur de logiciels Windows\n"
+          " 30 Virtualbox            => Programme of virtualisation\n"
+          " 31 Docker                => INSTALL of docker with interface graphique portainer\n"
+          " 32 Wine                  => Émulateur of logiciels Windows\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -88,7 +88,7 @@ while programmeLancer:
 
           " 40 Snort                 => (docker) Détecteur d'intrusion\n"
           " 41 DnsCrypt              => (docker) Chiffrement dns\n"
-          " 42 Noip                  => Synchronisation de l'ip public avec Noip toutes les minutes\n"
+          " 42 Noip                  => Synchronisation of l'ip public with Noip toutes les minutes\n"
 
           "\n"
 
@@ -97,21 +97,21 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 50 Armitage              => en cours de dev (docker) Beef-xss, Msf,Nmap,Geoip via Armitage\n"
-          " 51 Gophish               => (docker) Programme de phishing\n"
-          " 52 OnionScan             => (docker) Scanner de site .onion\n"
-          " 53 Ufonet                => (docker) Programme de Ddos\n"
-          " 54 Cupp                  => (docker) Gestion & creation de wordlists\n"
+          " 50 Armitage              => en cours of dev (docker) Beef-xss, Msf,Nmap,Geoip via Armitage\n"
+          " 51 Gophish               => (docker) Programme of phishing\n"
+          " 52 OnionScan             => (docker) Scanner of site .onion\n"
+          " 53 Ufonet                => (docker) Programme of Ddos\n"
+          " 54 Cupp                  => (docker) Gestion & creation of wordlists\n"
           " 55 WebShell              => Bibliotheque webshell\n"
           " 56 Sqlmap                => (docker) Programme d'injection sql\n"
-          " 57 Maltego               => (docker) Programme de footprinting\n"
-          " 58 Wifite                => (docker) Programme de crack wifi\n"
-          " 59 Nikto                 => (docker) Scanner de serveur web\n"
-          " 60 Whatweb               => (docker) Scanner de site web\n"
+          " 57 Maltego               => (docker) Programme of footprinting\n"
+          " 58 Wifite                => (docker) Programme of crack wifi\n"
+          " 59 Nikto                 => (docker) Scanner of serveur web\n"
+          " 60 Whatweb               => (docker) Scanner of site web\n"
           " 61 Owasp-Zap             => (docker) Scanner d'application web\n"
-          " 62 Wireshark             => (docker) Analyseur de trames web\n"
-          " 63 Zenmap                => (docker) Scanner de ports\n"
-          " 64 Evilginx              => (docker) Programme de phishing\n"
+          " 62 Wireshark             => (docker) Analyseur of trames web\n"
+          " 63 Zenmap                => (docker) Scanner of ports\n"
+          " 64 Evilginx              => (docker) Programme of phishing\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -119,7 +119,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 70 Pelican               => (docker) Générateur de site static\n"
+          " 70 Pelican               => (docker) Générateur of site static\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -128,8 +128,8 @@ while programmeLancer:
           "\n"
 
           " 80 Firefox               => (docker) Navigateur simple\n"
-          " 81 Opera                 => (docker) Navigateur avec vpn\n"
-          " 82 Tor Browser           => (docker) Navigateur du réseau tor\n"
+          " 81 Opera                 => (docker) Navigateur with vpn\n"
+          " 82 Tor Browser           => (docker) Navigateur of réseau tor\n"
           " 83 Chromium              => (docker) Navigateur google\n"
           "\n"
 
@@ -141,7 +141,7 @@ while programmeLancer:
           " 90 Pidgin                => (docker) Messagerie instantanée .onion\n"
           " 91 Discord               => (docker) Plateforme Voip\n"
           " 92 Skype                 => (docker) Plateforme Voip\n"
-          " 93 Teamspeak client      => (docker) Client pour serveur Voip\n"
+          " 93 Teamspeak client      => (docker) Client for serveur Voip\n"
           " 94 Teamspeak serveur     => (docker) Serveur Voip\n"
           "\n"
 
@@ -158,7 +158,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 110 Teamviewer           => (docker) Prise de contrôle à distance\n"
+          " 110 Teamviewer           => (docker) Prise of contrôle à distance\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -166,13 +166,13 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 120 Keepassx             => (docker) Gestionnaire de mot de passe\n"
+          " 120 Keepassx             => (docker) Gestionnaire of mot of passe\n"
           " 121 PeaZip               => (docker) Gestionnaire d'archive (zip,rar...)\n"
-          " 122 GtkHash              => (docker) Outils de vérification d'intégrité de fichier\n"
+          " 122 GtkHash              => (docker) Outils of vérification d'intégrité of file\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
-          "OUTILS\n"
+          "TOOLS\n"
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
@@ -180,11 +180,11 @@ while programmeLancer:
           " 131 Libreoffice          => (docker) Suite bureautique\n"
           " 132 Obs                  => Capture & streaming video\n"
           " 133 OpenShot             => Editeur video\n"
-          " 134 Spotify              => (docker) Lecteur de musique\n"
-          " 135 Vlc                  => (docker) Lecteur de media\n"
+          " 134 Spotify              => (docker) Lecteur of musique\n"
+          " 135 Vlc                  => (docker) Lecteur of media\n"
           " 136 Transmission         => (docker) Téléchargement Torrent\n"
           " 137 Android Studio       => (docker) IDEA\n"
-          " 138 Android Root         => (docker) Outils pour le root android \n"
+          " 138 Android Root         => (docker) Outils for le root android \n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -192,21 +192,21 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 0 Quitter                => Quitter le programme d'installation\n"
+          " 0 Quitter                => Quitter le programme d'INSTALL\n"
           "\n"
           "\033[36;1m")
 
-# CHOIX DU MENU
+# CHOIX OF MENU
     try:
-        choixMenu = raw_input("\033[36;1m" "VEUILLEZ SAISIR VOTRE CHOIX : " "\033[36;1m")
+        choixMenu = raw_input("\033[36;1m" "VEUILLEZ SAISIR YOUR CHOIX : " "\033[36;1m")
         choixMenu = str(choixMenu)
 
-# QUITTER LE MENU
+# QUITTER THE MENU
         if choixMenu == "0":
             print("\033[36;1m" "\nMerci aurevoir\n" "\033[36;1m")
             programmeLancer = False
 
-# MODULES CONFIGURATION
+# MODULES CONFIG
         elif choixMenu == "1":
             import configuration.kalibuild
             continue
@@ -220,7 +220,7 @@ while programmeLancer:
             continue
 
         elif choixMenu == "4":
-            import configuration.themesombre
+            import configuration.themedark
             continue
 
         elif choixMenu == "5":
@@ -433,7 +433,7 @@ while programmeLancer:
             import chiffrement.gtkhash
             continue
 
-# MODULES OUTILS
+# MODULES TOOLS
         elif choixMenu == "130":
             import outils.atom
             continue
@@ -472,7 +472,7 @@ while programmeLancer:
 
 # GESTION ERREUR
         else:
-            print("\033[36;1m" "\nCe choix n'est pas dans la liste\n" "\033[36;1m")
+            print("\033[36;1m" "\nCe choix n'est pas  in  the liste\n" "\033[36;1m")
             continue
 
     except KeyboardInterrupt:
@@ -480,7 +480,7 @@ while programmeLancer:
         programmeLancer = False
 
     except ImportError:
-        print("\033[36;1m" "\nImpossible de trouver le module\n" "\033[36;1m")
+        print("\033[36;1m" "\nImpossible of trouver le module\n" "\033[36;1m")
         continue
 
     except:

@@ -1,13 +1,13 @@
 # coding:utf-8
 
 '''
-module pour l'installation de gnome minimaliste avec shell kali linux
+module for install gnome minimal with shell kali linux
 '''
 
 import os
 
-# INSTALLATION DES PREREQUIS
-print("\033[36;1m \nInstallation des prérequis\n \033[0m")
+# INSTALL OF PACKAGES
+print("\033[36;1m Install of prérequis\n \033[0m")
 
 os.system("sudo apt update && \
 sudo apt install --no-install-recommends -y \
@@ -38,8 +38,8 @@ locate \
 usbutils \
 dosfstools")
 
-# NETTOYAGE DES PAQUETS INUTILES
-print("\033[36;1m \nSuppression des paquets inutiles\n \033[0m")
+# CLEANING UNUSED PACKAGES
+print("\033[36;1m \nDeleting unnecessary packages\n \033[0m")
 
 os.system("sudo apt-get --purge autoremove -y \
 chromium* \
@@ -73,20 +73,20 @@ vim-gui-common \
 vim-common \
 vim-tiny")
 
-# ACTIVATION DE L'INTERFACE eth DANS NETWORK MANAGER
-print("\033[36;1m \nActivation de l'interface eth\n \033[0m")
+# ACTIVATION OF THE INTERFACE eth  IN  NETWORK MANAGER
+print("\033[36;1m \nEnabling the interface eth\n \033[0m")
 
 os.system("echo \"[keyfile]\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf && \
 echo \"unmanaged-devices=*,except:type:ethernet,except:type:wifi,except:type:wwan\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf")
 
-# DESACTIVATION DES SERVICES EVOLUTION
-print("\033[36;1m \nDésactivation des services evolution\n \033[0m")
+# DEACTIVATION OF THE SERVICES EVOLUTION
+print("\033[36;1m \nDeactivation of the services evolution\n \033[0m")
 
 os.system("sudo mv /usr/lib/evolution/ /usr/lib/evolution-DISABLE/ && \
 sudo mv /usr/lib/evolution-data-server/ /usr/lib/evolution-data-server-DISABLE/")
 
-# NETTOYAGE DU DOSSIER PERSONNEL ROOT ET UTILISATEUR
-print("\033[36;1m \nSuppressions des dossiers pré-configurés\n \033[0m")
+# CLEANING OF personal folder ROOT AND USER
+print("\033[36;1m \nSupp of the folders preconfigured\n \033[0m")
 
 os.system("rm -rf $HOME/Modèles $HOME/Musique $HOME/Public $HOME/Téléchargements $HOME/Vidéos $HOME/Documents $HOME/Images && \
 sudo rm -rf /root/Modèles /root/Musique /root/Public /root/Téléchargements /root/Vidéos /root/Documents /root/Images")

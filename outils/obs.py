@@ -1,13 +1,13 @@
 # coding:utf-8
 
 '''
-module pour l'installation de obs studio
+module for install obs studio
 '''
 
 import os
 
-# INSTALLATION DE OBS
-print("\033[36;1m \nInstallation de obs\n \033[0m")
+# INSTALL OF OBS
+print("\033[36;1m Install of obs\n \033[0m")
 
 os.system("sudo apt-get update && \
 sudo apt install --no-install-recommends -y \
