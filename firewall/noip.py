@@ -26,13 +26,13 @@ print("\033[36;1m"
       "\n"
       "IN THE WINDOW THAT WILL FOLLOW INQUIRY AS THIS :\n"
 
-      "(FOR CREER A COMPTE NOIP SUIVRE CE LIEN\n" "https://www.noip.com/sign-up)\n"
-      "(FOR CREER YOUR COMPTE VIA UNE EMAIL JETABLE SUIVRE CE LIEN\n" "https://www.crazymailing.com/fr/)\n"
+      "(TO CREATE A COUNT NOIP FOLLOW THIS LINK\n" "https://www.noip.com/sign-up)\n"
+      "(FOR CREER YOUR ACCOUNT VIA A DISPOSABLE EMAIL FOLLOW THIS LINK\n" "https://www.crazymailing.com/fr/)\n"
 
-      "1-Entrez your email noip\n"
+      "1-Enter your email noip\n"
       "2-Enter your password noip\n"
-      "3-Entrez y and renseignez the temps entre chaque sync (default 30min)\n"
-      "4-Entrez y Appuyez sur entrer\n"
+      "3-Enter y and renseignez the time entre chaque sync (default 30min)\n"
+      "4-Enter y Push enter\n"
       "\n"
       "\033[0m")
 

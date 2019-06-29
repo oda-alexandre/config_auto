@@ -1,7 +1,7 @@
 # coding:utf-8
 
 '''
-module for acceleration of temps of start-up of grub
+module for acceleration of time of start-up of grub
 '''
 
 import os

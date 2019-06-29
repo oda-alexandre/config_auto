@@ -11,29 +11,29 @@ print("\033[36;1m \nInstall of pidgin\n \033[0m")
 
 os.system("docker run -d --name pidgin -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/pidgin -e DISPLAY alexandreoda/pidgin")
 
-# CONSIGNES OF CONFIG
+# INSTRUCTIONS
 print("\033[36;1m"
-      "\nCONFIGURE COMME CECI :\n"
-      "(Pour creer un compte XMPP en .onion via tor-browser suivre ce lien libertygb2nyeyay.onion:5280/register_web)\n"
+      "\nCONFIGURE LIKE THIS :\n"
+      "(To create an XMPP account in .onion via tor-browser follow this link libertygb2nyeyay.onion:5280/register_web)\n"
 
       "\n1-  IN  PIDGIN / TOOLS / PREFERENCES / PROXY :\n"
 
-      "\n(cocher) utiliser une DNS with SOCKS4\n"
+      "\n(check) Use a DNS with SOCKS4\n"
 
       "\nType of proxy	: Tor/Privacy (SOCKS5)\n"
       "\nHote	      	: 127.0.0.1         Port            : 9050\n"
-      "Utilisateur  	: laisser vide     	Mot of passe   	: laisser vide\n"
+      "USER           	: laisser vide     	Mot of passe   	: laisser vide\n"
 
       "\nACCEPT THE CERTIFICAT\n"
 
       "\n2-  IN  PIDGIN / TOOLS / PLUGINS :\n"
 
-      "\n(cocher) Messaging Confidential Off te Record\n"
+      "\n(check) Messaging Confidential Off te Record\n"
 
       "\n3- CHOICE CONFIGURE THE PLUGIN (next to closed)\n"
 
       "\n(clic) on produce\n"
-      "(coche) Require private messaging\n"
+      "(check) Require private messaging\n"
 
       "\n IN YOUR CONVERSATIONS CLIC ON NO-PRIVATE / NO-CHECK / AUTHENTICATE THE CONTACT (your interlocutor will have to do the same)\n"
       "\033[0m")

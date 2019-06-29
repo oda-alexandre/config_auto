@@ -19,7 +19,7 @@ if os.geteuid() == 0:
     print("\033[36;1m" "\nThis script does not work in root, a user account will be created" "\033[36;1m")
 
     os.system("apt install sudo && \
-    read -p 'Entrez your name : ' name && \
+    read -p 'Enter your name : ' name && \
     adduser $name && \
     adduser $name sudo && \
     su $name")

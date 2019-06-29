@@ -68,9 +68,9 @@ print("\033[36;1m \nInstall of gestionnaire portainer\n \033[0m")
 os.system("docker run -ti --name portainer -p 127.0.0.1:9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer")
 
 # MESSAGE
-print("\033[36;1m \nLien vers portainer http://localhost:9000\n \033[0m")
+print("\033[36;1m \nLien to portainer http://localhost:9000\n \033[0m")
 
-enter = raw_input("\033[36;1m \nAppuyer sur <Entrée> for confirmer \033[0m")
+enter = raw_input("\033[36;1m \nPush on <Entrée> for confirmer \033[0m")
 
 if enter == "":
     pass
