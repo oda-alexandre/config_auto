@@ -57,7 +57,7 @@ sudo update-rc.d -f privoxy enable && \
 ")
 
 # REACTIVATION OF THE INTERFACES NETWORK
-print("\033[36;1m \nRéactivation of the network\n \033[0m")
+print("\033[36;1m \nReactivation of the network\n \033[0m")
 
 os.system("sudo ifconfig wlan0 up && \
 sudo ifconfig eth0 up && \
