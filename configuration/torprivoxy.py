@@ -6,8 +6,8 @@ module for install tor and of privoxy
 
 import os
 
-# INSTALL OF PACKAGES
-print("\033[36;1m install prerequisites\n \033[0m")
+# INSTALL PACKAGES
+print("\033[36;1m Install prerequisites\n \033[0m")
 
 os.system("sudo apt-get update && \
 sudo apt install --no-install-recommends -y \
@@ -21,9 +21,9 @@ os.system("echo \"forward-socks5 / localhost:9050 .\" | sudo tee -a /etc/privoxy
 echo \"forward-socks4 / localhost:9050 .\" | sudo tee -a /etc/privoxy/config && \
 echo \"forward-socks4a / localhost:9050 .\" | sudo tee -a /etc/privoxy/config")
 
-# CONFIG MANUELLE OF RÉSEAU
+# CONFIG MANUAL OF NETWORK
 print("\033[36;1m"
-      "ADD THIS LINES  IN  PARAMETRE / RÉSEAU / SERVEUR MANDATAIRE / METHODE MANUELLE :\n\n"
+      "ADD THIS LINES  IN  PARAMETER / NETWORK / PROXY SERVER / MANUAL METHOD :\n\n"
 
       "HTTP localhost - 8118\n"
       "HTTPS localhost - 8118\n"
@@ -31,15 +31,15 @@ print("\033[36;1m"
       "\n"
       "\033[0m")
 
-entree = raw_input("\033[36;1m" "\nPress <Enter> to continue\n" "\033[0m")
+enter = raw_input("\033[36;1m" "\nPress <Enter> to continue\n" "\033[0m")
 
-if entree == "":
+if enter == "":
     pass
 else:
     print("\033[36;1m" "\nYou must press <Enter>\n" "\033[36;1m")
 
-# DEACTIVATION OF THE INTERFACES RESEAUX
-print("\033[36;1m \nDeactivation of the interfaces réseaux\n \033[0m")
+# DEACTIVATION OF THE INTERFACES NETWORK
+print("\033[36;1m \nDeactivation of the network\n \033[0m")
 
 os.system("sudo ifconfig wlan0 down && \
 sudo ifconfig eth0 down && \
@@ -56,8 +56,8 @@ sudo update-rc.d -f tor enable && \
 sudo update-rc.d -f privoxy enable && \
 ")
 
-# REACTIVATION OF THE INTERFACES RESEAUX
-print("\033[36;1m \nRéactivation of the interfaces réseaux\n \033[0m")
+# REACTIVATION OF THE INTERFACES NETWORK
+print("\033[36;1m \nRéactivation of the network\n \033[0m")
 
 os.system("sudo ifconfig wlan0 up && \
 sudo ifconfig eth0 up && \

@@ -6,8 +6,8 @@ module for install conky with conky custom
 
 import os
 
-# INSTALL OF PACKAGES
-print("\033[36;1m install prerequisites\n \033[0m")
+# INSTALL PACKAGES
+print("\033[36;1m Install prerequisites\n \033[0m")
 
 os.system("sudo apt-get update && \
 sudo apt install --no-install-recommends -y \
@@ -27,11 +27,11 @@ mv conky/conky $HOME/.conky")
 os.system("rm -rf conky")
 
 # STARTING CONKY MANAGER
-print("\033[36;1m \n IN  THE WINDOW SELECT YOUR CONKY\n \033[0m")
+print("\033[36;1m \n IN THE WINDOW SELECT YOUR CONKY\n \033[0m")
 
-entree = raw_input("\033[36;1m" "\nPress <Enter> to continue\n" "\033[0m")
+enter = raw_input("\033[36;1m" "\nPress <Enter> to continue\n" "\033[0m")
 
-if entree == "":
+if enter == "":
     pass
 else:
     print("\033[36;1m" "\nYou must press <Enter>\n" "\033[36;1m")

@@ -1,7 +1,7 @@
 # coding:utf-8
 
 '''
-module for activation of the self-destruct password only available for an encrypted LVM install
+module for activation of self-destruct password, only available for an encrypted LVM install
 '''
 
 import os
@@ -17,9 +17,9 @@ print("\033[36;1m"
       "\n"
       "\033[0m")
 
-entree = raw_input("\033[36;1m" "\nPress <Enter> to continue\n" "\033[0m")
+enter = raw_input("\033[36;1m" "\nPress <Enter> to continue\n" "\033[0m")
 
-if entree == "":
+if enter == "":
     pass
 else:
     print("\033[36;1m" "\nYou must press <Enter>\n" "\033[36;1m")

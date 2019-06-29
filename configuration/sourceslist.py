@@ -1,7 +1,7 @@
 # coding:utf-8
 
 '''
-module for the config of file /etc/apt/sources.list followed of the mise à niveau of system
+module for the config of file /etc/apt/sources.list followed of the mise à level of system
 '''
 
 import os
@@ -26,7 +26,7 @@ print("\033[36;1m \nCleaning of system\n \033[0m")
 os.system("sudo apt-get --purge autoremove -y && \
 sudo apt-get autoclean -y")
 
-# AJOUT D'UN ALIAS  IN  THE .bashrc
-print("\033[36;1m \nAjout alias .bashrc\n \033[0m")
+# ADD A ALIAS  IN  THE .bashrc
+print("\033[36;1m \nAdd alias .bashrc\n \033[0m")
 
 os.system("echo \"alias maj=\'sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt-get --purge autoremove -y && sudo apt-get autoclean -y\'\" >> $HOME/.bashrc")

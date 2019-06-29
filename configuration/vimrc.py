@@ -6,8 +6,8 @@ module for install vim with file of config custom
 
 import os
 
-# INSTALL OF PACKAGES
-print("\033[36;1m install prerequisites\n \033[0m")
+# INSTALL PACKAGES
+print("\033[36;1m Install prerequisites\n \033[0m")
 
 os.system("sudo apt-get update && \
 sudo apt install --no-install-recommends -y \

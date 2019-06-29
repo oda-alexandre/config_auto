@@ -1,41 +1,41 @@
 # coding:utf-8
 
 """
-Maintainer:  https://www.oda-alexandre.com/
-Description: Configurateur automatisé for Kali Linux
-PREREQUISITES:   Python
-Tutoriel:    https://www.youtube.com/channel/UCELtTOkvfaLoZzUWZ6zywJQ
+Maintainer:     https://www.oda-alexandre.com/
+Description:    Automated configurator for Kali Linux
+PREREQUISITES:  Python
+Tutoriel:       https://www.youtube.com/channel/UCELtTOkvfaLoZzUWZ6zywJQ
 """
 
-# IMPORT OF THE MODULES PYTHON
+# IMPORT OF MODULES PYTHON
 import os
 import sys
 import platform
 
-# VERIFICATION OF L'USER EN COURS
+# VERIFICATION OF USER
 if os.geteuid() == 0:
 
-# CREATION D'UN USER EN CAS D'UTILISATION OF COMPTE ROOT
-    print("\033[36;1m" "\nCe script ne fonctionne pas en root, un compte user va étre créé" "\033[36;1m")
+# CREATE USER IF YOUR IS ROOT
+    print("\033[36;1m" "\nThis script does not work in root, a user account will be created" "\033[36;1m")
 
     os.system("apt install sudo && \
-    read -p 'Entrez your nom : ' nom && \
-    adduser $nom && \
-    adduser $nom sudo && \
-    su $nom")
+    read -p 'Entrez your name : ' name && \
+    adduser $name && \
+    adduser $name sudo && \
+    su $name")
 
-# DEPLACEMENT OF PROGRAMME EN COURS VERS THE personal folder OF NOUVEL USER
+# DEPLACEMENT OF THE personal folder OF NEW USER
     os.system("sudo mv /root/config_auto $HOME/ && \
     python config_auto/install.py")
 
-# VERIFICATION OF L'OS EN COURS
+# VERIFICATION OF OS USED
 if not platform.platform('kali'):
-    sys.exit("\033[36;1m" "\nCe script ne fonctionne que sur une distribution Kali Linux" "\033[36;1m")
+    sys.exit("\033[36;1m" "\nThis script only works on a Kali Linux distribution" "\033[36;1m")
 
 # MENU
-programmeLancer = True
+programWorking = True
 
-while programmeLancer:
+while programWorking:
 
     print("\033[36;1m"
           "\n"
@@ -44,20 +44,20 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 1 Kali build             => Création d'une ISO minimal of kali with configurateur automatisé\n"
+          " 1 Kali build             => Create a minimal ISO of kali with config_auto\n"
           " 2 Sources.list           => Change of the sources and update of system\n"
           " 3 Gnome mini             => Configuration minimal of gnome\n"
-          " 4 Theme dark           => Utiliser le theme dark integral\n"
+          " 4 Theme dark             => Theme dark integral\n"
           " 5 Bluetooth              => Activation of bluetooth\n"
-          " 6 Son                    => Activation of son\n"
-          " 7 Grub                   => Acceleration of temps of start-up of grub and display of the logs of boot\n"
-          " 8 Grub wallpaper      => Change wallpaper of grub\n"
-          " 9 Vimrc                  => Vim with copy/paste & couleur syntax & souri\n"
+          " 6 Son                    => Activation of sound\n"
+          " 7 Grub                   => Acceleration time of start-up grub and display the logs of boot\n"
+          " 8 Grub wallpaper         => Change wallpaper of grub\n"
+          " 9 Vimrc                  => Vim custom\n"
           " 10 Terminal Custom       => Terminal custom\n"
-          " 11 Conky                 => Moniteur systeme personnailer\n"
-          " 12 Htop                  => (docker) Moniteur systeme\n"
-          " 13 Auto clean            => Cleaning at boot\n"
-          " 14 Auto Destruction      => (lvm encrypted) Mot of passe auto destruction\n"
+          " 11 Conky                 => Monitor system custom\n"
+          " 12 Htop                  => (docker) Monitor system\n"
+          " 13 Auto clean            => Cleaning auto at boot\n"
+          " 14 Auto Destruction      => (lvm encryptede) Password for auto destruction\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -65,10 +65,10 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 20 Hostname Random       => Change le nom of l'ordinateur at boot\n"
-          " 21 Mac Random            => Change les adresses mac at boot\n"
-          " 22 Ip Random             => Change IP publique at boot\n"
-          " 23 Tor Privoxy           => Passe tout le trafic réseau a travers Tor Privoxy via connection mandataire\n"
+          " 20 Hostname Random       => Hostname random at boot\n"
+          " 21 Mac Random            => Mac address random at boot\n"
+          " 22 Ip Random             => IP public random at boot\n"
+          " 23 Tor Privoxy           => Pass all network over tor privoxy\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -76,9 +76,9 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 30 Virtualbox            => Programme of virtualisation\n"
-          " 31 Docker                => INSTALL of docker with interface graphique portainer\n"
-          " 32 Wine                  => Émulateur of logiciels Windows\n"
+          " 30 Virtualbox            => Virtualisation\n"
+          " 31 Docker                => Containerisation\n"
+          " 32 Wine                  => Emulator for Windows app (.exe)\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -86,9 +86,9 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 40 Snort                 => (docker) Détecteur d'intrusion\n"
-          " 41 DnsCrypt              => (docker) Chiffrement dns\n"
-          " 42 Noip                  => Synchronisation of l'ip public with Noip toutes les minutes\n"
+          " 40 Snort                 => (docker) Intrusion Detection System\n"
+          " 41 DnsCrypt              => (docker) Dns encrypted\n"
+          " 42 Noip                  => Synchronisation of ip public with noip all minutes\n"
 
           "\n"
 
@@ -97,19 +97,19 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 50 Armitage              => en cours of dev (docker) Beef-xss, Msf,Nmap,Geoip via Armitage\n"
+          " 50 Armitage              => In progress...\n"
           " 51 Gophish               => (docker) Programme of phishing\n"
-          " 52 OnionScan             => (docker) Scanner of site .onion\n"
-          " 53 Ufonet                => (docker) Programme of Ddos\n"
-          " 54 Cupp                  => (docker) Gestion & creation of wordlists\n"
+          " 52 OnionScan             => (docker) (docker) Scanner of site of dark net\n"
+          " 53 Ufonet                => (docker) Programme of ddos by web servers\n"
+          " 54 Cupp                  => (docker) Management & creation of wordlists\n"
           " 55 WebShell              => Bibliotheque webshell\n"
-          " 56 Sqlmap                => (docker) Programme d'injection sql\n"
+          " 56 Sqlmap                => (docker) Programme of Sql injection\n"
           " 57 Maltego               => (docker) Programme of footprinting\n"
           " 58 Wifite                => (docker) Programme of crack wifi\n"
           " 59 Nikto                 => (docker) Scanner of serveur web\n"
           " 60 Whatweb               => (docker) Scanner of site web\n"
-          " 61 Owasp-Zap             => (docker) Scanner d'application web\n"
-          " 62 Wireshark             => (docker) Analyseur of trames web\n"
+          " 61 Owasp-Zap             => (docker) Scanner of web app\n"
+          " 62 Wireshark             => (docker) Analyser of trames\n"
           " 63 Zenmap                => (docker) Scanner of ports\n"
           " 64 Evilginx              => (docker) Programme of phishing\n"
           "\n"
@@ -119,7 +119,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 70 Pelican               => (docker) Générateur of site static\n"
+          " 70 Pelican               => (docker) Generator of site static\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -127,10 +127,10 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 80 Firefox               => (docker) Navigateur simple\n"
-          " 81 Opera                 => (docker) Navigateur with vpn\n"
-          " 82 Tor Browser           => (docker) Navigateur of réseau tor\n"
-          " 83 Chromium              => (docker) Navigateur google\n"
+          " 80 Firefox               => (docker) Navigator firefox\n"
+          " 81 Opera                 => (docker) Navigator with vpn\n"
+          " 82 Tor Browser           => (docker) Navigator of tor\n"
+          " 83 Chromium              => (docker) Navigator google\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -138,10 +138,10 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 90 Pidgin                => (docker) Messagerie instantanée .onion\n"
-          " 91 Discord               => (docker) Plateforme Voip\n"
-          " 92 Skype                 => (docker) Plateforme Voip\n"
-          " 93 Teamspeak client      => (docker) Client for serveur Voip\n"
+          " 90 Pidgin                => (docker) Instant messaging\n"
+          " 91 Discord               => (docker) Plateform Voip\n"
+          " 92 Skype                 => (docker) Plateform Voip\n"
+          " 93 Teamspeak client      => (docker) Client Voip\n"
           " 94 Teamspeak serveur     => (docker) Serveur Voip\n"
           "\n"
 
@@ -150,7 +150,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 100 Dropbox               => (docker) Service Cloud\n"
+          " 100 Dropbox              => (docker) Cloud\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -158,7 +158,7 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 110 Teamviewer           => (docker) Prise of contrôle à distance\n"
+          " 110 Teamviewer           => (docker) Support control\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -166,9 +166,9 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 120 Keepassx             => (docker) Gestionnaire of mot of passe\n"
-          " 121 PeaZip               => (docker) Gestionnaire d'archive (zip,rar...)\n"
-          " 122 GtkHash              => (docker) Outils of vérification d'intégrité of file\n"
+          " 120 Keepassx             => (docker) Management of password\n"
+          " 121 PeaZip               => (docker) Management archive (zip,rar...)\n"
+          " 122 GtkHash              => (docker) Tools of integrity check of file\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -177,14 +177,14 @@ while programmeLancer:
           "\n"
 
           " 130 Atom                 => (docker) IDE\n"
-          " 131 Libreoffice          => (docker) Suite bureautique\n"
-          " 132 Obs                  => Capture & streaming video\n"
-          " 133 OpenShot             => Editeur video\n"
-          " 134 Spotify              => (docker) Lecteur of musique\n"
-          " 135 Vlc                  => (docker) Lecteur of media\n"
-          " 136 Transmission         => (docker) Téléchargement Torrent\n"
+          " 131 Libreoffice          => (docker) Office suite\n"
+          " 132 Obs                  => Streaming video\n"
+          " 133 OpenShot             => Editor video\n"
+          " 134 Spotify              => (docker) Reader of musique\n"
+          " 135 Vlc                  => (docker) Reader of media\n"
+          " 136 Transmission         => (docker) Download Torrent\n"
           " 137 Android Studio       => (docker) IDEA\n"
-          " 138 Android Root         => (docker) Outils for le root android \n"
+          " 138 Android Root         => (docker) Tools for root android \n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -192,297 +192,297 @@ while programmeLancer:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 0 Quitter                => Quitter le programme d'INSTALL\n"
+          " 0 Quit                => Quit the programme\n"
           "\n"
           "\033[36;1m")
 
 # CHOIX OF MENU
     try:
-        choixMenu = raw_input("\033[36;1m" "VEUILLEZ SAISIR YOUR CHOIX : " "\033[36;1m")
-        choixMenu = str(choixMenu)
+        choiceMenu = raw_input("\033[36;1m" "ENTER YOUR CHOICE : " "\033[36;1m")
+        choiceMenu = str(choiceMenu)
 
-# QUITTER THE MENU
-        if choixMenu == "0":
-            print("\033[36;1m" "\nMerci aurevoir\n" "\033[36;1m")
-            programmeLancer = False
+# QUIT THE MENU
+        if choiceMenu == "0":
+            print("\033[36;1m" "\nGoodbye\n" "\033[36;1m")
+            programWorking = False
 
 # MODULES CONFIG
-        elif choixMenu == "1":
+        elif choiceMenu == "1":
             import configuration.kalibuild
             continue
 
-        elif choixMenu == "2":
+        elif choiceMenu == "2":
             import configuration.sourceslist
             continue
 
-        elif choixMenu == "3":
+        elif choiceMenu == "3":
             import configuration.gnomemini
             continue
 
-        elif choixMenu == "4":
+        elif choiceMenu == "4":
             import configuration.themedark
             continue
 
-        elif choixMenu == "5":
+        elif choiceMenu == "5":
             import configuration.bluetooth
             continue
 
-        elif choixMenu == "6":
+        elif choiceMenu == "6":
             import configuration.son
             continue
 
-        elif choixMenu == "7":
+        elif choiceMenu == "7":
             import configuration.grub
             continue
 
-        elif choixMenu == "8":
+        elif choiceMenu == "8":
             import configuration.grubimg
             continue
 
-        elif choixMenu == "9":
+        elif choiceMenu == "9":
             import configuration.vimrc
             continue
 
-        elif choixMenu == "10":
+        elif choiceMenu == "10":
             import configuration.terminalcustom
             continue
 
-        elif choixMenu == "11":
+        elif choiceMenu == "11":
             import configuration.conky
             continue
 
-        elif choixMenu == "12":
+        elif choiceMenu == "12":
             import configuration.htop
             continue
 
-        elif choixMenu == "13":
+        elif choiceMenu == "13":
             import configuration.autoclean
             continue
 
-        elif choixMenu == "14":
+        elif choiceMenu == "14":
             import configuration.autodestruction
             continue
 
 # MODULES ANONYMAT
-        elif choixMenu == "20":
+        elif choiceMenu == "20":
             import anonymat.hostnamerandom
             continue
 
-        elif choixMenu == "21":
+        elif choiceMenu == "21":
             import anonymat.macrandom
             continue
 
-        elif choixMenu == "23":
+        elif choiceMenu == "23":
             import anonymat.iprandom
             continue
 
-        elif choixMenu == "24":
+        elif choiceMenu == "24":
             import anonymat.torprivoxy
             continue
 
 # MODULES VIRTUALISATION
-        elif choixMenu == "30":
+        elif choiceMenu == "30":
             import virtualisation.virtualbox
             continue
 
-        elif choixMenu == "31":
+        elif choiceMenu == "31":
             import virtualisation.docker
             continue
 
-        elif choixMenu == "32":
+        elif choiceMenu == "32":
             import virtualisation.wine
             continue
 
 # MODULES FIREWALL
-        elif choixMenu == "40":
+        elif choiceMenu == "40":
             import firewall.snort
             continue
 
-        elif choixMenu == "41":
+        elif choiceMenu == "41":
             import firewall.dnscrypt
             continue
 
-        elif choixMenu == "42":
+        elif choiceMenu == "42":
             import firewall.noip
             continue
 
 # MODULES PENTEST
-        elif choixMenu == "50":
+        elif choiceMenu == "50":
             import pentest.armitage
             continue
 
-        elif choixMenu == "51":
+        elif choiceMenu == "51":
             import pentest.gophish
             continue
 
-        elif choixMenu == "52":
+        elif choiceMenu == "52":
             import pentest.onionscan
             continue
 
-        elif choixMenu == "53":
+        elif choiceMenu == "53":
             import pentest.ufonet
             continue
 
-        elif choixMenu == "54":
+        elif choiceMenu == "54":
             import pentest.cupp
             continue
 
-        elif choixMenu == "55":
+        elif choiceMenu == "55":
             import pentest.webshell
             continue
 
-        elif choixMenu == "56":
+        elif choiceMenu == "56":
             import pentest.sqlmap
             continue
 
-        elif choixMenu == "57":
+        elif choiceMenu == "57":
             import pentest.maltego
             continue
 
-        elif choixMenu == "58":
+        elif choiceMenu == "58":
             import pentest.wifite
             continue
 
-        elif choixMenu == "59":
+        elif choiceMenu == "59":
             import pentest.nikto
             continue
 
-        elif choixMenu == "60":
+        elif choiceMenu == "60":
             import pentest.whatweb
             continue
 
-        elif choixMenu == "61":
+        elif choiceMenu == "61":
             import pentest.owaspzap
             continue
 
-        elif choixMenu == "62":
+        elif choiceMenu == "62":
             import pentest.wireshark
             continue
 
-        elif choixMenu == "63":
+        elif choiceMenu == "63":
             import pentest.zenmap
             continue
 
-        elif choixMenu == "64":
+        elif choiceMenu == "64":
             import pentest.evilginx
             continue
 
 # MODULES CMS
-        elif choixMenu == "70":
+        elif choiceMenu == "70":
             import cms.pelican
             continue
 
 # MODULES NAVIGATEURS
-        elif choixMenu == "80":
+        elif choiceMenu == "80":
             import navigateurs.firefox
             continue
 
-        elif choixMenu == "81":
+        elif choiceMenu == "81":
             import navigateurs.opera
             continue
 
-        elif choixMenu == "82":
+        elif choiceMenu == "82":
             import navigateurs.torbrowser
             continue
 
-        elif choixMenu == "83":
+        elif choiceMenu == "83":
             import navigateurs.chromium
             continue
 
 # MODULES MESSAGERIE
-        elif choixMenu == "90":
+        elif choiceMenu == "90":
             import messagerie.pidgin
             continue
 
-        elif choixMenu == "91":
+        elif choiceMenu == "91":
             import messagerie.discord
             continue
 
-        elif choixMenu == "92":
+        elif choiceMenu == "92":
             import messagerie.skype
             continue
 
-        elif choixMenu == "93":
+        elif choiceMenu == "93":
             import messagerie.teamspeakclient
             continue
 
-        elif choixMenu == "94":
+        elif choiceMenu == "94":
             import messagerie.teamspeakserveur
             continue
 
 # MODULES CLOUDS
-        elif choixMenu == "100":
+        elif choiceMenu == "100":
             import clouds.dropbox
             continue
 
-# MODULES CONTROLE DISTANT
-        elif choixMenu == "110":
+# MODULES SUPPORT
+        elif choiceMenu == "110":
             import controledistant.teamviewer
             continue
 
 # MODULES CHIFFREMENT
-        elif choixMenu == "120":
+        elif choiceMenu == "120":
             import chiffrement.keepassx
             continue
 
-        elif choixMenu == "121":
+        elif choiceMenu == "121":
             import chiffrement.peazip
             continue
 
-        elif choixMenu == "122":
+        elif choiceMenu == "122":
             import chiffrement.gtkhash
             continue
 
 # MODULES TOOLS
-        elif choixMenu == "130":
+        elif choiceMenu == "130":
             import outils.atom
             continue
 
-        elif choixMenu == "131":
+        elif choiceMenu == "131":
             import outils.libreoffice
             continue
 
-        elif choixMenu == "132":
+        elif choiceMenu == "132":
             import outils.obs
             continue
 
-        elif choixMenu == "133":
+        elif choiceMenu == "133":
             import outils.openshot
             continue
 
-        elif choixMenu == "134":
+        elif choiceMenu == "134":
             import outils.spotify
             continue
 
-        elif choixMenu == "135":
+        elif choiceMenu == "135":
             import outils.vlc
             continue
 
-        elif choixMenu == "136":
+        elif choiceMenu == "136":
             import outils.transmission
             continue
 
-        elif choixMenu == "137":
+        elif choiceMenu == "137":
             import outils.androidstudio
             continue
 
-        elif choixMenu == "138":
+        elif choiceMenu == "138":
             import outils.androidroot
             continue
 
-# GESTION ERREUR
+# MANAGEMENT ERROR
         else:
-            print("\033[36;1m" "\nCe choix n'est pas  in  the liste\n" "\033[36;1m")
+            print("\033[36;1m" "\nThis choice is not in the list\n" "\033[36;1m")
             continue
 
     except KeyboardInterrupt:
-        print("\033[36;1m" "\nMerci aurevoir\n" "\033[36;1m")
-        programmeLancer = False
+        print("\033[36;1m" "\nGoodbye\n" "\033[36;1m")
+        programWorking = False
 
     except ImportError:
-        print("\033[36;1m" "\nImpossible of trouver le module\n" "\033[36;1m")
+        print("\033[36;1m" "\Module not found\n" "\033[36;1m")
         continue
 
     except:
-        print("\033[36;1m" "\nVous devez saisir un nombre\n" "\033[36;1m")
+        print("\033[36;1m" "\nYou must enter a number\n" "\033[36;1m")
         continue

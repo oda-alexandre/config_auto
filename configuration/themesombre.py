@@ -1,7 +1,7 @@
 # coding:utf-8
 
 '''
-module for obtenir le théme dark integral
+module for obtenir the théme dark integral
 '''
 
 import os

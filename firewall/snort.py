@@ -1,7 +1,7 @@
 # coding:utf-8
 
 '''
-module for install demon snort by docker
+module for install deamon snort by docker
 '''
 
 import os

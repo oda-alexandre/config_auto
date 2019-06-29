@@ -6,7 +6,7 @@ module for install a script of hostname random auto
 
 import os
 
-# INSTALL OF PACKAGES
+# INSTALL PACKAGES
 print("\033[36;1m \nInstall prerequisites\n \033[0m")
 
 os.system("sudo apt-get update && \

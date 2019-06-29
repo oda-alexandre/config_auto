@@ -19,7 +19,9 @@
 
 ## INTRODUCTION
 
-This repository contains an automated config program for [Kali Linux](https://www.kali.org/), he automates install the config of the this tools :
+This repository contains an automated config program for
+
+- [Kali Linux](https://www.kali.org/), he automates install the config of this tools :
 
 > (docker) means that the tool is install by docker
 
@@ -32,124 +34,126 @@ TOOLS               | DESCRIPTION
 1 Kali build        | Create a minimal ISO of kali with config_auto integrated
 2 Sources.list      | Change of the sources and update of system
 3 Gnome mini        | Configuration minimal of gnome
-4 Theme dark        | theme dark integral
+4 Theme dark        | Theme dark integral
 5 Bluetooth         | Activation of bluetooth
 6 Son               | Activation of sound
-7 Grub              | Acceleration of temps of start-up of grub and display of the logs of boot
+7 Grub              | Acceleration time of start-up grub and display the logs of boot
 8 Grub wallpaper    | Change wallpaper of grub
-9 Vimrc             | Vim with copy/paste & couleur syntax & souri
+9 Vimrc             | Vim custom
 10 Terminal Custom  | Terminal custom
-11 Conky            | Moniteur systeme custom
-12 Htop             | (docker) Moniteur systeme
-13 Auto clean       | Cleaning at boot
-14 Auto Destruction | (lvm encryptede) Mot of passe auto destruction
+11 Conky            | Monitor system custom
+12 Htop             | (docker) Monitor system
+13 Auto clean       | Cleaning auto at boot
+14 Auto Destruction | (lvm encryptede) Password for auto destruction
 
 ### ANONYMAT
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
-20 Hostname Random  | Change le nom of l'ordinateur at boot
-21 Mac Random       | Change les adresses mac at boot
-22 Ip Random        | Change IP publique at boot
-23 Tor Privoxy      | Passe tout le trafic réseau a travers Tor Privoxy via connection mandataire
+20 Hostname Random  | Hostname random at boot
+21 Mac Random       | Mac address random at boot
+22 Ip Random        | IP public random at boot
+23 Tor Privoxy      | Pass all network over tor privoxy
 
 ### VIRTUALISATION
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
-30 Virtualbox       | Programme of virtualisation
-31 Docker           | INSTALL of docker with interface graphique portainer
+30 Virtualbox       | Virtualisation
+31 Docker           | Containerisation
+32 Wine             | Emulator for Windows app (.exe)
 
 ### FIREWALL / IDS / DNS
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
-40 Snort            | (docker) Détecteur d'intrusion
-41 DnsCrypt         | (docker) Chiffrement dns
-42 Noip             | Synchronisation of l'ip public with Noip toutes les minutes
+40 Snort            | (docker) Intrusion Detection System
+41 DnsCrypt         | (docker) Dns encrypted
+42 Noip             | Synchronisation of ip public with noip all minutes
 
 ### PENTEST
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
-50 Armitage         | en cours of dev (docker) Beef-xss, Msf,Nmap,Geoip via Armitage
+50 Armitage         | In progress...
 51 Gophish          | (docker) Programme of phishing
-52 OnionScan        | (docker) Scanner of site .onion
-53 Ufonet           | (docker) Programme of Ddos
-54 Cupp             | (docker) Gestion & creation of wordlists
-55 WebShell         | Bibliotheque webshell
-56 Sqlmap           | (docker) Programme d'injection sql
+52 OnionScan        | (docker) Scanner of site of dark net
+53 Ufonet           | (docker) Programme of ddos by web servers
+54 Cupp             | (docker) Management & creation of wordlists
+55 WebShell         | Library of webshell
+56 Sqlmap           | (docker) Programme of Sql injection
 57 Maltego          | (docker) Programme of footprinting
 58 Wifite           | (docker) Programme of crack wifi
 59 Nikto            | (docker) Scanner of serveur web
 60 Whatweb          | (docker) Scanner of site web
-61 Owasp-Zap        | (docker) Scanner d'application web
-62 Wireshark        | (docker) Analyseur of trames web
+61 Owasp-Zap        | (docker) Scanner of web app
+62 Wireshark        | (docker) Analyser of trames
 63 Zenmap           | (docker) Scanner of ports
 64 Evilginx         | (docker) Programme of phishing
 
 ### CMS
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
-70 Pelican          | (docker) Générateur of site static
+70 Pelican          | (docker) Generator of site static
 
-### NAVIGATEURS
+### NAVIGATOR
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
-80 Firefox          | (docker) Navigateur simple
-81 Opera            | (docker) Navigateur with vpn
-82 Tor Browser      | (docker) Navigateur of réseau tor
-83 Chromium         | (docker) Navigateur google
+80 Firefox          | (docker) Navigator firefox
+81 Opera            | (docker) Navigator with vpn
+82 Tor Browser      | (docker) Navigator of tor
+83 Chromium         | (docker) Navigator google
 
-### MESSAGERIES
+### MESSAGING
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
-90 Pidgin           | (docker) Messagerie instantanée .onion
-91 Discord          | (docker) Plateforme Voip
-92 Skype            | (docker) Plateforme Voip
-93 Teamspeak client | (docker) Client for serveur Voip
+90 Pidgin           | (docker) Instant messaging
+91 Discord          | (docker) Plateform Voip
+92 Skype            | (docker) Plateform Voip
+93 Teamspeak client | (docker) Client Voip
 94 Teamspeak serveur| (docker) Serveur Voip
 
 ### CLOUDS
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
-100 Dropbox         | (docker) Service Cloud
+100 Dropbox         | (docker) Cloud
 
-### CONTROLE DISTANT
+### SUPPORT
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
-110 Teamviewer      | (docker) Prise of contrôle à distance
+110 Teamviewer      | (docker) Support control
 
 ### CHIFFREMENTS
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
-120 Keepassx        | (docker) Gestionnaire of mot of passe
-121 PeaZip          | (docker) Gestionnaire d'archive (zip,rar...)
+120 Keepassx        | (docker) Management of password
+121 PeaZip          | (docker) Management archive (zip,rar...)
+122 GtkHash         | (docker) Tools of integrity check of file
 
 ### TOOLS
 
-TOOLS              | DESCRIPTION
+TOOLS               | DESCRIPTION
 --------------------|----------------------------------------------------------
 130 Atom            | (docker) IDE
-131 Libreoffice     | (docker) Suite bureautique
-132 Obs             | Capture & streaming video
-133 OpenShot        | Editeur video
-134 Spotify         | (docker) Lecteur of musique
-135 Vlc             | (docker) Lecteur of media
-136 Transmission    | (docker) Téléchargement Torrent
+131 Libreoffice     | (docker) Office suite
+132 Obs             | Streaming video
+133 OpenShot        | Editor video
+134 Spotify         | (docker) Reader of musique
+135 Vlc             | (docker) Reader of media
+136 Transmission    | (docker) Download Torrent
 137 Android Studio  | (docker) IDEA
-138 Android Root    | (docker) Outils for le root android
+138 Android Root    | (docker) Tools for root android
 
 
 ## PREREQUISITES
 
-- Utiliser [Kali Linux](https://www.kali.org/)
+- Use [Kali Linux](https://www.kali.org/)
 
 
 ## INSTALL

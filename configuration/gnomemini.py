@@ -6,7 +6,7 @@ module for install gnome minimal with shell kali linux
 
 import os
 
-# INSTALL OF PACKAGES
+# INSTALL PACKAGES
 print("\033[36;1m Install of prérequis\n \033[0m")
 
 os.system("sudo apt update && \
@@ -73,7 +73,7 @@ vim-gui-common \
 vim-common \
 vim-tiny")
 
-# ACTIVATION OF THE INTERFACE eth  IN  NETWORK MANAGER
+# ACTIVATION OF THE INTERFACE eth IN NETWORK MANAGER
 print("\033[36;1m \nEnabling the interface eth\n \033[0m")
 
 os.system("echo \"[keyfile]\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf && \
@@ -88,5 +88,5 @@ sudo mv /usr/lib/evolution-data-server/ /usr/lib/evolution-data-server-DISABLE/"
 # CLEANING OF personal folder ROOT AND USER
 print("\033[36;1m \nSupp of the folders preconfigured\n \033[0m")
 
-os.system("rm -rf $HOME/Modèles $HOME/Musique $HOME/Public $HOME/Téléchargements $HOME/Vidéos $HOME/Documents $HOME/Images && \
-sudo rm -rf /root/Modèles /root/Musique /root/Public /root/Téléchargements /root/Vidéos /root/Documents /root/Images")
+os.system("rm -rf $HOME/Modèles $HOME/Musique $HOME/Public $HOME/Downloads $HOME/Vidéos $HOME/Documents $HOME/Images && \
+sudo rm -rf /root/Modèles /root/Musique /root/Public /root/Downloads /root/Vidéos /root/Documents /root/Images")
