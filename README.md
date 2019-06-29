@@ -7,7 +7,7 @@
 
 - [Badges](#BADGES)
 - [Introduction](#INTRODUCTION)
-- [PREREQUISITESites](#PREREQUISITESITES)
+- [Prerequisites](#PREREQUISITESITES)
 - [Install](#INSTALL)
 - [License](#LICENSE)
 
