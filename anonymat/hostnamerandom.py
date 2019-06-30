@@ -27,5 +27,5 @@ sudo chmod +x /etc/init.d/hostname-random")
 # AUTO STARTING
 os.system("sudo update-rc.d -f hostname-random defaults")
 
-# CLEANING OF INSTALL RESIDUES
+# CLEANING
 os.system("rm -rf hostname_random")

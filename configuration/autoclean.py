@@ -23,5 +23,5 @@ sudo chmod +x /etc/init.d/auto-clean")
 # AUTO STARTING
 os.system("sudo update-rc.d -f auto-clean defaults")
 
-# CLEANING OF INSTALL RESIDUES
+# CLEANING
 os.system("rm -rf auto_clean")

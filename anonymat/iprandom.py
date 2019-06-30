@@ -39,5 +39,5 @@ os.system("sudo systemctl restart openvpn && \
 sudo systemctl enable openvpn && \
 sudo update-rc.d -f ip-random defaults")
 
-# CLEANING OF INSTALL RESIDUES
+# CLEANING
 os.system("rm -rf ip_random")

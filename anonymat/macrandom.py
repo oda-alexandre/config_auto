@@ -23,5 +23,5 @@ sudo chmod +x /etc/init.d/mac-random")
 # AUTO STARTING
 os.system("sudo update-rc.d -f mac-random defaults")
 
-# CLEANING OF INSTALL RESIDUES
+# CLEANING
 os.system("rm -rf mac_random")

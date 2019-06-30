@@ -54,7 +54,7 @@ os.system("git clone https://gitlab.com/oda-alexandre/noip.git noip && \
 sudo mv -f noip/noip /etc/init.d/ && \
 sudo chmod +x /etc/init.d/noip")
 
-# CLEANING OF INSTALL RESIDUES
+# CLEANING
 os.system("rm -rf noip && \
 rm -rf noip-duc-linux.tar.gz && \
 sudo rm -rf /usr/local/src/noip-duc-linux.tar.gz")

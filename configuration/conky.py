@@ -23,7 +23,7 @@ git clone https://gitlab.com/oda-alexandre/conky.git && \
 sudo mv conky/pizzadude_bullets /usr/share/fonts && \
 mv conky/conky $HOME/.conky")
 
-# CLEANING OF INSTALL RESIDUES
+# CLEANING
 os.system("rm -rf conky")
 
 # STARTING CONKY MANAGER
