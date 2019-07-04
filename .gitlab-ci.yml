@@ -4,7 +4,7 @@ services:
   - docker:dind
 
 stages:
-  - build
+  # - build
   - test
 
 variables:
@@ -14,7 +14,6 @@ variables:
 before_script:
   - echo -e '\033[36;1m ******* DOCKER LOGIN REGISTRY & INSTALL PREREQUISITES ******** \033[0m'
   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-  - apt install python -y
 
 # build:
 #   stage: build
@@ -63,19 +62,19 @@ code_quality:
 #   artifacts:
 #       paths: [gl-container-scanning-report.json]
 
-# dependency_scanning:
-#   stage: test
-#   allow_failure: false
-#   script:
-#     - echo -e '\033[36;1m ******* TEST DEPENDENCY SCANNING ******** \033[0m'
-#     - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
-#     - docker run --rm
-#         --env DEP_SCAN_DISABLE_REMOTE_CHECKS="${DEP_SCAN_DISABLE_REMOTE_CHECKS:-false}"
-#         --volume $PWD:/code
-#         --volume /var/run/docker.sock:/var/run/docker.sock
-#         "registry.gitlab.com/gitlab-org/security-products/dependency-scanning:$SP_VERSION" /code
-#   artifacts:
-#       paths: [gl-dependency-scanning-report.json]
+dependency_scanning:
+  stage: test
+  allow_failure: false
+  script:
+    - echo -e '\033[36;1m ******* TEST DEPENDENCY SCANNING ******** \033[0m'
+    - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
+    - docker run --rm
+        --env DEP_SCAN_DISABLE_REMOTE_CHECKS="${DEP_SCAN_DISABLE_REMOTE_CHECKS:-false}"
+        --volume $PWD:/code
+        --volume /var/run/docker.sock:/var/run/docker.sock
+        "registry.gitlab.com/gitlab-org/security-products/dependency-scanning:$SP_VERSION" /code
+  artifacts:
+      paths: [gl-dependency-scanning-report.json]
 
 sast:
   stage: test
@@ -103,11 +102,11 @@ license_management:
   artifacts:
     paths: [gl-license-management-report.json]
 
-test:
-  stage: test
-  allow_failure: false
-  script:
-    - echo -e '\033[36;1m ******* TEST RUN ******** \033[0m'
-    - python install.py
+# test:
+#   stage: test
+#   allow_failure: false
+#   script:
+#     - echo -e '\033[36;1m ******* TEST RUN ******** \033[0m'
+#     - python install.py
   only:
     - master
