@@ -1,12 +1,7 @@
 # coding:utf-8
 
-'''
-module for activation of self-destruct password, only available for an encrypted LVM install
-'''
-
 import os
 
-# MESSAGE
 print("\033[36;1m"
       "\n"
       "IN THE WINDOW THAT WILL FOLLOW INQUIRY AS THIS :\n\n"
@@ -24,5 +19,6 @@ if enter == "":
 else:
     print("\033[36;1m" "\nYou must press <Enter>\n" "\033[36;1m")
 
-# CONFIG OF PASSWORD SELF DESTRUCTION WITH CRYPTSETUP
+print("\033[36;1m \nCONFIG OF PASSWORD SELF DESTRUCTION WITH CRYPTSETUP\n \033[0m")
+
 os.system("sudo cryptsetup luksAddNuke /dev/sda3")

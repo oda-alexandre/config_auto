@@ -1,17 +1,11 @@
 # coding:utf-8
 
-'''
-module for install pidgin by docker
-'''
-
 import os
 
-# INSTALL FROM THE DOCKER HUB
-print("\033[36;1m \nInstall of pidgin\n \033[0m")
+print("\033[36;1m \nINSTALL FROM THE DOCKER HUB\n \033[0m")
 
 os.system("docker run -d --name pidgin -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v ${HOME}:/home/pidgin -e DISPLAY alexandreoda/pidgin")
 
-# INSTRUCTIONS
 print("\033[36;1m"
       "\nCONFIGURE LIKE THIS :\n"
       "(To create an XMPP account in .onion via tor-browser follow this link libertygb2nyeyay.onion:5280/register_web)\n"

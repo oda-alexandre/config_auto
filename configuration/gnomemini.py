@@ -1,13 +1,8 @@
 # coding:utf-8
 
-'''
-module for install gnome minimal with shell kali linux
-'''
-
 import os
 
-# INSTALL PACKAGES
-print("\033[36;1m Install of prérequis\n \033[0m")
+print("\033[36;1m \nINSTALL PREREQUISITES\n \033[0m")
 
 os.system("sudo apt update && \
 sudo apt install --no-install-recommends -y \
@@ -38,8 +33,7 @@ locate \
 usbutils \
 dosfstools")
 
-# CLEANING UNUSED PACKAGES
-print("\033[36;1m \nDeleting unnecessary packages\n \033[0m")
+print("\033[36;1m \nCLEANING UNUSED PACKAGES\n \033[0m")
 
 os.system("sudo apt-get --purge autoremove -y \
 chromium* \
@@ -73,20 +67,17 @@ vim-gui-common \
 vim-common \
 vim-tiny")
 
-# ACTIVATION OF THE INTERFACE eth IN NETWORK MANAGER
-print("\033[36;1m \nEnabling the interface eth\n \033[0m")
+print("\033[36;1m \nACTIVATION eth IN NETWORK MANAGER\n \033[0m")
 
 os.system("echo \"[keyfile]\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf && \
 echo \"unmanaged-devices=*,except:type:ethernet,except:type:wifi,except:type:wwan\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf")
 
-# DEACTIVATION OF THE SERVICES EVOLUTION
-print("\033[36;1m \nDeactivation of the services evolution\n \033[0m")
+print("\033[36;1m \nDEACTIVATION OF THE SERVICES EVOLUTION\n \033[0m")
 
 os.system("sudo mv /usr/lib/evolution/ /usr/lib/evolution-DISABLE/ && \
 sudo mv /usr/lib/evolution-data-server/ /usr/lib/evolution-data-server-DISABLE/")
 
-# CLEANING OF personal folder ROOT AND USER
-print("\033[36;1m \nSupp of the folders preconfigured\n \033[0m")
+print("\033[36;1m \nCLEANING ROOT AND USER WORKSPACE\n \033[0m")
 
 os.system("rm -rf $HOME/Modèles $HOME/Musique $HOME/Public $HOME/Downloads $HOME/Vidéos $HOME/Documents $HOME/Images && \
 sudo rm -rf /root/Modèles /root/Musique /root/Public /root/Downloads /root/Vidéos /root/Documents /root/Images")

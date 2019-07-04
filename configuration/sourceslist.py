@@ -26,7 +26,7 @@ print("\033[36;1m \nCleaning of system\n \033[0m")
 os.system("sudo apt-get --purge autoremove -y && \
 sudo apt-get autoclean -y")
 
-# ADD A ALIAS  IN  THE .bashrc
+print("\033[36;1m \nADD ALIAS IN .bashrc\n \033[0m")
 print("\033[36;1m \nAdd alias .bashrc\n \033[0m")
 
 os.system("echo \"alias maj=\'sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt-get --purge autoremove -y && sudo apt-get autoclean -y\'\" >> $HOME/.bashrc")

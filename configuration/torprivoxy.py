@@ -1,27 +1,20 @@
 # coding:utf-8
 
-'''
-module for install tor and of privoxy
-'''
-
 import os
 
-# INSTALL PACKAGES
-print("\033[36;1m Install prerequisites\n \033[0m")
+print("\033[36;1m \nINSTALL PREREQUISITES\n \033[0m")
 
 os.system("sudo apt-get update && \
 sudo apt install --no-install-recommends -y \
 tor \
 privoxy")
 
-# CONFIG OF FILE /etc/privoxy/config
-print("\033[36;1m \nConfiguration\n \033[0m")
+print("\033[36;1m \nCONFIG PRIVOXY\n \033[0m")
 
 os.system("echo \"forward-socks5 / localhost:9050 .\" | sudo tee -a /etc/privoxy/config && \
 echo \"forward-socks4 / localhost:9050 .\" | sudo tee -a /etc/privoxy/config && \
 echo \"forward-socks4a / localhost:9050 .\" | sudo tee -a /etc/privoxy/config")
 
-# CONFIG MANUAL OF NETWORK
 print("\033[36;1m"
       "ADD THIS LINES  IN  PARAMETER / NETWORK / PROXY SERVER / MANUAL METHOD :\n\n"
 
@@ -38,15 +31,13 @@ if enter == "":
 else:
     print("\033[36;1m" "\nYou must press <Enter>\n" "\033[36;1m")
 
-# DEACTIVATION OF THE INTERFACES NETWORK
-print("\033[36;1m \nDeactivation of the network\n \033[0m")
+print("\033[36;1m \nDEACTIVATION INTERFACES NETWORK\n \033[0m")
 
 os.system("sudo ifconfig wlan0 down && \
 sudo ifconfig eth0 down && \
 sudo service network-manager stop")
 
-# ACTIVATION OF THE SERVICES TOR & PRIVOXY
-print("\033[36;1m \nActivation of the services\n \033[0m")
+print("\033[36;1m \nACTIVATION SERVICES TOR & PRIVOXY\n \033[0m")
 
 os.system("sudo update-rc.d -f tor remove && \
 sudo update-rc.d -f privoxy remove && \
@@ -56,8 +47,7 @@ sudo update-rc.d -f tor enable && \
 sudo update-rc.d -f privoxy enable && \
 ")
 
-# REACTIVATION OF THE INTERFACES NETWORK
-print("\033[36;1m \nReactivation of the network\n \033[0m")
+print("\033[36;1m \nREACTIVATION OF THE INTERFACES NETWORK\n \033[0m")
 
 os.system("sudo ifconfig wlan0 up && \
 sudo ifconfig eth0 up && \
