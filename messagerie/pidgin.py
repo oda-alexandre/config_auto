@@ -15,8 +15,8 @@ print("\033[36;1m"
       "\n(check) Use a DNS with SOCKS4\n"
 
       "\nType of proxy	: Tor/Privacy (SOCKS5)\n"
-      "\nHote	      	: 127.0.0.1         Port            : 9050\n"
-      "USER           	: laisser vide     	Mot of passe   	: laisser vide\n"
+      "\nHote	      	: 127.0.0.1          Port            : 9050\n"
+      "USER           	: laisser vide       Mot of passe    : laisser vide\n"
 
       "\nACCEPT THE CERTIFICAT\n"
 
@@ -29,7 +29,7 @@ print("\033[36;1m"
       "\n(clic) on produce\n"
       "(check) Require private messaging\n"
 
-      "\n IN YOUR CONVERSATIONS CLIC ON NO-PRIVATE / NO-CHECK / AUTHENTICATE THE CONTACT (your interlocutor will have to do the same)\n"
+      "\nIN YOUR CONVERSATIONS CLIC ON NO-PRIVATE / NO-CHECK / AUTHENTICATE THE CONTACT (your interlocutor will have to do the same)\n"
       "\033[0m")
 
 enter = raw_input(

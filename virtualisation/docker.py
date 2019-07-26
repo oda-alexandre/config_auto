@@ -55,7 +55,7 @@ os.system("sudo systemctl restart docker.service")
 #
 # print("\033[36;1m \nLien to portainer http://localhost:9000\n \033[0m")
 #
-# enter = raw_input("\033[36;1m \nPush on <Entrée> for confirmer \033[0m")
+# enter = raw_input("\033[36;1m \nPush on <Entrée> for confirm \033[0m")
 #
 # if enter == "":
 #     pass
