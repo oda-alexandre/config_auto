@@ -185,6 +185,7 @@ while programWorking:
           " 136 Transmission         => (docker) Download Torrent\n"
           " 137 Android Studio       => (docker) IDEA\n"
           " 138 ADB Fastboot         => (docker) Tools for root android \n"
+          " 139 VSCode               => (docker) IDE\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -468,6 +469,10 @@ while programWorking:
 
         elif choiceMenu == "138":
             import outils.adbfastboot
+            continue
+
+        elif choiceMenu == "139":
+            import outils.vscode
             continue
 
 # MANAGEMENT ERROR
