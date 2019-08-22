@@ -120,8 +120,9 @@ test:
   stage: test
   allow_failure: false
   script:
-    - echo -e '\033[36;1m ******* TEST RUN ******** \033[0m'
-    - python install.py
+    - docker pull $CI_REGISTRY_IMAGE
+    - docker run --rm $CI_REGISTRY_IMAGE
+        python install.py
   only:
     - dev
 
