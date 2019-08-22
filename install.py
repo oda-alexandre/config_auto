@@ -221,7 +221,7 @@ while programWorking:
             continue
 
         elif choiceMenu == "4":
-            import configuration.themedark
+            import configuration.themesombre
             continue
 
         elif choiceMenu == "5":
