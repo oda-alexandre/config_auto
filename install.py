@@ -199,7 +199,7 @@ while programWorking:
 
 # CHOIX OF MENU
     try:
-        choiceMenu = raw_input("\033[36;1m" "ENTER YOUR CHOICE : " "\033[36;1m")
+        choiceMenu = 'raw_input'("\033[36;1m" "ENTER YOUR CHOICE : " "\033[36;1m")
         choiceMenu = str(choiceMenu)
 
 # QUIT THE MENU
