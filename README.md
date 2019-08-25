@@ -2,7 +2,6 @@
 
 <img src="https://raw.githubusercontent.com/oda-alexandre/config_auto/master/img/logo-kali.png" width="200" height="200"/>
 
-
 ## INDEX
 
 - [Badges](#BADGES)
@@ -11,11 +10,9 @@
 - [Install](#INSTALL)
 - [License](#LICENSE)
 
-
 ## BADGES
 
 [![pipeline status](https://gitlab.com/oda-alexandre/config_auto/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/config_auto/commits/master)
-
 
 ## INTRODUCTION
 
@@ -24,7 +21,6 @@ This repository contains an automated config program for
 - [Kali Linux](https://www.kali.org/), he automates install the config of this tools :
 
 > (docker) means that the tool is install by docker
-
 > (lvm encrypted) means that the tool is only available for an encrypted system
 
 ### CONFIG
@@ -150,21 +146,15 @@ TOOLS               | DESCRIPTION
 137 Android Studio  | (docker) IDEA
 138 Android Root    | (docker) Tools for root android
 
-
 ## PREREQUISITES
 
 - Use [Kali Linux](https://www.kali.org/)
 
-
 ## INSTALL
 
-```
-git clone https://gitlab.com/oda-alexandre/config_auto.git
-```
-```
-python config_auto/install.py
-```
+```git clone https://gitlab.com/oda-alexandre/config_auto.git```
 
+```python config_auto/install.py```
 
 ## LICENSE
 
