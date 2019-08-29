@@ -184,7 +184,7 @@ while programWorking:
           " 135 Vlc                  => (docker) Reader of media\n"
           " 136 Transmission         => (docker) Download Torrent\n"
           " 137 Android Studio       => (docker) IDEA\n"
-          " 138 ADB Fastboot         => (docker) Tools for root android \n"
+          " 138 Android Root         => (docker) Tools for root android \n"
           " 139 VSCode               => (docker) IDE\n"
           "\n"
 
@@ -199,7 +199,7 @@ while programWorking:
 
 # CHOIX OF MENU
     try:
-        choiceMenu = 'raw_input'("\033[36;1m" "ENTER YOUR CHOICE : " "\033[36;1m")
+        choiceMenu = raw_input("\033[36;1m" "ENTER YOUR CHOICE : " "\033[36;1m")
         choiceMenu = str(choiceMenu)
 
 # QUIT THE MENU
@@ -221,7 +221,7 @@ while programWorking:
             continue
 
         elif choiceMenu == "4":
-            import configuration.themesombre
+            import configuration.themedark
             continue
 
         elif choiceMenu == "5":
@@ -468,7 +468,7 @@ while programWorking:
             continue
 
         elif choiceMenu == "138":
-            import outils.adbfastboot
+            import outils.androidroot
             continue
 
         elif choiceMenu == "139":
