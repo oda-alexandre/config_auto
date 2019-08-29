@@ -123,8 +123,6 @@ test:
     - docker pull $CI_REGISTRY_IMAGE
     - docker run --rm $CI_REGISTRY_IMAGE
         python install.py
-  output_limit:
-    1000000
   only:
     - dev
 
