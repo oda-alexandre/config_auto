@@ -44,20 +44,19 @@ while programWorking:
           "-----------------------------------------------------------------------------------------------------------------\n"
           "\n"
 
-          " 1 Kali build             => Create a minimal ISO of kali with config_auto\n"
-          " 2 Sources.list           => Change of the sources and update of system\n"
-          " 3 Gnome mini             => Configuration minimal of gnome\n"
-          " 4 Theme dark             => Theme dark integral\n"
-          " 5 Bluetooth              => Activation of bluetooth\n"
-          " 6 Son                    => Activation of sound\n"
-          " 7 Grub                   => Acceleration time of start-up grub and display the logs of boot\n"
-          " 8 Grub wallpaper         => Change wallpaper of grub\n"
-          " 9 Vimrc                  => Vim custom\n"
-          " 10 Terminal Custom       => Terminal custom\n"
-          " 11 Conky                 => Monitor system custom\n"
-          " 12 Htop                  => (docker) Monitor system\n"
-          " 13 Auto clean            => Cleaning auto at boot\n"
-          " 14 Auto Destruction      => (lvm encryptede) Password for auto destruction\n"
+          " 1 Sources.list           => Change of the sources and update of system\n"
+          " 2 Gnome mini             => Configuration minimal of gnome\n"
+          " 3 Theme dark             => Theme dark integral\n"
+          " 4 Bluetooth              => Activation of bluetooth\n"
+          " 5 Son                    => Activation of sound\n"
+          " 6 Grub                   => Acceleration time of start-up grub and display the logs of boot\n"
+          " 7 Grub wallpaper         => Change wallpaper of grub\n"
+          " 8 Vimrc                  => Vim custom\n"
+          " 9 Terminal Custom       => Terminal custom\n"
+          " 10 Conky                 => Monitor system custom\n"
+          " 11 Htop                  => (docker) Monitor system\n"
+          " 12 Auto clean            => Cleaning auto at boot\n"
+          " 13 Auto Destruction      => (lvm encryptede) Password for auto destruction\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -209,58 +208,54 @@ while programWorking:
 
 # MODULES CONFIG
         elif choiceMenu == "1":
-            import configuration.kalibuild
-            continue
-
-        elif choiceMenu == "2":
             import configuration.sourceslist
             continue
 
-        elif choiceMenu == "3":
+        elif choiceMenu == "2":
             import configuration.gnomemini
             continue
 
-        elif choiceMenu == "4":
+        elif choiceMenu == "3":
             import configuration.themedark
             continue
 
-        elif choiceMenu == "5":
+        elif choiceMenu == "4":
             import configuration.bluetooth
             continue
 
-        elif choiceMenu == "6":
+        elif choiceMenu == "5":
             import configuration.son
             continue
 
-        elif choiceMenu == "7":
+        elif choiceMenu == "6":
             import configuration.grub
             continue
 
-        elif choiceMenu == "8":
+        elif choiceMenu == "7":
             import configuration.grubimg
             continue
 
-        elif choiceMenu == "9":
+        elif choiceMenu == "8":
             import configuration.vimrc
             continue
 
-        elif choiceMenu == "10":
+        elif choiceMenu == "9":
             import configuration.terminalcustom
             continue
 
-        elif choiceMenu == "11":
+        elif choiceMenu == "10":
             import configuration.conky
             continue
 
-        elif choiceMenu == "12":
+        elif choiceMenu == "11":
             import configuration.htop
             continue
 
-        elif choiceMenu == "13":
+        elif choiceMenu == "12":
             import configuration.autoclean
             continue
 
-        elif choiceMenu == "14":
+        elif choiceMenu == "13":
             import configuration.autodestruction
             continue
 
