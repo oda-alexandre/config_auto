@@ -4,7 +4,7 @@ import os
 
 print("\033[36;1m \nINSTALL PREREQUISITES\n \033[0m")
 
-os.system("sudo apt-get update && \
+os.system("sudo apt update && \
 sudo apt install --no-install-recommends -y \
 gnupg2 \
 apt-transport-https \
@@ -20,7 +20,7 @@ echo \'deb https://download.docker.com/linux/debian stretch stable\' | sudo tee 
 
 print("\033[36;1m \nINSTALL DOCKER\n \033[0m")
 
-os.system("sudo apt-get update && \
+os.system("sudo apt update && \
 sudo apt install --no-install-recommends -y \
 docker.ce")
 
