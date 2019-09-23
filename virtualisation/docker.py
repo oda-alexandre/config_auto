@@ -43,7 +43,7 @@ os.system("sudo usermod -a -G docker $USER")
 
 print("\033[36;1m \nSECURISE COMMUNICATIONS INTER CONTENEURS\n \033[0m")
 
-os.system("echo \'DOCKER_OPTS=\"-icc=false\"\' | sudo tee -a /etc/default/docker")
+os.system("echo 'DOCKER_OPTS=\"-icc=false\"' | sudo tee -a /etc/default/docker")
 
 print("\033[36;1m \nREBOOT SERVICE DOCKER\n \033[0m")
 
