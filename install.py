@@ -46,7 +46,7 @@ while programWorking:
 
           " 1 Sources.list           => Change of the sources and update of system\n"
           " 2 Gnome mini             => Configuration minimal of gnome\n"
-          " 3 Theme dark             => Theme dark integral\n"
+          " 3 Dark theme             => Theme dark integral\n"
           " 4 Bluetooth              => Activation of bluetooth\n"
           " 5 Son                    => Activation of sound\n"
           " 6 Grub                   => Acceleration time of start-up grub and display the logs of boot\n"
@@ -216,7 +216,7 @@ while programWorking:
             continue
 
         elif choiceMenu == "3":
-            import configuration.themedark
+            import configuration.themesombre
             continue
 
         elif choiceMenu == "4":
