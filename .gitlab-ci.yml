@@ -91,8 +91,8 @@ test_app:
   script:
     - echo -e '\033[36;1m ******* TEST APP ******** \033[0m'
     - apt-get update
-    - apt-get install --no-install-recommends -y \
-        sudo \
+    - apt-get install --no-install-recommends -y
+        sudo
         python
     - useradd -d /home/kali -m kali
     - passwd -d kali
