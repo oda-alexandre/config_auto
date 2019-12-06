@@ -9,16 +9,6 @@ stages:
   - staging
   - deploy
 
-build:
-  stage: build
-  allow_failure: false
-  script:
-    - echo -e '\033[36;1m ******* BUILD ******** \033[0m'
-    - docker build -t ${CI_PROJECT_NAME} .
-    - docker push ${CI_PROJECT_NAME}
-  only:
-    - dev
-
 code_quality:
   stage: test
   allow_failure: false
