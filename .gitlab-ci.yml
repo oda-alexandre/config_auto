@@ -87,20 +87,19 @@ license_management:
 test_app:
   stage: test
   allow_failure: false
+  image: kalilinux/kali-linux-docker
   script:
     - echo -e '\033[36;1m ******* TEST APP ******** \033[0m'
-    - docker run --rm
-        --volume ${PWD}:/tmp
-        kalilinux/kali-linux-docker
-        apt-get update; \
-        apt-get install --no-install-recommends -y \
+    - apt-get update
+    - apt-get install --no-install-recommends -y \
         sudo \
-        python; \
-        useradd -d /home/kali -m kali; \
-        passwd -d kali; \
-        adduser kali sudo; \
-        su kali; \
-        python /tmp/install.py
+        python
+    - useradd -d /home/kali -m kali
+    - passwd -d kali
+    - adduser kali sudo
+    - su kali
+    - sudo chown -R kali:kali ../
+    - python install.py
   only:
     - dev
 
