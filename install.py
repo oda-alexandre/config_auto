@@ -480,7 +480,7 @@ while programWorking:
         programWorking = False
 
     except ImportError:
-        print("\033[36;1m" "\Module not found\n" "\033[36;1m")
+        print("\033[36;1m" "\nModule not found\n" "\033[36;1m")
         continue
 
     except:

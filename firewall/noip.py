@@ -29,8 +29,7 @@ print("\033[36;1m"
       "\n"
       "\033[0m")
 
-enter = raw_input(
-    "\033[36;1m" "\nPress <Enter> to continue\n" "\033[0m")
+enter = raw_input("\033[36;1m" "\nPress <Enter> to continue\n" "\033[0m")
 
 if enter == "":
     pass
