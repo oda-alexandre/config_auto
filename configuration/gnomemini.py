@@ -4,7 +4,7 @@ import os
 
 print("\033[36;1m \nINSTALL PREREQUISITES\n \033[0m")
 
-os.system("sudo apt update && \
+os.system("sudo apt update; \
 sudo apt install --no-install-recommends -y \
 gdm3 \
 gnome-theme-kali \
@@ -69,15 +69,15 @@ vim-tiny")
 
 print("\033[36;1m \nACTIVATION eth IN NETWORK MANAGER\n \033[0m")
 
-os.system("echo \"[keyfile]\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf && \
+os.system("echo \"[keyfile]\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf; \
 echo \"unmanaged-devices=*,except:type:ethernet,except:type:wifi,except:type:wwan\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf")
 
 print("\033[36;1m \nDEACTIVATION OF THE SERVICES EVOLUTION\n \033[0m")
 
-os.system("sudo mv /usr/lib/evolution/ /usr/lib/evolution-DISABLE/ && \
+os.system("sudo mv /usr/lib/evolution/ /usr/lib/evolution-DISABLE/; \
 sudo mv /usr/lib/evolution-data-server/ /usr/lib/evolution-data-server-DISABLE/")
 
 print("\033[36;1m \nCLEANING ROOT AND USER WORKSPACE\n \033[0m")
 
-os.system("rm -rf $HOME/Modèles $HOME/Musique $HOME/Public $HOME/Downloads $HOME/Vidéos $HOME/Documents $HOME/Images && \
+os.system("rm -rf $HOME/Modèles $HOME/Musique $HOME/Public $HOME/Downloads $HOME/Vidéos $HOME/Documents $HOME/Images; \
 sudo rm -rf /root/Modèles /root/Musique /root/Public /root/Downloads /root/Vidéos /root/Documents /root/Images")

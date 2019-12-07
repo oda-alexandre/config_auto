@@ -18,14 +18,14 @@ if os.geteuid() == 0:
 # CREATE USER IF YOUR IS ROOT
     print("\033[36;1m" "\nThis script does not work in root, a user account will be created" "\033[36;1m")
 
-    os.system("apt install sudo && \
-    read -p 'Enter your name : ' name && \
-    adduser $name && \
-    adduser $name sudo && \
+    os.system("apt install sudo; \
+    read -p 'Enter your name : ' name; \
+    adduser $name; \
+    adduser $name sudo; \
     su $name")
 
 # DEPLACEMENT OF THE personal folder OF NEW USER
-    os.system("sudo mv /root/config_auto $HOME/ && \
+    os.system("sudo mv /root/config_auto $HOME/; \
     python config_auto/install.py")
 
 # VERIFICATION OF OS USED
