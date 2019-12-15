@@ -418,7 +418,7 @@ while programWorking:
 
 # MODULES CHIFFREMENT
         elif choiceMenu == "120":
-            import chiffrement.keepassx
+            import chiffrement.keepassxc
             continue
 
         elif choiceMenu == "121":
