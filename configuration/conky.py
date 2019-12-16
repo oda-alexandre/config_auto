@@ -4,7 +4,7 @@ import os
 
 print("\033[36;1m \nINSTALL PREREQUISITES\n \033[0m")
 
-os.system("sudo apt-get update && \
+os.system("sudo apt update; \
 sudo apt install --no-install-recommends -y \
 psmisc \
 conky-manager \
@@ -12,9 +12,9 @@ git")
 
 print("\033[36;1m \nINSTALL OF CONKY CUSTOM\n \033[0m")
 
-os.system("mkdir $HOME/.conky && \
-git clone https://gitlab.com/oda-alexandre/conky.git && \
-sudo mv conky/pizzadude_bullets /usr/share/fonts && \
+os.system("mkdir $HOME/.conky; \
+git clone https://gitlab.com/oda-alexandre/conky.git; \
+sudo mv conky/pizzadude_bullets /usr/share/fonts; \
 mv conky/conky $HOME/.conky")
 
 print("\033[36;1m \nCLEANING\n \033[0m")

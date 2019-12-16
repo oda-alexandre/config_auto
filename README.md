@@ -21,7 +21,6 @@ This repository contains an automated config program for
 - [Kali Linux](https://www.kali.org/), he automates install the config of this tools :
 
 > (docker) means that the tool is install by docker
-
 > (lvm encrypted) means that the tool is only available for an encrypted system
 
 ### CONFIG

@@ -10,8 +10,8 @@ macchanger")
 
 print("\033[36;1m \nINSTALL SCRIPT /etc/init.d/mac-random\n \033[0m")
 
-os.system("git clone https://gitlab.com/oda-alexandre/mac_random.git && \
-sudo mv -f mac_random/mac-random /etc/init.d/ && \
+os.system("git clone https://gitlab.com/oda-alexandre/mac_random.git; \
+sudo mv -f mac_random/mac-random /etc/init.d/; \
 sudo chmod +x /etc/init.d/mac-random")
 
 print("\033[36;1m \nAUTO STARTING\n \033[0m")

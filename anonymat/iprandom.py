@@ -4,7 +4,7 @@ import os
 
 print("\033[36;1m \nINSTALL PREREQUISITES\n \033[0m")
 
-os.system("sudo apt-get update && \
+os.system("sudo apt update; \
 sudo apt install --no-install-recommends -y \
 git \
 openvpn")
@@ -24,14 +24,14 @@ else:
 
 print("\033[36;1m \nINSTALL SCRIPT /etc/init.d/ip-random\n \033[0m")
 
-os.system("git clone https://gitlab.com/oda-alexandre/ip_random.git && \
-sudo mv -f ip_random/ip-random /etc/init.d/ && \
+os.system("git clone https://gitlab.com/oda-alexandre/ip_random.git; \
+sudo mv -f ip_random/ip-random /etc/init.d/; \
 sudo chmod +x /etc/init.d/ip-random")
 
 print("\033[36;1m \nAUTO STARTING\n \033[0m")
 
-os.system("sudo systemctl restart openvpn && \
-sudo systemctl enable openvpn && \
+os.system("sudo systemctl restart openvpn; \
+sudo systemctl enable openvpn; \
 sudo update-rc.d -f ip-random defaults")
 
 print("\033[36;1m \nCLEANING\n \033[0m")
