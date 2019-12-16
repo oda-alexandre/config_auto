@@ -130,6 +130,7 @@ while programWorking:
           " 81 Opera                 => (docker) Navigator with vpn\n"
           " 82 Tor Browser           => (docker) Navigator of tor\n"
           " 83 Chromium              => (docker) Navigator google\n"
+          " 84 GetStation            => (docker) Sandbox Web Apps\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -183,8 +184,9 @@ while programWorking:
           " 135 Vlc                  => (docker) Reader of media\n"
           " 136 Transmission         => (docker) Download Torrent\n"
           " 137 Android Studio       => (docker) IDEA\n"
-          " 138 Android Root         => (docker) Tools for root android \n"
-          " 139 VSCode               => (docker) IDE\n"
+          " 138 ADB Fastboot         => (docker) Tools for root android \n"
+          " 139 Heimdall             => (docker) Tools for flash rom's on Samsung android \n"
+          " 140 VSCode               => (docker) IDE\n"
           "\n"
 
           "-----------------------------------------------------------------------------------------------------------------\n"
@@ -385,6 +387,10 @@ while programWorking:
             import navigateurs.chromium
             continue
 
+        elif choiceMenu == "84":
+            import navigateurs.getstation
+            continue
+
 # MODULES MESSAGERIE
         elif choiceMenu == "90":
             import messagerie.pidgin
@@ -463,10 +469,14 @@ while programWorking:
             continue
 
         elif choiceMenu == "138":
-            import outils.androidroot
+            import outils.adbfastboot
             continue
 
         elif choiceMenu == "139":
+            import outils.heimdall
+            continue
+
+        elif choiceMenu == "140":
             import outils.vscode
             continue
 
