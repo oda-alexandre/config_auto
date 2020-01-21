@@ -17,7 +17,6 @@ network-manager-pptp-gnome \
 nautilus \
 nautilus-extension-gnome-terminal \
 gnome-icon-theme \
-gnome-disk-utility \
 gnome-shell-extensions \
 xserver-xorg \
 xfonts-base \
@@ -71,8 +70,3 @@ print("\033[36;1m \nACTIVATION eth IN NETWORK MANAGER\n \033[0m")
 
 os.system("echo \"[keyfile]\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf; \
 echo \"unmanaged-devices=*,except:type:ethernet,except:type:wifi,except:type:wwan\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf")
-
-print("\033[36;1m \nDEACTIVATION OF THE SERVICES EVOLUTION\n \033[0m")
-
-os.system("sudo mv /usr/lib/evolution/ /usr/lib/evolution-DISABLE/; \
-sudo mv /usr/lib/evolution-data-server/ /usr/lib/evolution-data-server-DISABLE/")
