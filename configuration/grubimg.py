@@ -13,7 +13,7 @@ if enter == "":
 else:
     print("\033[36;1m" "\nYou must press <Enter>\n" "\033[36;1m")
 
-os.system("sudo rm -f /boot/grub/.background_cache.png; \
+os.system("sudo rm -f /boot/grub/.background_cache.png && \
 sudo mv $HOME/background_cache.png /boot/grub/background_cache.png")
 
 print("\033[36;1m \nUPDATE GRUB FOR TAKING CHANGES\n \033[0m")

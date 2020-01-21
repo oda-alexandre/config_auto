@@ -4,7 +4,7 @@ import os
 
 print("\033[36;1m \nINSTALL PREREQUISITES\n \033[0m")
 
-os.system("sudo apt update; \
+os.system("sudo apt update && \
 sudo apt install --no-install-recommends -y \
 git")
 
@@ -16,9 +16,9 @@ os.system("sudo mkdir /usr/share/wordlists")
 
 print("\033[36;1m \nINSTALL SCRIPT /etc/init.d/hostname-random & WORDLIST OF NAMES /usr/share/wordlist/names.txt\n \033[0m")
 
-os.system("git clone https://gitlab.com/oda-alexandre/hostname_random.git; \
-sudo mv -f hostname_random/names.txt /usr/share/wordlists/; \
-sudo mv -f hostname_random/hostname-random /etc/init.d/; \
+os.system("git clone https://gitlab.com/oda-alexandre/hostname_random.git && \
+sudo mv -f hostname_random/names.txt /usr/share/wordlists/ && \
+sudo mv -f hostname_random/hostname-random /etc/init.d/ && \
 sudo chmod +x /etc/init.d/hostname-random")
 
 print("\033[36;1m \nAUTO STARTING\n \033[0m")

@@ -4,7 +4,7 @@ import os
 
 print("\033[36;1m \nINSTALL PREREQUISITES\n \033[0m")
 
-os.system("sudo apt update; \
+os.system("sudo apt update && \
 sudo apt install --no-install-recommends -y \
 gdm3 \
 gnome-theme-kali \
@@ -68,5 +68,5 @@ vim-tiny")
 
 print("\033[36;1m \nACTIVATION eth IN NETWORK MANAGER\n \033[0m")
 
-os.system("echo \"[keyfile]\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf; \
+os.system("echo \"[keyfile]\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf && \
 echo \"unmanaged-devices=*,except:type:ethernet,except:type:wifi,except:type:wwan\" | sudo tee -a /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf")
