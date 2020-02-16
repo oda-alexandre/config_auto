@@ -1,6 +1,6 @@
 FROM kalilinux/kali-linux-docker
 
-LABEL authors https://www.oda-alexandre.com/
+LABEL authors https://www.oda-alexandre.com
 
 ENV USER kali
 
