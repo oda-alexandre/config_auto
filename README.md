@@ -7,7 +7,6 @@
 - [CONFIG AUTO](#config-auto)
   - [INDEX](#index)
   - [BADGES](#badges)
-  - [FIRST UPDATE](#first-update)
   - [INTRODUCTION](#introduction)
     - [CONFIG](#config)
     - [ANONYMAT](#anonymat)
@@ -28,10 +27,6 @@
 ## BADGES
 
 [![pipeline status](https://gitlab.com/oda-alexandre/config_auto/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/config_auto/commits/master)
-
-## FIRST UPDATE
-
-Date: 01-01-01
 
 ## INTRODUCTION
 
