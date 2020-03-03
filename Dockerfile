@@ -7,7 +7,8 @@ ENV USER kali
 RUN echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m' && \
   apt update && apt install --no-install-recommends -y \
   sudo \
-  python
+  python && \
+  rm -rf /var/lib/apt/lists/*
 
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
   useradd -d ${HOME} -m ${USER} && \
