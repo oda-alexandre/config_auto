@@ -51,7 +51,7 @@ os.system("sudo systemctl restart docker.service")
 
 # print("\033[36;1m \nINSTALL PORTAINER\n \033[0m")
 #
-# os.system("docker run -ti --name portainer -p 127.0.0.1:9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer")
+# os.system("docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock  portainer/portainer")
 #
 # print("\033[36;1m \nLien to portainer http://localhost:9000\n \033[0m")
 #
