@@ -10,14 +10,14 @@ git")
 
 print("\033[36;1m \nSETTING UP SCRIPT\n \033[0m")
 
-print("\033[36;1m \nCREATE FOLDER /usr/share/wordlists\n \033[0m")
+print("\033[36;1m \nCREATE FOLDER /usr/share/dict\n \033[0m")
 
-os.system("sudo mkdir /usr/share/wordlists")
+os.system("sudo mkdir /usr/share/dict")
 
 print("\033[36;1m \nINSTALL SCRIPT /etc/init.d/hostname-random & WORDLIST OF NAMES /usr/share/wordlist/names.txt\n \033[0m")
 
 os.system("git clone https://gitlab.com/oda-alexandre/hostname_random.git; \
-sudo mv -f hostname_random/names.txt /usr/share/wordlists/; \
+sudo mv -f hostname_random/names.txt /usr/share/dict/; \
 sudo mv -f hostname_random/hostname-random /etc/init.d/; \
 sudo chmod +x /etc/init.d/hostname-random")
 
